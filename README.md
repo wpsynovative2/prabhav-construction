@@ -27,6 +27,38 @@ a real `index.html` and no server rewrites are needed.
 
 ---
 
+## Deploying to Hostinger (or any cPanel host)
+
+**Build on your machine, upload the result.** This site is a static export, so
+the server runs no Node at all — it only serves files. Do not use Hostinger's
+git-build/Node.js app deploy; it is slower, more fragile, and unnecessary here.
+
+1. `npm run build`
+2. Upload **the contents of `out/`** (not the folder itself) into `public_html/`
+   via hPanel → File Manager, or over SFTP.
+3. Done. `public/.htaccess` is copied into `out/` automatically and handles
+   HTTPS, the `www` → apex redirect, the trailing-slash canonical, the custom
+   404 page, gzip and cache headers.
+
+> Environment variables are inlined **at build time**. Set them in `.env.local`
+> on your machine and rebuild — setting them in hPanel does nothing for a static
+> export.
+
+### If you must build on the server
+
+Hostinger's build image ships an old glibc, so the native SWC binary cannot
+load. Two consequences, both already handled in this repo:
+
+| Symptom in the build log | Cause | Fix in place |
+| --- | --- | --- |
+| `Failed to load next.config.ts` → `ERR_MODULE_NOT_FOUND … next.config.compiled.js` | A TypeScript config must be transpiled first, and that step needs the native binary | The config is plain JS: `next.config.mjs`. **Do not rename it back to `.ts`.** |
+| `Attempted to load @next/swc-linux-x64-gnu … GLIBC_2.29 not found` | Turbopack (the Next 16 default bundler) is a native binary | Run `npm run build:compat`, which is `next build --webpack` |
+
+So on a server build, set the build command to `npm run build:compat`. It is
+slower than Turbopack but produces byte-identical output.
+
+---
+
 ## Environment variables
 
 Both live in `.env.local` and are inlined at build time — **restart the dev
@@ -146,9 +178,9 @@ google-apps-script/     Backend script + setup guide
 
 ## Notes
 
-- `public/Refrences/` holds the design reference images and is currently copied
-  into the build output. Delete or move that folder before deploying if you do
-  not want it published.
+- The design reference images now live in `design-references/` at the repo root.
+  They used to sit in `public/Refrences/`, which meant they were published with
+  the site; they are kept out of the build output now.
 - Image optimisation is disabled (`images.unoptimized`), which a static export
   requires. Compress images before adding them to `public/`.
 - `npm run lint` runs ESLint directly — `next lint` was removed in Next.js 16.
