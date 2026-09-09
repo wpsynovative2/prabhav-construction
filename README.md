@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Prabhav Construction — website
 
-## Getting Started
+A fully static marketing site for Prabhav Construction, built with Next.js 16
+(App Router), TypeScript and Tailwind CSS v4. There is no backend: `next build`
+emits plain HTML/CSS/JS into `out/`, and every form posts directly to a Google
+Apps Script Web App that writes to a Google Sheet and sends e-mail.
 
-First, run the development server:
+---
+
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local   # then fill in the two values
+npm run dev                  # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build the static site:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build                # output lands in ./out
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Upload the contents of `out/` to any static host — Netlify, Vercel, Cloudflare
+Pages, S3, or plain nginx/Apache. `trailingSlash` is enabled, so every route is
+a real `index.html` and no server rewrites are needed.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Environment variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Both live in `.env.local` and are inlined at build time — **restart the dev
+server / rebuild after changing them**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Variable | What it is |
+| --- | --- |
+| `NEXT_PUBLIC_APPS_SCRIPT_URL` | The `/exec` URL of the deployed Apps Script Web App |
+| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | reCAPTCHA v3 **site** key (the secret key lives in Apps Script) |
 
-## Deploy on Vercel
+Full setup instructions: [`google-apps-script/README.md`](./google-apps-script/README.md).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Without these the site still builds and runs; forms show a message asking the
+visitor to call instead, and reCAPTCHA is skipped.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Adding a new project
+
+Everything about a project lives in one place: **[`data/projects.ts`](./data/projects.ts)**.
+
+1. Copy an existing object in the `projects` array and edit the fields.
+2. Set a unique `slug` — this becomes the URL, `/projects/<slug>`.
+3. Set `status` to `"upcoming"`, `"ongoing"` or `"completed"`.
+4. Set `featured: true` to also surface it on the home page.
+5. Drop the images into `public/images/projects/<name>/` and reference them as
+   `/images/projects/<name>/hero.jpg`.
+6. `npm run build`.
+
+That single edit gives you the listing card, the filter counts, a full detail
+page, the footer link, the "project of interest" dropdown in every form, the
+sitemap entry and the page-level SEO tags.
+
+**Images are optional at first.** Any file that does not exist yet falls back to
+a branded placeholder panel rather than a broken image, so you can publish the
+data now and add photography later.
+
+---
+
+## Editing the rest of the content
+
+| File | Controls |
+| --- | --- |
+| [`data/site.ts`](./data/site.ts) | Company name, phone numbers, e-mail, office address, map embed, social links, nav menu, hero stats |
+| [`data/projects.ts`](./data/projects.ts) | Every project (see above) |
+| [`data/company.ts`](./data/company.ts) | About page: company copy, vision/mission/values, founder, team, process, timeline, awards, "why Prabhav" |
+| [`data/careers.ts`](./data/careers.ts) | Career page: why-join-us, life at Prabhav, benefits, all job openings, form dropdown options |
+| [`data/testimonials.ts`](./data/testimonials.ts) | Testimonial carousel |
+| [`data/faqs.ts`](./data/faqs.ts) | Contact and home page FAQs (also emitted as FAQ structured data) |
+| [`data/legal.ts`](./data/legal.ts) | Privacy Policy, Terms & Conditions and Disclaimer popup copy |
+
+> ⚠️ The contact details, office address, map embeds and MahaRERA numbers
+> currently in `data/site.ts` and `data/projects.ts` are **placeholders**.
+> Replace them before going live.
+
+---
+
+## How things are wired
+
+### CTA popups
+Every call-to-action on the site is a `<CtaButton label="…">`
+([`components/ui/CtaButton.tsx`](./components/ui/CtaButton.tsx)). Clicking one
+opens the enquiry popup with **the button's own label as the popup heading**, so
+"Download Brochure" opens a dialog headed *Download Brochure*. Pass `project` to
+tag the enquiry with a project name, or `title`/`subtitle` to override the copy.
+
+### Legal popups
+`<LegalLink doc="privacy">Privacy Policy</LegalLink>` opens the corresponding
+document from `data/legal.ts` in a dialog. Used in the footer and in every form's
+consent line.
+
+### Forms and validation
+- Mandatory everywhere: **full name** and **mobile number**. Everything else is
+  optional, and validated only if filled in.
+- Mobile numbers are validated as Indian mobiles — 10 digits starting 6/7/8/9,
+  accepting `+91`, `0` and spacing variants ([`lib/validation.ts`](./lib/validation.ts)).
+- reCAPTCHA v3 runs invisibly on submit; the script is loaded lazily on first
+  form interaction, and the badge is hidden with the required attribution shown
+  in the form footer instead.
+- CVs on the career form: PDF/Word, max 5 MB, uploaded to Drive by the script.
+
+### SEO
+Per-page `title`/`description`/canonical/Open Graph via the Metadata API,
+`sitemap.xml` and `robots.txt` generated at build time, and JSON-LD for
+`RealEstateAgent`, `WebSite`, `FAQPage`, `ItemList`, `BreadcrumbList` and
+`Residence` (per project). Semantic headings, descriptive alt text, a skip link
+and `prefers-reduced-motion` support throughout.
+
+---
+
+## Project structure
+
+```
+app/                    Routes (App Router)
+  page.tsx              Home
+  about-us/             About Us
+  projects/             Projects listing
+  projects/[slug]/      Generated project pages
+  career/               Career
+  contact-us/           Contact Us
+  sitemap.ts robots.ts  Generated at build time
+components/
+  layout/               Header, Footer, floating contact bar
+  home/ about/ career/  Page-specific sections
+  projects/             Cards, gallery, filters, enquiry panel
+  common/               Sections reused across pages
+  forms/                Enquiry form, popup, shared fields
+  legal/                Legal popup + links
+  providers/            Enquiry + legal popup context
+  ui/                   Buttons, icons, modal, images, section shells
+data/                   All editable content (see table above)
+lib/                    Validation, reCAPTCHA, form transport, config
+google-apps-script/     Backend script + setup guide
+```
+
+---
+
+## Notes
+
+- `public/Refrences/` holds the design reference images and is currently copied
+  into the build output. Delete or move that folder before deploying if you do
+  not want it published.
+- Image optimisation is disabled (`images.unoptimized`), which a static export
+  requires. Compress images before adding them to `public/`.
+- `npm run lint` runs ESLint directly — `next lint` was removed in Next.js 16.

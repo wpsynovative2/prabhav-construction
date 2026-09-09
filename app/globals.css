@@ -1,26 +1,226 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* ---------------------------------------------------------------------- */
+  /* Brand — pulled from the gold/bronze gradient in the Prabhav logo        */
+  /* ---------------------------------------------------------------------- */
+  --color-gold-50: #fdf8f0;
+  --color-gold-100: #f8ecd8;
+  --color-gold-200: #efd8b1;
+  --color-gold-300: #e4c089;
+  --color-gold-400: #d5a463;
+  --color-gold-500: #c8964b;
+  --color-gold-600: #b07c37;
+  --color-gold-700: #8e612c;
+  --color-gold-800: #6d4a24;
+  --color-gold-900: #4c341a;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Warm neutrals — the cream/sand palette from the UI references */
+  --color-cream: #faf7f2;
+  --color-cream-deep: #f4ece0;
+  --color-sand: #ece0cf;
+  --color-ink: #191512;
+  --color-ink-soft: #3a322b;
+  --color-ink-muted: #5f564c;
+  --color-ink-subtle: #857a6d;
+  --color-line: #e8dfd2;
+  --color-line-strong: #d9cbb6;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* ---------------------------------------------------------------------- */
+  /* Type scale                                                             */
+  /* ---------------------------------------------------------------------- */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-playfair), "Times New Roman", Georgia, serif;
+
+  /* UI + body sizes. Body copy sits at 16px — the web default, and the size
+     form controls need to stop iOS Safari zooming the viewport on focus. */
+  --text-2xs: 0.6875rem; /* 11px — micro labels, badges */
+  --text-2xs--line-height: 1.45;
+  --text-xs: 0.78125rem; /* 12.5px — meta, captions */
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.875rem; /* 14px — secondary UI text, card bodies */
+  --text-sm--line-height: 1.6;
+  --text-base: 1rem; /* 16px — body copy, form controls */
+  --text-base--line-height: 1.68;
+  --text-lg: 1.09375rem; /* 17.5px — lead paragraphs */
+  --text-lg--line-height: 1.6;
+  --text-xl: 1.1875rem; /* 19px */
+  --text-xl--line-height: 1.4;
+  --text-2xl: 1.375rem; /* 22px */
+  --text-2xl--line-height: 1.32;
+  --text-3xl: 1.625rem; /* 26px */
+  --text-3xl--line-height: 1.24;
+  --text-4xl: 2rem; /* 32px */
+  --text-4xl--line-height: 1.18;
+  --text-5xl: 2.5rem; /* 40px */
+  --text-5xl--line-height: 1.12;
+  --text-6xl: 3rem; /* 48px */
+  --text-6xl--line-height: 1.08;
+  --text-7xl: 3.5rem; /* 56px */
+  --text-7xl--line-height: 1.04;
+
+  /* Fluid display sizes — one class per heading instead of a three-breakpoint
+     chain, so headings scale continuously rather than jumping at 640/1024px. */
+  --text-display-xs: clamp(1.125rem, 1.05rem + 0.33vw, 1.25rem); /* 18 → 20 */
+  --text-display-xs--line-height: 1.35;
+  --text-display-xs--letter-spacing: -0.006em;
+
+  --text-display-sm: clamp(1.3125rem, 1.16rem + 0.68vw, 1.625rem); /* 21 → 26 */
+  --text-display-sm--line-height: 1.28;
+  --text-display-sm--letter-spacing: -0.01em;
+
+  --text-display-md: clamp(1.625rem, 1.29rem + 1.5vw, 2.375rem); /* 26 → 38 */
+  --text-display-md--line-height: 1.18;
+  --text-display-md--letter-spacing: -0.016em;
+
+  --text-display-lg: clamp(1.875rem, 1.44rem + 1.95vw, 2.875rem); /* 30 → 46 */
+  --text-display-lg--line-height: 1.12;
+  --text-display-lg--letter-spacing: -0.02em;
+
+  --text-display-xl: clamp(2.125rem, 1.63rem + 2.2vw, 3.375rem); /* 34 → 54 */
+  --text-display-xl--line-height: 1.08;
+  --text-display-xl--letter-spacing: -0.024em;
+
+  /* ---------------------------------------------------------------------- */
+  /* Shape, depth, motion                                                    */
+  /* ---------------------------------------------------------------------- */
+  --radius-4xl: 1.75rem;
+  --radius-5xl: 2.25rem;
+
+  /* Layered rather than single-blur, so cards lift off the cream ground
+     without the grey haze a one-shadow rule produces on a warm background. */
+  --shadow-soft: 0 1px 2px rgb(25 21 18 / 0.04), 0 4px 12px -4px rgb(25 21 18 / 0.06),
+    0 16px 40px -20px rgb(25 21 18 / 0.1);
+  --shadow-lift: 0 2px 4px rgb(25 21 18 / 0.05), 0 12px 28px -8px rgb(25 21 18 / 0.09),
+    0 32px 64px -24px rgb(25 21 18 / 0.18);
+
+  --animate-fade-up: fade-up 0.5s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  :root {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Playfair's regular weight goes thin and spindly at display sizes on a warm
+     ground. 500 with slightly negative tracking gives it presence. Any explicit
+     font-weight utility still wins, since utilities layer after base. */
+  .font-display {
+    font-weight: 500;
+    font-feature-settings: "lnum" 1, "kern" 1;
+  }
+
+  /* Give every heading a sensible default measure for balanced ragging. */
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer utilities {
+  /* Comfortable reading measure for body copy. */
+  .measure {
+    max-width: 68ch;
+  }
+  .measure-tight {
+    max-width: 56ch;
+  }
+
+  /* The gold gradient used for rules, underlines and small accents. */
+  .gold-rule {
+    background-image: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-gold-500),
+      transparent
+    );
+  }
+
+  .text-gradient-gold {
+    background-image: linear-gradient(100deg, #8e612c, #d5a463 45%, #8e612c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Uppercase micro-label used for eyebrows and field labels. */
+  .label-caps {
+    font-size: var(--text-2xs);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Scroll-reveal primitive driven by components/ui/Reveal.tsx */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal[data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Respect users who ask for less motion — kills the reveal animations. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Hide the reCAPTCHA v3 badge — the required attribution sits in the form footer. */
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+::selection {
+  background-color: var(--color-gold-300);
+  color: var(--color-ink);
 }
