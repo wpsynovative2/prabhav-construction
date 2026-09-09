@@ -44,18 +44,23 @@ git-build/Node.js app deploy; it is slower, more fragile, and unnecessary here.
 > on your machine and rebuild — setting them in hPanel does nothing for a static
 > export.
 
-### If you must build on the server
+### Building on the server
 
-Hostinger's build image ships an old glibc, so the native SWC binary cannot
-load. Two consequences, both already handled in this repo:
+Hostinger's build image ships glibc older than 2.29, so Next's native SWC binary
+cannot load there. Two failures follow from that, both already handled — a
+server-side `npm run build` works as-is:
 
-| Symptom in the build log | Cause | Fix in place |
+| Build-log error | Cause | Fix in place |
 | --- | --- | --- |
-| `Failed to load next.config.ts` → `ERR_MODULE_NOT_FOUND … next.config.compiled.js` | A TypeScript config must be transpiled first, and that step needs the native binary | The config is plain JS: `next.config.mjs`. **Do not rename it back to `.ts`.** |
-| `Attempted to load @next/swc-linux-x64-gnu … GLIBC_2.29 not found` | Turbopack (the Next 16 default bundler) is a native binary | Run `npm run build:compat`, which is `next build --webpack` |
+| `Failed to load next.config.ts` → `ERR_MODULE_NOT_FOUND … next.config.compiled.js` | A TypeScript config has to be transpiled before it can be read, and that needs the native binary | The config is plain JS: **`next.config.mjs`**. Do not rename it back to `.ts`. |
+| `Turbopack is not supported on this platform … native bindings are not available` | Turbopack, the Next 16 default bundler, is a native binary with no WASM fallback | **`npm run build` is `next build --webpack`.** Webpack falls back to the WASM compiler and works anywhere. |
 
-So on a server build, set the build command to `npm run build:compat`. It is
-slower than Turbopack but produces byte-identical output.
+`npm run build:turbo` is the Turbopack build — faster, but only on a modern
+glibc, so use it locally and never as the deploy command.
+
+Expect a server build to take several minutes: without native bindings, Next
+compiles through `@next/swc-wasm-nodejs`, which is considerably slower. The
+output is identical either way.
 
 ---
 
@@ -184,3 +189,6 @@ google-apps-script/     Backend script + setup guide
 - Image optimisation is disabled (`images.unoptimized`), which a static export
   requires. Compress images before adding them to `public/`.
 - `npm run lint` runs ESLint directly — `next lint` was removed in Next.js 16.
+- `npm run build` deliberately uses Webpack so the same command works locally and
+  on hosts without a modern glibc. Use `npm run build:turbo` for a fast local
+  build.
