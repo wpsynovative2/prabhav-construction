@@ -1,0 +1,50 @@
+{
+  "slug": "prabhav-plaza-virar",
+  "name": "Prabhav Plaza",
+  "tagline": "High-street shops & offices on Virar's main road",
+  "description": "A glass-fronted commercial address with double-height shops and flexible office floors.",
+  "category": "commercial",
+  "subType": "shops",
+  "status": "ongoing",
+  "featured": true,
+  "station": "virar",
+  "location": {
+    "address": "Example Main Road",
+    "locality": "Virar East",
+    "city": "Palghar",
+    "state": "Maharashtra",
+    "pincode": "401305",
+    "lat": 19.4545,
+    "lng": 72.8165,
+    "distanceFromStation": "400 m"
+  },
+  "units": [
+    { "label": "Shop", "carpetAreaSqft": [220, 640], "priceFrom": 4500000 },
+    { "label": "Office", "carpetAreaSqft": [380, 1200], "priceFrom": 5200000 }
+  ],
+  "price": { "min": 4500000, "max": 18000000, "display": "₹45 L – ₹1.8 Cr", "onRequest": false },
+  "possession": "2027-09",
+  "floors": "G+8",
+  "frontageFt": 18,
+  "rera": [{ "number": "P99000000002" }],
+  "highlights": ["400 m to station", "Double-height shops", "Main-road frontage"],
+  "amenities": ["lift", "parking", "power-backup", "cctv", "fire-safety", "wifi", "security"],
+  "connectivity": [
+    { "place": "Virar station", "distance": "400 m", "type": "transport" },
+    { "place": "Virar bus depot", "distance": "600 m", "type": "transport" }
+  ],
+  "art": { "scene": "commercial", "seed": 11 },
+  "images": { "gallery": [], "floorPlans": [] },
+  "constructionUpdates": [
+    { "date": "2026-08", "title": "6th slab complete", "progress": 64 },
+    { "date": "2026-04", "title": "Basement and plinth complete", "progress": 30 }
+  ],
+  "faqs": [{ "q": "Can I lease my shop after possession?", "a": "Yes. Our leasing desk helps owners find tenants." }],
+  "seo": {
+    "title": "Prabhav Plaza: Shops & Offices in Virar East",
+    "description": "RERA-registered shops and offices 400 m from Virar station from ₹45 L. Possession Sep 2027.",
+    "keywords": ["shops in Virar", "office space Virar East"]
+  },
+  "publishedAt": "2026-02-15",
+  "updatedAt": "2026-09-18"
+}

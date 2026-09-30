@@ -1,0 +1,82 @@
+import { z } from "zod";
+
+export const StationSchema = z.object({
+  slug: z.string(),
+  name: z.string(),
+  line: z.string(),
+  order: z.number(),
+  intro: z.string().optional(),
+  seo: z.object({ title: z.string(), description: z.string() }).optional(),
+});
+export const StationsSchema = z.array(StationSchema);
+export type Station = z.infer<typeof StationSchema>;
+
+export const SiteSchema = z.object({
+  name: z.string(),
+  shortName: z.string(),
+  legalName: z.string(),
+  tagline: z.string(),
+  foundingYear: z.string(),
+  logos: z.object({ light: z.string(), dark: z.string() }),
+  phone: z.string(),
+  phoneDisplay: z.string(),
+  whatsapp: z.string(),
+  email: z.string().email(),
+  careersEmail: z.string().email(),
+  hours: z.string(),
+  hoursSpec: z.array(z.object({ days: z.array(z.string()), opens: z.string(), closes: z.string() })),
+  offices: z
+    .array(
+      z.object({
+        name: z.string(),
+        address: z.object({
+          streetAddress: z.string(),
+          addressLocality: z.string(),
+          addressRegion: z.string(),
+          postalCode: z.string(),
+        }),
+        city: z.string(),
+        lat: z.number(),
+        lng: z.number(),
+        phone: z.string(),
+        mapsUrl: z.string().url(),
+        mapEmbedUrl: z.string().url(),
+      }),
+    )
+    .min(1),
+  social: z.record(z.string(), z.string().url()),
+  region: z.string(),
+  defaultOgImage: z.string(),
+});
+export type Site = z.infer<typeof SiteSchema>;
+
+export const JobSchema = z.object({
+  slug: z.string(),
+  title: z.string(),
+  department: z.string(),
+  location: z.string(),
+  type: z.enum(["FULL_TIME", "PART_TIME", "CONTRACTOR", "INTERN"]),
+  experience: z.string(),
+  description: z.string(),
+  responsibilities: z.array(z.string()),
+  requirements: z.array(z.string()),
+  postedAt: z.string(),
+  validThrough: z.string(),
+  open: z.boolean(),
+});
+export const JobsSchema = z.array(JobSchema);
+export type Job = z.infer<typeof JobSchema>;
+
+export const AmenitiesSchema = z.array(z.object({ id: z.string(), label: z.string(), icon: z.string() }));
+export type Amenity = z.infer<typeof AmenitiesSchema>[number];
+
+export const TestimonialsSchema = z.array(
+  z.object({
+    name: z.string(),
+    project: z.string(),
+    quote: z.string().max(160),
+    rating: z.number().min(1).max(5).optional(),
+    image: z.string().optional(),
+  }),
+);
+export type Testimonial = z.infer<typeof TestimonialsSchema>[number];

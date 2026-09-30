@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Build your career with us",
+    "subtitle": "Join a team that has been building landmarks since 2000."
+  },
+  "culture": [
+    { "icon": "users", "title": "Family culture", "text": "Small teams, big ownership" },
+    { "icon": "trending-up", "title": "Grow fast", "text": "Clear paths, real responsibility" },
+    { "icon": "hard-hat", "title": "Safety first", "text": "Zero-harm on every site" }
+  ],
+  "perks": [
+    { "icon": "heart-pulse", "title": "Health cover" },
+    { "icon": "graduation-cap", "title": "Learning budget" },
+    { "icon": "calendar", "title": "Paid leave" },
+    { "icon": "home", "title": "Staff home discount" },
+    { "icon": "bus", "title": "Travel allowance" },
+    { "icon": "trophy", "title": "Performance bonus" }
+  ]
+}

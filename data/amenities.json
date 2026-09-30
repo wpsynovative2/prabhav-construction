@@ -1,0 +1,20 @@
+[
+  { "id": "swimming-pool", "label": "Swimming pool", "icon": "waves" },
+  { "id": "clubhouse", "label": "Clubhouse", "icon": "sofa" },
+  { "id": "gym", "label": "Gymnasium", "icon": "dumbbell" },
+  { "id": "kids-play-area", "label": "Kids' play area", "icon": "baby" },
+  { "id": "jogging-track", "label": "Jogging track", "icon": "footprints" },
+  { "id": "landscaped-garden", "label": "Landscaped garden", "icon": "trees" },
+  { "id": "security", "label": "24×7 security", "icon": "shield" },
+  { "id": "power-backup", "label": "Power backup", "icon": "zap" },
+  { "id": "parking", "label": "Covered parking", "icon": "car" },
+  { "id": "lift", "label": "High-speed lifts", "icon": "arrow-up-down" },
+  { "id": "cctv", "label": "CCTV surveillance", "icon": "cctv" },
+  { "id": "rainwater", "label": "Rainwater harvesting", "icon": "droplets" },
+  { "id": "solar", "label": "Solar lighting", "icon": "sun" },
+  { "id": "wifi", "label": "Wi-Fi ready", "icon": "wifi" },
+  { "id": "loading-bay", "label": "Loading bay", "icon": "truck" },
+  { "id": "fire-safety", "label": "Fire safety", "icon": "flame" },
+  { "id": "temple", "label": "Temple", "icon": "landmark" },
+  { "id": "yoga-deck", "label": "Yoga deck", "icon": "flower" }
+]

@@ -1,0 +1,48 @@
+{
+  "slug": "prabhav-greens-vasai",
+  "name": "Prabhav Greens",
+  "tagline": "Ready-to-move row houses in Vasai West",
+  "description": "Forty-two row houses with private gardens inside a gated green enclave. Ready to move in.",
+  "category": "residential",
+  "subType": "row-houses",
+  "status": "completed",
+  "featured": false,
+  "station": "vasai-road",
+  "location": {
+    "address": "Example Lane, Papdy",
+    "locality": "Vasai West",
+    "city": "Palghar",
+    "state": "Maharashtra",
+    "pincode": "401207",
+    "lat": 19.3664,
+    "lng": 72.8155,
+    "distanceFromStation": "2.4 km"
+  },
+  "units": [
+    { "label": "3 BHK Row house", "carpetAreaSqft": [1350, 1420], "priceFrom": 16500000 },
+    { "label": "4 BHK Row house", "carpetAreaSqft": [1780, 1850], "priceFrom": 21500000 }
+  ],
+  "price": { "min": 16500000, "max": 23000000, "display": "₹1.65 Cr – ₹2.3 Cr", "onRequest": false },
+  "possession": "2025-03",
+  "landParcelAcres": 4.2,
+  "floors": "G+2",
+  "rera": [{ "number": "P99000000001" }],
+  "highlights": ["Private gardens", "Gated enclave", "Ready to move"],
+  "amenities": ["landscaped-garden", "security", "parking", "cctv", "temple", "jogging-track", "rainwater", "solar"],
+  "connectivity": [
+    { "place": "Vasai Road station", "distance": "2.4 km", "type": "transport" },
+    { "place": "Vasai Fort", "distance": "5 km", "type": "shopping" },
+    { "place": "Cardinal Gracias Hospital", "distance": "2 km", "type": "health" }
+  ],
+  "art": { "scene": "villas", "seed": 3 },
+  "images": { "gallery": [], "floorPlans": [] },
+  "constructionUpdates": [],
+  "faqs": [{ "q": "Is Prabhav Greens ready to move?", "a": "Yes. Occupation certificate received in March 2025." }],
+  "seo": {
+    "title": "Prabhav Greens: 3 & 4 BHK Row Houses in Vasai West",
+    "description": "Ready-to-move 3 & 4 BHK row houses with private gardens in Vasai West. MahaRERA P99000000001.",
+    "keywords": ["row house in Vasai", "ready to move Vasai West"]
+  },
+  "publishedAt": "2024-01-10",
+  "updatedAt": "2026-05-02"
+}

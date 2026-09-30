@@ -1,0 +1,40 @@
+{
+  "slug": "prabhav-business-hub-nallasopara",
+  "name": "Prabhav Business Hub",
+  "tagline": "Ready offices beside Nallasopara station",
+  "description": "Ready-to-use office suites with a shared conference floor and café.",
+  "category": "commercial",
+  "subType": "offices",
+  "status": "completed",
+  "featured": false,
+  "station": "nallasopara",
+  "location": {
+    "address": "Example Station Road",
+    "locality": "Nallasopara West",
+    "city": "Palghar",
+    "state": "Maharashtra",
+    "pincode": "401203",
+    "lat": 19.4202,
+    "lng": 72.8155,
+    "distanceFromStation": "300 m"
+  },
+  "units": [{ "label": "Office", "carpetAreaSqft": [300, 900], "priceFrom": 3800000 }],
+  "price": { "min": 3800000, "max": 11000000, "display": "₹38 L – ₹1.1 Cr", "onRequest": false },
+  "possession": "2024-11",
+  "floors": "G+6",
+  "rera": [{ "number": "P99000000003" }],
+  "highlights": ["Ready to move", "300 m to station", "Conference floor"],
+  "amenities": ["lift", "parking", "power-backup", "cctv", "wifi", "fire-safety"],
+  "connectivity": [{ "place": "Nallasopara station", "distance": "300 m", "type": "transport" }],
+  "art": { "scene": "commercial", "seed": 5 },
+  "images": { "gallery": [], "floorPlans": [] },
+  "constructionUpdates": [],
+  "faqs": [],
+  "seo": {
+    "title": "Prabhav Business Hub: Ready Offices in Nallasopara West",
+    "description": "Ready-to-move offices 300 m from Nallasopara station from ₹38 L. MahaRERA P99000000003.",
+    "keywords": ["office in Nallasopara"]
+  },
+  "publishedAt": "2023-06-01",
+  "updatedAt": "2025-12-01"
+}

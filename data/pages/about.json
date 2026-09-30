@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "Twenty-five years of building trust",
+    "subtitle": "A family-run developer shaping the Western suburbs since 2000."
+  },
+  "story": {
+    "title": "Our story",
+    "lines": [
+      "Started with one building in Virar in 2000.",
+      "Grew station by station, family by family.",
+      "Today: homes, high streets and industrial parks."
+    ]
+  },
+  "pillars": [
+    { "icon": "eye", "title": "Vision", "text": "The most trusted name in the Western suburbs." },
+    { "icon": "target", "title": "Mission", "text": "Quality homes, delivered on time, priced honestly." },
+    { "icon": "heart", "title": "Values", "text": "Integrity, craft and care in every brick." }
+  ],
+  "leadership": [
+    { "name": "Founder name", "role": "Founder & Chairman", "initials": "FN" },
+    { "name": "Director name", "role": "Managing Director", "initials": "MD" },
+    { "name": "Director name", "role": "Director, Projects", "initials": "DP" }
+  ],
+  "milestones": [
+    { "year": "2000", "title": "First building in Virar" },
+    { "year": "2006", "title": "100 families handed over" },
+    { "year": "2012", "title": "First commercial complex" },
+    { "year": "2017", "title": "All projects on MahaRERA" },
+    { "year": "2021", "title": "Industrial parks launched" },
+    { "year": "2025", "title": "2,500+ families home" }
+  ],
+  "quality": [
+    { "icon": "shield-check", "title": "MahaRERA registered" },
+    { "icon": "badge-check", "title": "ISO 9001 processes" },
+    { "icon": "hard-hat", "title": "Zero-harm sites" },
+    { "icon": "leaf", "title": "Green practices" }
+  ],
+  "csr": [
+    { "icon": "graduation-cap", "title": "Education", "text": "Scholarships for workers' children" },
+    { "icon": "trees", "title": "Tree plantation", "text": "10,000 saplings planted" },
+    { "icon": "hand-heart", "title": "Health camps", "text": "Free check-ups on every site" }
+  ]
+}

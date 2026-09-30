@@ -1,0 +1,8 @@
+[
+  { "slug": "virar", "name": "Virar", "line": "Western", "order": 1, "intro": "The fastest-growing end of the Western line, with fast locals to Churchill and new ring-road links.", "seo": { "title": "Flats, Shops & Industrial Units near Virar Station", "description": "RERA-registered homes, shops and industrial galas by Prabhav Construction near Virar station." } },
+  { "slug": "nallasopara", "name": "Nallasopara", "line": "Western", "order": 2, "intro": "A busy commercial hub with strong rental demand and quick access to the Vasai-Virar belt.", "seo": { "title": "Flats & Shops near Nallasopara Station", "description": "Residential and commercial projects by Prabhav Construction near Nallasopara station." } },
+  { "slug": "vasai-road", "name": "Vasai Road", "line": "Western", "order": 3, "intro": "A junction station linking the Western line with the Diva–Panvel corridor, backed by an established industrial estate.", "seo": { "title": "Projects near Vasai Road Station", "description": "Homes and industrial galas by Prabhav Construction near Vasai Road station." } },
+  { "slug": "naigaon", "name": "Naigaon", "line": "Western", "order": 4 },
+  { "slug": "bhayandar", "name": "Bhayandar", "line": "Western", "order": 5 },
+  { "slug": "mira-road", "name": "Mira Road", "line": "Western", "order": 6 }
+]

@@ -1,0 +1,15 @@
+{
+  "titleTemplate": "%s | Prabhav Construction",
+  "pages": {
+    "home": { "title": "Prabhav Construction: Residential, Commercial & Industrial Projects in Mumbai Western Suburbs", "description": "MahaRERA-registered homes, shops and industrial galas near Virar, Nallasopara and Vasai Road stations. Building trust since 2000." },
+    "about": { "title": "About us", "description": "Prabhav Construction has built homes, high streets and industrial parks in the Western suburbs since 2000." },
+    "projects": { "title": "Our projects", "description": "Residential, commercial and industrial projects by Prabhav Construction near Western line stations." },
+    "career": { "title": "Careers at Prabhav Construction", "description": "Open roles in projects, sales, design and customer care at Prabhav Construction." },
+    "contact": { "title": "Contact Prabhav Construction", "description": "Call, WhatsApp or visit Prabhav Construction's head office in Virar West. Open Monday to Saturday." },
+    "thankYou": { "title": "Thank you", "description": "We have received your details." },
+    "privacy": { "title": "Privacy policy", "description": "How Prabhav Construction collects and protects your personal data." },
+    "terms": { "title": "Terms & conditions", "description": "Terms of use for the Prabhav Construction website." },
+    "disclaimer": { "title": "RERA disclaimer", "description": "Advertising and RERA disclaimer for Prabhav Construction projects." }
+  },
+  "sameAs": ["https://www.instagram.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://www.youtube.com/"]
+}

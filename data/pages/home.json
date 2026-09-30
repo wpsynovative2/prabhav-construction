@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "badge": "Since 2000 · MahaRERA registered",
+    "headline": ["Built on trust.", "Crafted to last."],
+    "subline": "Homes, shops and industrial spaces along the Western line.",
+    "primaryCta": { "label": "Explore projects", "href": "/projects" },
+    "secondaryCta": { "label": "Book a site visit", "intent": "site-visit" },
+    "trust": "2,500+ families moved in"
+  },
+  "stats": [
+    { "value": 25, "suffix": "+", "label": "Years building", "icon": "award" },
+    { "value": 40, "suffix": "+", "label": "Projects delivered", "icon": "building" },
+    { "value": 2500, "suffix": "+", "label": "Happy families", "icon": "home" },
+    { "value": 100, "suffix": "%", "label": "RERA compliant", "icon": "shield" }
+  ],
+  "sections": {
+    "featured": { "eyebrow": "Featured", "title": "Signature projects", "subtitle": "Handpicked addresses, open for site visits." },
+    "categories": { "eyebrow": "What we build", "title": "Spaces for every ambition" },
+    "about": {
+      "eyebrow": "About Prabhav",
+      "title": "More than buildings, we build belonging",
+      "points": [
+        { "icon": "gem", "title": "Premium materials", "text": "Branded fittings, tested concrete." },
+        { "icon": "clock", "title": "On-time delivery", "text": "Tracked, published, kept." },
+        { "icon": "file-check", "title": "Clear paperwork", "text": "Clear titles, full RERA disclosure." },
+        { "icon": "handshake", "title": "After-sales care", "text": "A team that picks up the phone." }
+      ]
+    },
+    "stations": { "eyebrow": "Where we build", "title": "Minutes from the station" },
+    "process": {
+      "eyebrow": "How it works",
+      "title": "Your home in four steps",
+      "steps": [
+        { "icon": "search", "title": "Discover", "text": "Pick a project" },
+        { "icon": "map-pin", "title": "Visit", "text": "Free site tour" },
+        { "icon": "file-signature", "title": "Book", "text": "Transparent pricing" },
+        { "icon": "key", "title": "Move in", "text": "Keys, on time" }
+      ]
+    },
+    "testimonials": { "eyebrow": "Testimonials", "title": "Words from our families" },
+    "cta": { "title": "Visit a project this weekend", "subtitle": "Free pick-up from the station. No obligation.", "button": "Book a site visit" }
+  },
+  "marquee": ["MahaRERA registered", "Vastu compliant", "Bank-approved loans", "On-time possession", "Premium fittings", "Walk to station", "Clear titles", "Earthquake-resistant RCC"]
+}
