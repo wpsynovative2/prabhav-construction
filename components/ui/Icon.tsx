@@ -2,7 +2,7 @@ import {
   ArrowUpDown, Award, Baby, BadgeCheck, Building2, Bus, Calendar, Car, Cctv, Clock, Droplets, Dumbbell, Eye,
   FileCheck, FilePenLine, Flame, Flower, Footprints, Gem, GraduationCap, HandHeart, Handshake, HardHat, Heart,
   HeartPulse, House, Key, Landmark, Leaf, MapPin, Search, Shield, ShieldCheck, Sofa, Sun, Target, Trees,
-  TrendingUp, Trophy, Truck, Users, Waves, Wifi, Zap, type LucideIcon, type LucideProps,
+  TrendingUp, Trophy, Truck, Users, Waves, Wifi, Zap, Route, Ruler, Scale, Factory, type LucideIcon, type LucideProps,
 } from "lucide-react";
 
 const MAP: Record<string, LucideIcon> = {
@@ -13,7 +13,7 @@ const MAP: Record<string, LucideIcon> = {
   search: Search, "map-pin": MapPin, "file-signature": FilePenLine, key: Key, eye: Eye, target: Target,
   heart: Heart, "badge-check": BadgeCheck, "hard-hat": HardHat, leaf: Leaf, "graduation-cap": GraduationCap,
   "hand-heart": HandHeart, users: Users, "trending-up": TrendingUp, "heart-pulse": HeartPulse,
-  calendar: Calendar, bus: Bus, trophy: Trophy,
+  calendar: Calendar, bus: Bus, trophy: Trophy, route: Route, ruler: Ruler, scale: Scale, factory: Factory,
 };
 
 /** Renders a lucide icon from the kebab-case name stored in /data JSON. */

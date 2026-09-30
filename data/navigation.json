@@ -11,6 +11,7 @@
       "title": "Company",
       "links": [
         { "label": "About us", "href": "/about-us" },
+        { "label": "Insights", "href": "/insights" },
         { "label": "Career", "href": "/career" },
         { "label": "Contact us", "href": "/contact-us" }
       ]

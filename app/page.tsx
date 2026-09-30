@@ -8,6 +8,7 @@ import { StationPresence } from "@/components/home/StationPresence";
 import { Process } from "@/components/home/Process";
 import { Testimonials } from "@/components/home/Testimonials";
 import { CtaBand } from "@/components/home/CtaBand";
+import { InsightsSection } from "@/components/home/InsightsSection";
 import { ProjectGrid } from "@/components/projects/ProjectGrid";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { ButtonLink } from "@/components/ui/Button";
@@ -16,7 +17,7 @@ import { Accordion } from "@/components/ui/Accordion";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getCategoryCounts, getFeaturedProjects } from "@/lib/data/projects";
 import { getActiveStations, getLineStations, stations } from "@/lib/data/stations";
-import { faqs, home, seo, site, testimonials } from "@/lib/data/content";
+import { faqs, home, insights, seo, site, testimonials } from "@/lib/data/content";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { faqLd, localBusinessLd } from "@/lib/seo/jsonld";
 
@@ -51,6 +52,10 @@ export default function HomePage() {
           }
         />
         <ProjectGrid projects={featured} stationNames={stationNames} />
+      </Section>
+
+      <Section tone="surface">
+        <InsightsSection items={insights} />
       </Section>
 
       <Marquee items={home.marquee} />

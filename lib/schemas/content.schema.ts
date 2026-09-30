@@ -80,3 +80,19 @@ export const TestimonialsSchema = z.array(
   }),
 );
 export type Testimonial = z.infer<typeof TestimonialsSchema>[number];
+
+export const INSIGHT_CATEGORIES = ["Market", "Buyer guide", "Policy", "Infrastructure"] as const;
+export const InsightsSchema = z.array(
+  z.object({
+    slug: z.string().regex(/^[a-z0-9-]+$/),
+    title: z.string().max(90),
+    category: z.enum(INSIGHT_CATEGORIES),
+    icon: z.string(),
+    date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    readMins: z.number().int().positive(),
+    featured: z.boolean().default(false),
+    summary: z.string().max(140, "Keep summaries to one line"),
+    points: z.array(z.string().max(90)).min(2),
+  }),
+);
+export type Insight = z.infer<typeof InsightsSchema>[number];
