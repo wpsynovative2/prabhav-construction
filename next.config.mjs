@@ -1,6 +1,8 @@
-import type { NextConfig } from "next";
+// Plain JS (not next.config.ts) so it loads without SWC: Hostinger's glibc is too old
+// for the native SWC binary, and the WASM fallback can't transpile a TypeScript config.
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
     qualities: [75, 90],
