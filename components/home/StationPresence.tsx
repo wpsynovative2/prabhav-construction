@@ -72,12 +72,24 @@ export function StationPresence({ stations }: { stations: LineStation[] }) {
 
         {/* Mobile: vertical route */}
         <ol className="relative grid gap-1 md:hidden">
-          <span className="absolute top-3 bottom-3 left-[13px] w-1 rounded bg-line" aria-hidden />
+          {/* Rail with gold dashed track, and a train running down it on a loop */}
+          <span className="absolute top-3 bottom-3 left-[10px] w-2.5 rounded-full bg-line" aria-hidden />
+          <span className="absolute top-3 bottom-3 left-[14px] w-0.5 [background-image:repeating-linear-gradient(to_bottom,var(--accent)_0_8px,transparent_8px_14px)] opacity-80" aria-hidden />
+          <span className="pointer-events-none absolute inset-y-3 left-[6px] z-[5] w-[18px]" aria-hidden>
+            <span className="train-v absolute left-0 flex h-10 w-[18px] flex-col items-center justify-center gap-1 rounded-full bg-primary shadow-soft">
+              <span className="h-1.5 w-2 rounded-[1px] bg-bg" />
+              <span className="h-1.5 w-2 rounded-[1px] bg-bg" />
+              <span className="h-1.5 w-2 rounded-[1px] bg-accent" />
+            </span>
+          </span>
           {stations.map((s) => (
             <li key={s.slug} className="relative">
               {s.count ? (
                 <Link href={`/projects/station/${s.slug}`} className="flex items-center gap-4 rounded-xl py-2.5 pr-2">
-                  <span className="relative z-10 grid size-7 place-items-center rounded-full border-[3px] border-primary bg-accent" />
+                  <span className="relative z-10 grid size-7 place-items-center">
+                    <span className="absolute inset-0 animate-ping rounded-full bg-accent/40 [animation-duration:2.8s]" />
+                    <span className="relative size-7 rounded-full border-[3px] border-primary bg-accent" />
+                  </span>
                   <span className="flex-1 font-display text-lg text-fg">{s.name}</span>
                   <span className="rounded-full bg-primary px-2.5 py-0.5 text-xs text-primary-fg">{s.count}</span>
                   <ArrowRight className="size-4 text-accent-text" />

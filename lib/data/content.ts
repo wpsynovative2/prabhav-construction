@@ -4,7 +4,8 @@ import amenitiesJson from "@/data/amenities.json";
 import testimonialsJson from "@/data/testimonials.json";
 import jobsJson from "@/data/jobs.json";
 import insightsJson from "@/data/insights.json";
-import { AmenitiesSchema, InsightsSchema, JobsSchema, SiteSchema, TestimonialsSchema } from "@/lib/schemas/content.schema";
+import constructionsJson from "@/data/constructions.json";
+import { AmenitiesSchema, ConstructionsSchema, InsightsSchema, JobsSchema, SiteSchema, TestimonialsSchema } from "@/lib/schemas/content.schema";
 
 export { default as navigation } from "@/data/navigation.json";
 export { default as home } from "@/data/pages/home.json";
@@ -28,3 +29,6 @@ export const insights = InsightsSchema.parse(insightsJson).sort(
   (a, b) => Number(b.featured) - Number(a.featured) || b.date.localeCompare(a.date),
 );
 export const getInsight = (slug: string) => insights.find((i) => i.slug === slug);
+
+/** Delivered buildings, newest first */
+export const constructions = ConstructionsSchema.parse(constructionsJson).sort((a, b) => b.year - a.year);

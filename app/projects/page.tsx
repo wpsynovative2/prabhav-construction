@@ -30,7 +30,7 @@ export default function ProjectsPage() {
     <>
       <PageHero
         title="Our projects"
-        subtitle="Homes, high streets and industrial parks, each minutes from the station."
+        subtitle="Homes, high streets and industrial parks, each one built by Prabhav."
         crumbs={[{ name: "Projects", href: "/projects" }]}
       />
       <section className="bg-bg py-12 md:py-16">

@@ -1,15 +1,13 @@
 import Link from "next/link";
-import { ArrowUpRight, CalendarCheck, MapPin, TrainFront } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CalendarCheck, MapPin, TrainFront } from "lucide-react";
 import type { Project } from "@/lib/schemas/project.schema";
 import { StatusBadge } from "@/components/ui/Badge";
-import { CtaButton } from "@/components/ui/CtaButton";
-import { CATEGORY_LABEL, cn, formatMonth, formatPrice } from "@/lib/utils";
+import { CATEGORY_LABEL, cn, formatMonth } from "@/lib/utils";
 import { ProjectVisual } from "./ProjectVisual";
 
 type Props = { project: Project; stationName?: string; className?: string };
 
 export function ProjectCard({ project: p, stationName, className }: Props) {
-  const priceFrom = p.price.onRequest || !p.price.min ? "On request" : formatPrice(p.price.min);
   return (
     <article
       className={cn(
@@ -59,20 +57,19 @@ export function ProjectCard({ project: p, stationName, className }: Props) {
           ))}
         </ul>
 
-        <div className="mt-auto flex items-end justify-between gap-3 border-t border-dashed border-line pt-4">
-          <div>
-            <p className="text-xs text-muted">Starting from</p>
-            <p className="font-display text-xl text-accent-text">{priceFrom}</p>
-            {p.possession ? (
-              <p className="mt-1 inline-flex items-center gap-1 text-xs text-muted">
-                <CalendarCheck className="size-3.5" />
-                {p.status === "completed" ? "Ready to move" : `Possession ${formatMonth(p.possession)}`}
-              </p>
-            ) : null}
-          </div>
-          <CtaButton source={`card:${p.slug}`} project={p.name} size="sm" variant="outline" className="relative z-10">
-            Enquire
-          </CtaButton>
+        <div className="mt-auto flex items-center justify-between gap-3 border-t border-dashed border-line pt-4">
+          <p className="inline-flex items-center gap-1.5 text-sm text-muted">
+            <CalendarCheck className="size-4 text-accent-text" />
+            {p.status === "completed"
+              ? "Delivered"
+              : p.possession
+                ? `Possession ${formatMonth(p.possession)}`
+                : "Launching soon"}
+          </p>
+          <span className="inline-flex items-center gap-1 text-sm font-medium text-primary">
+            View project
+            <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </span>
         </div>
       </div>
     </article>

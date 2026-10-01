@@ -16,7 +16,7 @@ import { Marquee } from "@/components/ui/Marquee";
 import { Accordion } from "@/components/ui/Accordion";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getCategoryCounts, getFeaturedProjects } from "@/lib/data/projects";
-import { getActiveStations, getLineStations, stations } from "@/lib/data/stations";
+import { getLineStations, stations } from "@/lib/data/stations";
 import { faqs, home, insights, seo, site, testimonials } from "@/lib/data/content";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { faqLd, localBusinessLd } from "@/lib/seo/jsonld";
@@ -32,11 +32,10 @@ export default function HomePage() {
   const s = home.sections;
   const featured = getFeaturedProjects().slice(0, 3);
   const stationNames = Object.fromEntries(stations.map((st) => [st.slug, st.name]));
-  const active = getActiveStations().map(({ slug, name, count }) => ({ slug, name, count }));
 
   return (
     <>
-      <Hero hero={home.hero} stations={active} />
+      <Hero hero={home.hero} />
       <StatsRow stats={home.stats} />
 
       <Section>

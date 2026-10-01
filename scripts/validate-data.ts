@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { ProjectSchema } from "../lib/schemas/project.schema";
-import { AmenitiesSchema, InsightsSchema, JobsSchema, SiteSchema, StationsSchema, TestimonialsSchema } from "../lib/schemas/content.schema";
+import { AmenitiesSchema, ConstructionsSchema, InsightsSchema, JobsSchema, SiteSchema, StationsSchema, TestimonialsSchema } from "../lib/schemas/content.schema";
 
 const root = path.join(process.cwd(), "data");
 const read = (f: string) => JSON.parse(fs.readFileSync(path.join(root, f), "utf8"));
@@ -19,6 +19,7 @@ function check(label: string, fn: () => void) {
 check("site.json", () => SiteSchema.parse(read("site.json")));
 check("jobs.json", () => JobsSchema.parse(read("jobs.json")));
 check("insights.json", () => InsightsSchema.parse(read("insights.json")));
+check("constructions.json", () => ConstructionsSchema.parse(read("constructions.json")));
 check("testimonials.json", () => TestimonialsSchema.parse(read("testimonials.json")));
 const stations = StationsSchema.parse(read("stations.json"));
 const amenities = AmenitiesSchema.parse(read("amenities.json"));

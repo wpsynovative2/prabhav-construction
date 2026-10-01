@@ -96,3 +96,23 @@ export const InsightsSchema = z.array(
   }),
 );
 export type Insight = z.infer<typeof InsightsSchema>[number];
+
+export const ConstructionsSchema = z.array(
+  z.object({
+    slug: z.string().regex(/^[a-z0-9-]+$/),
+    name: z.string(),
+    locality: z.string(),
+    category: z.enum(["residential", "commercial", "industrial"]),
+    scene: z.enum(["towers", "villas", "commercial", "industrial"]),
+    seed: z.number().default(1),
+    year: z.number().int().min(1990).max(2100),
+    floors: z.string(),
+    units: z.number().int().positive(),
+    builtUpSqft: z.number().positive(),
+    highlight: z.string().max(60),
+    /** Optional link to a project page when the building is also listed under Projects */
+    project: z.string().optional(),
+    image: z.object({ src: z.string().startsWith("/"), alt: z.string() }).optional(),
+  }),
+);
+export type Construction = z.infer<typeof ConstructionsSchema>[number];

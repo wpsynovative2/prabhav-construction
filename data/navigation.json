@@ -1,27 +1,72 @@
 {
   "main": [
-    { "label": "Home", "href": "/" },
-    { "label": "About us", "href": "/about-us" },
-    { "label": "Projects", "href": "/projects", "dropdown": true },
-    { "label": "Career", "href": "/career" },
-    { "label": "Contact us", "href": "/contact-us" }
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About us",
+      "href": "/about-us"
+    },
+    {
+      "label": "Projects",
+      "href": "/projects",
+      "dropdown": true
+    },
+    {
+      "label": "Our constructions",
+      "href": "/our-constructions"
+    },
+    {
+      "label": "Career",
+      "href": "/career"
+    },
+    {
+      "label": "Contact us",
+      "href": "/contact-us"
+    }
   ],
   "footer": [
     {
       "title": "Company",
       "links": [
-        { "label": "About us", "href": "/about-us" },
-        { "label": "Insights", "href": "/insights" },
-        { "label": "Career", "href": "/career" },
-        { "label": "Contact us", "href": "/contact-us" }
+        {
+          "label": "About us",
+          "href": "/about-us"
+        },
+        {
+          "label": "Our constructions",
+          "href": "/our-constructions"
+        },
+        {
+          "label": "Insights",
+          "href": "/insights"
+        },
+        {
+          "label": "Career",
+          "href": "/career"
+        },
+        {
+          "label": "Contact us",
+          "href": "/contact-us"
+        }
       ]
     },
     {
       "title": "Legal",
       "links": [
-        { "label": "Privacy policy", "href": "/privacy-policy" },
-        { "label": "Terms & conditions", "href": "/terms-and-conditions" },
-        { "label": "RERA disclaimer", "href": "/disclaimer" }
+        {
+          "label": "Privacy policy",
+          "href": "/privacy-policy"
+        },
+        {
+          "label": "Terms & conditions",
+          "href": "/terms-and-conditions"
+        },
+        {
+          "label": "RERA disclaimer",
+          "href": "/disclaimer"
+        }
       ]
     }
   ]

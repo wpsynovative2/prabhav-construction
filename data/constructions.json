@@ -1,0 +1,10 @@
+[
+  { "slug": "prabhav-greens", "name": "Prabhav Greens", "locality": "Vasai West", "category": "residential", "scene": "villas", "seed": 3, "year": 2025, "floors": "G+2", "units": 42, "builtUpSqft": 76000, "highlight": "Gated row-house enclave", "project": "prabhav-greens-vasai" },
+  { "slug": "prabhav-business-hub", "name": "Prabhav Business Hub", "locality": "Nallasopara West", "category": "commercial", "scene": "commercial", "seed": 5, "year": 2024, "floors": "G+6", "units": 96, "builtUpSqft": 88000, "highlight": "Glass-façade office block", "project": "prabhav-business-hub-nallasopara" },
+  { "slug": "prabhav-arcade", "name": "Prabhav Arcade", "locality": "Virar West", "category": "commercial", "scene": "commercial", "seed": 17, "year": 2021, "floors": "G+4", "units": 64, "builtUpSqft": 52000, "highlight": "High-street retail arcade" },
+  { "slug": "prabhav-udyog-nagar", "name": "Prabhav Udyog Nagar", "locality": "Vasai East", "category": "industrial", "scene": "industrial", "seed": 4, "year": 2021, "floors": "G+1", "units": 38, "builtUpSqft": 120000, "highlight": "First industrial estate" },
+  { "slug": "prabhav-park", "name": "Prabhav Park", "locality": "Virar East", "category": "residential", "scene": "towers", "seed": 12, "year": 2018, "floors": "G+14", "units": 168, "builtUpSqft": 190000, "highlight": "Three towers, central garden" },
+  { "slug": "prabhav-vihar", "name": "Prabhav Vihar", "locality": "Nallasopara East", "category": "residential", "scene": "towers", "seed": 26, "year": 2014, "floors": "G+10", "units": 120, "builtUpSqft": 132000, "highlight": "Twin residential towers" },
+  { "slug": "prabhav-complex", "name": "Prabhav Complex", "locality": "Virar West", "category": "commercial", "scene": "commercial", "seed": 31, "year": 2012, "floors": "G+3", "units": 48, "builtUpSqft": 41000, "highlight": "Our first commercial build" },
+  { "slug": "prabhav-niwas", "name": "Prabhav Niwas", "locality": "Virar West", "category": "residential", "scene": "towers", "seed": 2, "year": 2002, "floors": "G+4", "units": 32, "builtUpSqft": 28000, "highlight": "Where it all began" }
+]

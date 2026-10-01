@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { BadgeCheck, Bus, IndianRupee, X } from "lucide-react";
+import { BadgeCheck, Building2, HardHat, X } from "lucide-react";
 import { LogoMark } from "@/components/brand/LogoMark";
 import { LeadForm } from "./LeadForm";
 import type { LeadContext, ProjectOption } from "./LeadModalProvider";
@@ -16,8 +16,8 @@ const TITLES: Record<string, string> = {
 };
 
 const PERKS = [
-  { icon: Bus, text: "Free pick-up from the station" },
-  { icon: IndianRupee, text: "Best launch pricing" },
+  { icon: Building2, text: "Direct from the developer" },
+  { icon: HardHat, text: "Site tours with our engineers" },
   { icon: BadgeCheck, text: "MahaRERA registered" },
 ];
 
@@ -89,7 +89,7 @@ export function LeadModal({ context, projects, onClose }: Props) {
               <LogoMark className="absolute -right-16 -bottom-10 h-72 w-auto opacity-20" />
               <div className="relative">
                 <LogoMark className="h-10 w-auto" />
-                <p className="mt-6 font-display text-3xl leading-tight">Let&apos;s find your perfect address.</p>
+                <p className="mt-6 font-display text-3xl leading-tight">Talk to the Prabhav team.</p>
                 <ul className="mt-8 grid gap-4">
                   {PERKS.map(({ icon: I, text }) => (
                     <li key={text} className="flex items-center gap-3 text-sm text-white/85">

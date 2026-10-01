@@ -1,24 +1,21 @@
-import { ArrowRight, BadgeCheck, CalendarCheck, Star, TrainFront } from "lucide-react";
+import { ArrowRight, BadgeCheck, HardHat } from "lucide-react";
 import { HeroScene } from "@/components/brand/HeroScene";
 import { LogoMark } from "@/components/brand/LogoMark";
 import { ButtonLink } from "@/components/ui/Button";
-import { CtaButton } from "@/components/ui/CtaButton";
 import { Container } from "@/components/ui/Container";
-import type { Intent } from "@/lib/schemas/lead.schema";
-import { QuickFinder, type FinderStation } from "./QuickFinder";
 
 type HeroData = {
   badge: string;
   headline: string[];
   subline: string;
   primaryCta: { label: string; href: string };
-  secondaryCta: { label: string; intent: string };
-  trust: string;
+  secondaryCta: { label: string; href: string };
+  trust: { value: string; label: string }[];
 };
 
 const d = (s: number) => ({ "--d": `${s}s` }) as React.CSSProperties;
 
-export function Hero({ hero, stations }: { hero: HeroData; stations: FinderStation[] }) {
+export function Hero({ hero }: { hero: HeroData }) {
   const [line1, line2] = hero.headline;
   return (
     <section className="relative -mt-[84px] overflow-hidden pt-[84px]">
@@ -27,7 +24,7 @@ export function Hero({ hero, stations }: { hero: HeroData; stations: FinderStati
       <div className="dot-grid pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(70%_60%_at_20%_30%,black,transparent)]" />
       <LogoMark className="pointer-events-none absolute top-24 -left-40 h-[520px] w-auto -rotate-12 opacity-[0.06]" tone="current" />
 
-      <Container className="relative grid items-center gap-10 pt-8 pb-40 md:pt-12 lg:grid-cols-[1.05fr_1fr] lg:gap-6 lg:pb-44">
+      <Container className="relative grid items-center gap-10 pt-8 pb-12 md:pt-12 lg:grid-cols-[1.05fr_1fr] lg:gap-6 lg:pb-16">
         <div className="relative z-10 max-w-xl">
           <span className="hero-rise intro-delay inline-flex items-center gap-2 rounded-full border border-accent/40 bg-surface-raised/80 px-4 py-1.5 text-sm text-accent-text shadow-soft backdrop-blur" style={d(0.05)}>
             <span className="relative flex size-2">
@@ -55,29 +52,21 @@ export function Hero({ hero, stations }: { hero: HeroData; stations: FinderStati
               {hero.primaryCta.label}
               <ArrowRight className="size-4 transition-transform group-hover/btn:translate-x-1" />
             </ButtonLink>
-            <CtaButton source="home:hero" intent={hero.secondaryCta.intent as Intent} variant="outline" size="lg">
-              <CalendarCheck className="size-4" />
+            <ButtonLink href={hero.secondaryCta.href} variant="outline" size="lg">
+              <HardHat className="size-4" />
               {hero.secondaryCta.label}
-            </CtaButton>
+            </ButtonLink>
           </div>
 
-          <div className="hero-rise intro-delay mt-10 flex items-center gap-4" style={d(0.75)}>
-            <div className="flex -space-x-3">
-              {["#8a4a26", "#b08f25", "#612f15", "#d19a5c"].map((c, i) => (
-                <span key={c} className="grid size-10 place-items-center rounded-full border-2 border-bg text-xs font-semibold text-white" style={{ background: c }}>
-                  {["RK", "AS", "PM", "NJ"][i]}
-                </span>
-              ))}
-            </div>
-            <div>
-              <div className="flex gap-0.5 text-accent">
-                {Array.from({ length: 5 }, (_, i) => (
-                  <Star key={i} className="size-4 fill-current" />
-                ))}
+          <dl className="hero-rise intro-delay mt-10 grid max-w-md grid-cols-3 divide-x divide-line border-y border-line py-4" style={d(0.75)}>
+            {hero.trust.map((t) => (
+              <div key={t.label} className="px-4 first:pl-0">
+                <dt className="sr-only">{t.label}</dt>
+                <dd className="font-display text-2xl text-fg md:text-3xl">{t.value}</dd>
+                <dd className="text-xs text-muted">{t.label}</dd>
               </div>
-              <p className="text-sm text-muted">{hero.trust}</p>
-            </div>
-          </div>
+            ))}
+          </dl>
         </div>
 
         {/* Illustration with floating proof cards */}
@@ -106,16 +95,12 @@ export function Hero({ hero, stations }: { hero: HeroData; stations: FinderStati
           </div>
 
           <div className="floaty absolute top-[4%] right-[8%] hidden items-center gap-2 rounded-full border border-line bg-surface-raised/90 px-3 py-2 text-xs font-medium text-fg shadow-soft backdrop-blur [animation-delay:-1.5s] sm:flex">
-            <TrainFront className="size-4 text-accent-text" />
-            Minutes from the station
+            <HardHat className="size-4 text-accent-text" />
+            Engineered in-house
           </div>
         </div>
       </Container>
 
-      {/* Quick finder overlaps the hero edge, like a search console */}
-      <Container className="relative z-20 -mt-28 lg:-mt-32">
-        <QuickFinder stations={stations} />
-      </Container>
     </section>
   );
 }

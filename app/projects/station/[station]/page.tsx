@@ -33,7 +33,7 @@ export default async function StationPage({ params }: PageProps<"/projects/stati
   return (
     <LandingPage
       title={`Projects near ${s.name}`}
-      intro={s.intro ?? `Prabhav addresses a short ride from ${s.name} station.`}
+      intro={s.intro ?? `Developments by Prabhav near ${s.name} station.`}
       crumbs={[
         { name: "Projects", href: "/projects" },
         { name: s.name, href: `/projects/station/${s.slug}` },
@@ -42,7 +42,7 @@ export default async function StationPage({ params }: PageProps<"/projects/stati
       stationNames={stationNames}
       faqs={[
         { q: `How far are Prabhav projects from ${s.name} station?`, a: projects.map((p) => `${p.name}: ${p.location.distanceFromStation ?? "nearby"}`).join(". ") + "." },
-        { q: "Can you arrange a pick-up from the station?", a: "Yes. Book a site visit and we will pick you up from the station for free." },
+        { q: "Can I visit the site?", a: "Yes. Schedule a site tour and our project engineers will walk you through it." },
       ]}
       source={`station:${s.slug}`}
       phone={site.phone}

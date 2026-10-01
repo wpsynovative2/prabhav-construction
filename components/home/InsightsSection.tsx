@@ -12,9 +12,9 @@ export function InsightsSection({ items }: { items: Insight[] }) {
   return (
     <>
       <SectionHeading
-        eyebrow="Real estate insights"
-        title="Latest from the market"
-        subtitle="News, guides and trends for smarter property decisions."
+        eyebrow="News & insights"
+        title="From the Prabhav desk"
+        subtitle="Updates, guides and perspectives from our team."
         action={
           <ButtonLink href="/insights" variant="outline">
             All insights

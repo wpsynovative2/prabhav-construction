@@ -239,6 +239,15 @@ body {
   0%, 100% { transform: translateX(0); }
   50% { transform: translateX(-18px); }
 }
+/* Mobile route map: train runs down the vertical rail */
+@keyframes train-v {
+  from { top: 0; }
+  to { top: calc(100% - 2.5rem); }
+}
+.train-v {
+  animation: train-v 9s linear infinite;
+}
+
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: none; }

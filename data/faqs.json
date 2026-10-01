@@ -1,15 +1,36 @@
 {
   "home": [
-    { "q": "Are all Prabhav projects RERA registered?", "a": "Yes. Every launched project carries a MahaRERA number, shown on its project page." },
-    { "q": "Do you arrange home loans?", "a": "Our projects are approved by leading banks, and our team helps with the paperwork." },
-    { "q": "Can I book a site visit on weekends?", "a": "Yes. Site visits run seven days a week, with free pick-up from the station." }
+    {
+      "q": "Who builds Prabhav projects?",
+      "a": "Our own in-house design, engineering and site teams, from foundation to handover."
+    },
+    {
+      "q": "Are all Prabhav projects RERA registered?",
+      "a": "Yes. Every launched project carries a MahaRERA number, shown on its project page."
+    },
+    {
+      "q": "Can I visit a site under construction?",
+      "a": "Yes. Our project engineers walk you through the site, seven days a week."
+    }
   ],
   "contact": [
-    { "q": "How soon will you call back?", "a": "Within one working day, usually the same day." },
-    { "q": "Do you have an office I can visit?", "a": "Yes. Our head office address and hours are listed on this page." }
+    {
+      "q": "How soon will you call back?",
+      "a": "Within one working day, usually the same day."
+    },
+    {
+      "q": "Do you have an office I can visit?",
+      "a": "Yes. Our head office address and hours are listed on this page."
+    }
   ],
   "career": [
-    { "q": "How do I apply?", "a": "Open a role and fill in the short form with your resume." },
-    { "q": "Do you hire freshers?", "a": "Yes, for trainee engineer and sales roles when openings are listed." }
+    {
+      "q": "How do I apply?",
+      "a": "Open a role and fill in the short form with your resume."
+    },
+    {
+      "q": "Do you hire freshers?",
+      "a": "Yes, for trainee engineer and sales roles when openings are listed."
+    }
   ]
 }
