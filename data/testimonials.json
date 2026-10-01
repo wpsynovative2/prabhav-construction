@@ -1,7 +1,32 @@
 [
-  { "name": "Sample Customer A", "project": "Prabhav Greens", "quote": "Possession came on the date they promised. That says everything.", "rating": 5 },
-  { "name": "Sample Customer B", "project": "Prabhav Business Hub", "quote": "Five minutes from the station and the build quality is excellent.", "rating": 5 },
-  { "name": "Sample Customer C", "project": "Prabhav Residency", "quote": "Transparent pricing, no hidden charges, and a team that listens.", "rating": 5 },
-  { "name": "Sample Customer D", "project": "Prabhav Greens", "quote": "Our garden is the best part of the house. The kids love it.", "rating": 5 },
-  { "name": "Sample Customer E", "project": "Prabhav Plaza", "quote": "Great frontage. My shop was leased before possession.", "rating": 4 }
+  {
+    "name": "Sample Customer A",
+    "project": "Vivaant",
+    "quote": "Possession came on the date they promised. That says everything.",
+    "rating": 5
+  },
+  {
+    "name": "Sample Customer B",
+    "project": "Amberley",
+    "quote": "Five minutes from the station and the build quality is excellent.",
+    "rating": 5
+  },
+  {
+    "name": "Sample Customer C",
+    "project": "Manibhadra Tower",
+    "quote": "Transparent pricing, no hidden charges, and a team that listens.",
+    "rating": 5
+  },
+  {
+    "name": "Sample Customer D",
+    "project": "Evana",
+    "quote": "Our garden is the best part of the house. The kids love it.",
+    "rating": 5
+  },
+  {
+    "name": "Sample Customer E",
+    "project": "Arisha",
+    "quote": "Great location, quality construction and a team that answers every question.",
+    "rating": 4
+  }
 ]

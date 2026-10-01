@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Building2, FlaskConical, HardHat, Layers, ShieldCheck, Sparkles, Waves, ClipboardCheck } from "lucide-react";
+import { Building2, ClipboardCheck, Clock, HardHat, Layers, Leaf, ShieldCheck, Sparkles, Truck } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
 import { LiveSiteCard } from "@/components/constructions/LiveSiteCard";
 import { DeliveredCard } from "@/components/constructions/DeliveredCard";
@@ -9,6 +9,7 @@ import { Container } from "@/components/ui/Container";
 import { CountUp } from "@/components/ui/CountUp";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
+import { cn } from "@/lib/utils";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getAllProjects } from "@/lib/data/projects";
 import { getStation } from "@/lib/data/stations";
@@ -18,55 +19,67 @@ import { itemListLd } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = buildMetadata({ ...seo.pages.constructions, path: "/our-constructions" });
 
+// Capabilities as stated on prabhavgroup.com (Constructor / About pages)
 const CHECKS = [
-  { icon: FlaskConical, title: "Soil & cube tests", text: "Every pour, lab-tested" },
-  { icon: Layers, title: "Slab-by-slab sign-off", text: "Engineer-approved" },
-  { icon: Waves, title: "Waterproofing trials", text: "Flood-tested terraces" },
-  { icon: ShieldCheck, title: "Structural audits", text: "Third-party reviewed" },
-  { icon: ClipboardCheck, title: "Snag-free handover", text: "100-point checklist" },
-  { icon: Sparkles, title: "Branded fittings", text: "Only approved makes" },
+  { icon: Sparkles, title: "Latest techniques", text: "For complex, high-rise projects" },
+  { icon: Truck, title: "Own equipment fleet", text: "At strategic locations across India" },
+  { icon: Clock, title: "Precise timekeeping", text: "Time-bound completion" },
+  { icon: ClipboardCheck, title: "Highest accuracy", text: "Workmanship comes first" },
+  { icon: ShieldCheck, title: "Earthquake-resistant", text: "Structures built to last" },
+  { icon: Leaf, title: "LEED standards", text: "Implemented wherever required" },
 ];
 
 export default function OurConstructionsPage() {
-  const live = getAllProjects().filter((p) => p.status === "ongoing" && p.constructionUpdates.length);
-  const sqft = constructions.reduce((a, c) => a + c.builtUpSqft, 0);
-  const units = constructions.reduce((a, c) => a + c.units, 0);
+  const projects = getAllProjects();
+  const live = projects.filter((p) => p.status === "ongoing" && p.constructionUpdates.length);
+  const inDevelopment = projects.filter((p) => p.status !== "completed").length;
 
   const stats = [
-    { value: constructions.length, suffix: "", label: "Landmark buildings", icon: Building2 },
-    { value: Math.round(sqft / 1000), suffix: "K", label: "Sq ft constructed", icon: Layers },
-    { value: units, suffix: "+", label: "Homes & units handed over", icon: ShieldCheck },
-    { value: live.length, suffix: "", label: "Sites under construction", icon: HardHat },
+    { value: constructions.length, suffix: "+", label: "Buildings constructed", icon: Building2 },
+    { value: 2, suffix: "M+", label: "Sq ft developed", icon: Layers },
+    { value: 35, suffix: "", label: "Floors, tallest tower", icon: ShieldCheck },
+    { value: inDevelopment, suffix: "", label: "Projects in development", icon: HardHat },
   ];
 
   return (
     <>
       <PageHero
         title="Our constructions"
-        subtitle="Every building engineered and built by our own teams, since 2000."
+        subtitle="Towers up to 35 floors, built for Mumbai's leading developers and for our own projects."
         crumbs={[{ name: "Our constructions", href: "/our-constructions" }]}
       />
 
-      {/* Portfolio numbers */}
-      <Container className="pt-12 md:pt-16">
-        <RevealGroup className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5">
-          {stats.map(({ value, suffix, label, icon: I }) => (
-            <RevealItem key={label}>
-              <div className="flex h-full items-center gap-4 rounded-[var(--radius-card)] border border-line bg-surface p-4 md:p-6">
-                <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-surface-raised text-accent-text shadow-soft ring-1 ring-line md:size-14">
-                  <I className="size-6" />
-                </span>
-                <div>
-                  <p className="font-display text-3xl leading-none text-fg md:text-4xl">
-                    <CountUp value={value} suffix={suffix} />
-                  </p>
-                  <p className="mt-1.5 text-xs text-muted md:text-sm">{label}</p>
-                </div>
-              </div>
-            </RevealItem>
-          ))}
-        </RevealGroup>
-      </Container>
+      {/* Portfolio numbers: one raised panel that overlaps into the next section */}
+      <div className="relative z-10 -mb-20 pt-10 md:-mb-24 md:pt-14">
+        <Container>
+          <Reveal>
+            <div className="relative overflow-hidden rounded-[2rem] bg-surface-raised shadow-lift ring-1 ring-line">
+              <span className="gold-fill absolute inset-x-0 top-0 h-1" aria-hidden />
+              <dl className="grid grid-cols-2 md:grid-cols-4">
+                {stats.map(({ value, suffix, label, icon: I }, i) => (
+                  <div
+                    key={label}
+                    className={cn(
+                      "group relative flex flex-col items-center px-4 py-8 text-center md:py-10",
+                      i % 2 === 1 && "border-l border-line",
+                      i >= 2 && "border-t border-line md:border-t-0",
+                      i === 2 && "md:border-l",
+                    )}
+                  >
+                    <span className="grid size-11 place-items-center rounded-full bg-surface text-accent-text ring-1 ring-line transition duration-500 group-hover:-translate-y-1 group-hover:bg-primary group-hover:text-primary-fg" aria-hidden>
+                      <I className="size-5" />
+                    </span>
+                    <dt className="order-last mt-3 max-w-[18ch] text-[0.7rem] leading-snug tracking-[0.16em] text-muted uppercase">{label}</dt>
+                    <dd className="gold-text mt-4 font-display text-4xl leading-none md:text-5xl">
+                      <CountUp value={value} suffix={suffix} />
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </Reveal>
+        </Container>
+      </div>
 
       {live.length ? (
         <Section>
@@ -81,8 +94,8 @@ export default function OurConstructionsPage() {
         </Section>
       ) : null}
 
-      <Section tone="surface">
-        <SectionHeading eyebrow="Delivered" title="Built and handed over" subtitle="A quarter-century of buildings, newest first." />
+      <Section tone="surface" className="pt-36 md:pt-48">
+        <SectionHeading eyebrow="Delivered" title="Built and handed over" subtitle="Civil and RCC works for leading developers, newest first." />
         <RevealGroup className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4" stagger={0.06}>
           {constructions.map((c) => (
             <RevealItem key={c.slug}>

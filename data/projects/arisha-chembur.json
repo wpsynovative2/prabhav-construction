@@ -1,0 +1,103 @@
+{
+  "slug": "arisha-chembur",
+  "name": "Arisha",
+  "tagline": "2 & 3 BHK homes in Chembur East",
+  "description": "A residential building with 2 & 3 BHK homes on the Chembur East – Ghatkopar East border.",
+  "category": "residential",
+  "subType": "apartments",
+  "status": "upcoming",
+  "featured": false,
+  "station": "chembur",
+  "location": {
+    "address": "Chembur East / Ghatkopar East",
+    "locality": "Chembur East",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400071",
+    "lat": 19.0622,
+    "lng": 72.9
+  },
+  "units": [
+    {
+      "label": "2 BHK"
+    },
+    {
+      "label": "3 BHK"
+    }
+  ],
+  "rera": [
+    {
+      "number": "P51900007376"
+    }
+  ],
+  "highlights": [
+    "Chembur–Ghatkopar location",
+    "2 & 3 BHK homes"
+  ],
+  "amenities": [
+    "lift",
+    "security",
+    "parking"
+  ],
+  "connectivity": [
+    {
+      "place": "Chembur station",
+      "type": "transport"
+    },
+    {
+      "place": "Eastern Express Highway",
+      "type": "transport"
+    }
+  ],
+  "art": {
+    "scene": "towers",
+    "seed": 26
+  },
+  "seo": {
+    "title": "Arisha: 2 & 3 BHK Homes in Chembur East by Prabhav",
+    "description": "Arisha by Prabhav: 2 & 3 BHK homes in Chembur East / Ghatkopar East. MahaRERA P51900007376.",
+    "keywords": []
+  },
+  "publishedAt": "2015-06-01",
+  "price": {
+    "display": "Price on request",
+    "onRequest": true
+  },
+  "images": {
+    "gallery": [
+      {
+        "src": "/images/projects/arisha-chembur/01-exterior.jpg",
+        "alt": "Arisha: elevation at night",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/arisha-chembur/02-exterior.jpg",
+        "alt": "Arisha: day elevation",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/arisha-chembur/03-exterior.jpg",
+        "alt": "Arisha: aerial view",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/arisha-chembur/04-site.jpg",
+        "alt": "Arisha: neighbourhood aerial view",
+        "kind": "site"
+      }
+    ],
+    "floorPlans": [],
+    "cover": {
+      "src": "/images/projects/arisha-chembur/01-exterior.jpg",
+      "alt": "Arisha: elevation at night"
+    }
+  },
+  "constructionUpdates": [],
+  "faqs": [
+    {
+      "q": "Is Arisha RERA registered?",
+      "a": "Yes. MahaRERA No. P51900007376."
+    }
+  ],
+  "updatedAt": "2026-10-01"
+}

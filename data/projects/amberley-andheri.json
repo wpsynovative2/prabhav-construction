@@ -1,0 +1,121 @@
+{
+  "slug": "amberley-andheri",
+  "name": "Amberley",
+  "tagline": "1, 2 & 3 BHK apartments in Andheri (West)",
+  "description": "Stilt + podium + puzzle parking + 21 storeys, with sea views from the higher floors, near Lokhandwala and Versova Metro.",
+  "category": "residential",
+  "subType": "apartments",
+  "status": "ongoing",
+  "featured": true,
+  "station": "andheri",
+  "location": {
+    "address": "Andheri (West)",
+    "locality": "Andheri (West)",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400053",
+    "lat": 19.1364,
+    "lng": 72.8296
+  },
+  "units": [
+    {
+      "label": "1 BHK"
+    },
+    {
+      "label": "2 BHK"
+    },
+    {
+      "label": "3 BHK"
+    }
+  ],
+  "floors": "Stilt + Podium + 21",
+  "rera": [
+    {
+      "number": "P51800004072"
+    }
+  ],
+  "highlights": [
+    "Sea view from higher floors",
+    "Puzzle car parking",
+    "Near Versova Metro"
+  ],
+  "amenities": [
+    "lift",
+    "parking",
+    "security",
+    "power-backup",
+    "kids-play-area"
+  ],
+  "connectivity": [
+    {
+      "place": "Versova Metro station",
+      "type": "transport"
+    },
+    {
+      "place": "BEST bus depot",
+      "type": "transport"
+    },
+    {
+      "place": "Kokilaben Dhirubhai Ambani Hospital",
+      "type": "health"
+    },
+    {
+      "place": "St. Louis Convent School",
+      "type": "education"
+    },
+    {
+      "place": "Lokhandwala Complex",
+      "type": "shopping"
+    },
+    {
+      "place": "Inorbit Mall",
+      "type": "shopping"
+    }
+  ],
+  "art": {
+    "scene": "towers",
+    "seed": 7
+  },
+  "seo": {
+    "title": "Amberley: 1, 2 & 3 BHK Apartments in Andheri (West) by Prabhav",
+    "description": "Amberley by Prabhav: 1, 2 & 3 BHK apartments in Andheri (W) with sea views from higher floors. MahaRERA P51800004072.",
+    "keywords": []
+  },
+  "publishedAt": "2014-06-01",
+  "price": {
+    "display": "Price on request",
+    "onRequest": true
+  },
+  "images": {
+    "gallery": [
+      {
+        "src": "/images/projects/amberley-andheri/01-exterior.jpg",
+        "alt": "Amberley: road-side elevation",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/amberley-andheri/02-exterior.jpg",
+        "alt": "Amberley: rear elevation",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/amberley-andheri/03-exterior.jpg",
+        "alt": "Amberley: bird's-eye view",
+        "kind": "exterior"
+      }
+    ],
+    "floorPlans": [],
+    "cover": {
+      "src": "/images/projects/amberley-andheri/01-exterior.jpg",
+      "alt": "Amberley: road-side elevation"
+    }
+  },
+  "constructionUpdates": [],
+  "faqs": [
+    {
+      "q": "Is Amberley RERA registered?",
+      "a": "Yes. MahaRERA No. P51800004072."
+    }
+  ],
+  "updatedAt": "2026-10-01"
+}

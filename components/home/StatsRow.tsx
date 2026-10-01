@@ -1,31 +1,45 @@
 import { Container } from "@/components/ui/Container";
 import { CountUp } from "@/components/ui/CountUp";
 import { Icon } from "@/components/ui/Icon";
-import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
+import { LogoMark } from "@/components/brand/LogoMark";
+import { cn } from "@/lib/utils";
 
 type Stat = { value: number; suffix: string; label: string; icon: string };
 
+/** Credentials band: one dark brand panel, big gold numerals, hairline dividers. */
 export function StatsRow({ stats }: { stats: Stat[] }) {
   return (
-    <Container className="pt-12 md:pt-16">
-      <RevealGroup className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5">
-        {stats.map((s) => (
-          <RevealItem key={s.label}>
-            <div className="group relative flex h-full items-center gap-4 overflow-hidden rounded-[var(--radius-card)] border border-line bg-surface p-4 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-soft md:p-6">
-              <span className="relative grid size-12 shrink-0 place-items-center rounded-2xl bg-surface-raised text-accent-text shadow-soft ring-1 ring-line transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110 md:size-14">
-                <Icon name={s.icon} className="size-6" />
-              </span>
-              <div>
-                <p className="font-display text-3xl leading-none text-fg md:text-4xl">
-                  <CountUp value={s.value} suffix={s.suffix} />
-                </p>
-                <p className="mt-1.5 text-xs text-muted md:text-sm">{s.label}</p>
-              </div>
-              <span className="pointer-events-none absolute -right-6 -bottom-6 size-20 rounded-full bg-[radial-gradient(circle,var(--glow),transparent_70%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-            </div>
-          </RevealItem>
-        ))}
-      </RevealGroup>
-    </Container>
+    <div className="pt-12 md:pt-16">
+      <Container>
+        <Reveal>
+          <div className="relative overflow-hidden rounded-[2rem] bg-[linear-gradient(120deg,#612f15_0%,#3a1a0b_55%,#1c0c04_100%)] text-white shadow-lift">
+            <LogoMark className="pointer-events-none absolute -top-16 -left-10 h-72 w-auto opacity-[0.12]" />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_90%_at_90%_0%,rgba(212,175,55,0.22),transparent_70%)]" />
+            <dl className="relative grid grid-cols-2 md:grid-cols-4">
+              {stats.map((s, i) => (
+                <div
+                  key={s.label}
+                  className={cn(
+                    "group flex flex-col-reverse items-center px-4 py-8 text-center md:py-11",
+                    i % 2 === 1 && "border-l border-white/10",
+                    i >= 2 && "border-t border-white/10 md:border-t-0",
+                    i === 2 && "md:border-l",
+                  )}
+                >
+                  <dt className="mt-3 text-xs tracking-[0.18em] text-white/70 uppercase">{s.label}</dt>
+                  <dd className="gold-shine mt-4 font-display text-5xl leading-none md:text-6xl">
+                    <CountUp value={s.value} suffix={s.suffix} />
+                  </dd>
+                  <span className="grid size-11 place-items-center rounded-full border border-[#d4af37]/40 text-[#fbcd8c] transition-transform duration-500 group-hover:-translate-y-1 group-hover:rotate-6" aria-hidden>
+                    <Icon name={s.icon} className="size-5" />
+                  </span>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </Reveal>
+      </Container>
+    </div>
   );
 }

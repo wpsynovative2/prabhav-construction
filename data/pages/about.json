@@ -1,43 +1,95 @@
 {
   "hero": {
-    "title": "Twenty-five years of building trust",
-    "subtitle": "A family-run developer shaping the Western suburbs since 2000."
+    "title": "Creating splendid structures since 2000",
+    "subtitle": "Led by Chairman & MD Mr. Prashant Lathia: 50+ projects and 2 million+ sq ft across Mumbai's western belt."
   },
   "story": {
     "title": "Our story",
     "lines": [
-      "Started with one building in Virar in 2000.",
-      "Grew station by station, family by family.",
-      "Today: homes, high streets and industrial parks."
+      "Began as a civil contractor trusted by Mumbai's leading developers.",
+      "Built towers up to 35 floors for Kalpataru, Rustomjee, Lodha and Mayfair.",
+      "Today we develop our own homes in Mumbai, Igatpuri and Nashik."
     ]
   },
   "pillars": [
-    { "icon": "eye", "title": "Vision", "text": "The most trusted name in the Western suburbs." },
-    { "icon": "target", "title": "Mission", "text": "Quality homes, delivered on time, priced honestly." },
-    { "icon": "heart", "title": "Values", "text": "Integrity, craft and care in every brick." }
+    {
+      "icon": "eye",
+      "title": "Vision",
+      "text": "To be the most trusted and efficient developer in the infrastructure sector."
+    },
+    {
+      "icon": "target",
+      "title": "Philosophy",
+      "text": "Luxury is an outcome of who we are, with care for our communities and environment."
+    },
+    {
+      "icon": "heart",
+      "title": "Values",
+      "text": "Integrity, time-bound accuracy, room to grow and LEED standards."
+    }
   ],
   "leadership": [
-    { "name": "Founder name", "role": "Founder & Chairman", "initials": "FN" },
-    { "name": "Director name", "role": "Managing Director", "initials": "MD" },
-    { "name": "Director name", "role": "Director, Projects", "initials": "DP" }
-  ],
-  "milestones": [
-    { "year": "2000", "title": "First building in Virar" },
-    { "year": "2006", "title": "100 families handed over" },
-    { "year": "2012", "title": "First commercial complex" },
-    { "year": "2017", "title": "All projects on MahaRERA" },
-    { "year": "2021", "title": "Industrial parks launched" },
-    { "year": "2025", "title": "2,500+ families home" }
+    {
+      "name": "Mr. Prashant Lathia",
+      "role": "Aspirational Founder",
+      "line": "Chairman & Managing Director. Over 50 projects delivered under his leadership.",
+      "initials": "PL"
+    },
+    {
+      "name": "Director name",
+      "role": "Executional Wizard",
+      "line": "Turns blueprints into buildings, on time, every time.",
+      "initials": "DN"
+    }
   ],
   "quality": [
-    { "icon": "shield-check", "title": "MahaRERA registered" },
-    { "icon": "badge-check", "title": "ISO 9001 processes" },
-    { "icon": "hard-hat", "title": "Zero-harm sites" },
-    { "icon": "leaf", "title": "Green practices" }
+    {
+      "icon": "shield-check",
+      "title": "MahaRERA registered"
+    },
+    {
+      "icon": "leaf",
+      "title": "IGBC Gold pre-certified project"
+    },
+    {
+      "icon": "badge-check",
+      "title": "LEED standards"
+    },
+    {
+      "icon": "hard-hat",
+      "title": "Earthquake-resistant structures"
+    }
   ],
-  "csr": [
-    { "icon": "graduation-cap", "title": "Education", "text": "Scholarships for workers' children" },
-    { "icon": "trees", "title": "Tree plantation", "text": "10,000 saplings planted" },
-    { "icon": "hand-heart", "title": "Health camps", "text": "Free check-ups on every site" }
+  "milestones": [
+    {
+      "year": "2000",
+      "title": "Prabhav is founded",
+      "text": "A civil construction company built on integrity and accuracy."
+    },
+    {
+      "year": "2007",
+      "title": "35-floor Evershine Crown",
+      "text": "All civil works for Evershine Crown, Kandivali, plus Lodha Grandeur (G+18)."
+    },
+    {
+      "year": "2009",
+      "title": "Rustomjee Elanza Tower B",
+      "text": "A G+33 tower, alongside Mayfair projects in Juhu."
+    },
+    {
+      "year": "2011",
+      "title": "Kalpataru at BKC",
+      "text": "All civil works for a 4B + S + 20 tower at Bandra Kurla Complex."
+    },
+    {
+      "year": "2014",
+      "title": "Our own developments",
+      "text": "Manibhadra Tower in Mulund and Amberley in Andheri begin."
+    },
+    {
+      "year": "2016",
+      "title": "Evana, Nashik",
+      "text": "Six IGBC Gold pre-certified towers at Pathardi, Nashik."
+    }
   ]
 }

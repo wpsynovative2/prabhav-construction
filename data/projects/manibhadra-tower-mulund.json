@@ -1,0 +1,119 @@
+{
+  "slug": "manibhadra-tower-mulund",
+  "name": "Manibhadra Tower",
+  "tagline": "Residences in Mulund (West)",
+  "description": "A residential tower in Mulund (West), close to LBS Marg, the Eastern Express Highway and Nahur and Mulund stations.",
+  "category": "residential",
+  "subType": "apartments",
+  "status": "ongoing",
+  "featured": false,
+  "station": "mulund",
+  "location": {
+    "address": "Mulund (West)",
+    "locality": "Mulund (West)",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400080",
+    "lat": 19.1726,
+    "lng": 72.9425
+  },
+  "units": [
+    {
+      "label": "Apartments"
+    }
+  ],
+  "rera": [
+    {
+      "number": "P51800003009",
+      "phase": "Phase 1, Tower 1"
+    }
+  ],
+  "highlights": [
+    "Near Nahur & Mulund stations",
+    "Off LBS Marg",
+    "Eastern Express Highway access"
+  ],
+  "amenities": [
+    "lift",
+    "security",
+    "parking",
+    "power-backup"
+  ],
+  "connectivity": [
+    {
+      "place": "Nahur and Mulund railway stations",
+      "type": "transport"
+    },
+    {
+      "place": "Eastern Express Highway",
+      "type": "transport"
+    },
+    {
+      "place": "LBS Marg",
+      "type": "transport"
+    },
+    {
+      "place": "St. Mary's High School",
+      "type": "education"
+    },
+    {
+      "place": "Fortis Hospital",
+      "type": "health"
+    },
+    {
+      "place": "D-Mart",
+      "type": "shopping"
+    }
+  ],
+  "art": {
+    "scene": "towers",
+    "seed": 12
+  },
+  "seo": {
+    "title": "Manibhadra Tower: Residences in Mulund (West) by Prabhav",
+    "description": "Manibhadra Tower by Prabhav in Mulund (West), near Nahur and Mulund stations. MahaRERA P51800003009.",
+    "keywords": []
+  },
+  "publishedAt": "2014-01-01",
+  "price": {
+    "display": "Price on request",
+    "onRequest": true
+  },
+  "images": {
+    "gallery": [
+      {
+        "src": "/images/projects/manibhadra-tower-mulund/01-exterior.jpg",
+        "alt": "Manibhadra Tower: elevation at dusk",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/manibhadra-tower-mulund/02-exterior.jpg",
+        "alt": "Manibhadra Tower: aerial view",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/manibhadra-tower-mulund/03-exterior.jpg",
+        "alt": "Manibhadra Tower: elevation and surroundings",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/manibhadra-tower-mulund/04-exterior.jpg",
+        "alt": "Manibhadra Tower: view from the main road",
+        "kind": "exterior"
+      }
+    ],
+    "floorPlans": [],
+    "cover": {
+      "src": "/images/projects/manibhadra-tower-mulund/01-exterior.jpg",
+      "alt": "Manibhadra Tower: elevation at dusk"
+    }
+  },
+  "constructionUpdates": [],
+  "faqs": [
+    {
+      "q": "Is Manibhadra Tower RERA registered?",
+      "a": "Yes. MahaRERA No. P51800003009."
+    }
+  ],
+  "updatedAt": "2026-10-01"
+}

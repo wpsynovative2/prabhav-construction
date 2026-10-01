@@ -19,15 +19,28 @@ export function ProjectVisual({
 }) {
   const cover = project.images.cover;
   if (cover) {
+    // Show the whole elevation (renders are often tall) inside the fixed frame;
+    // a blurred copy of the same image fills the leftover space.
     return (
-      <Image
-        src={cover.src}
-        alt={cover.alt}
-        fill
-        sizes={sizes}
-        preload={preload}
-        className={cn("object-cover", className)}
-      />
+      <>
+        <Image
+          src={cover.src}
+          alt=""
+          aria-hidden
+          fill
+          sizes={sizes}
+          preload={preload}
+          className="scale-125 object-cover opacity-80 blur-2xl"
+        />
+        <Image
+          src={cover.src}
+          alt={cover.alt}
+          fill
+          sizes={sizes}
+          preload={preload}
+          className={cn("object-contain", className)}
+        />
+      </>
     );
   }
   return (

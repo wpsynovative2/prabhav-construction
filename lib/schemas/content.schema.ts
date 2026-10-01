@@ -103,12 +103,14 @@ export const ConstructionsSchema = z.array(
     name: z.string(),
     locality: z.string(),
     category: z.enum(["residential", "commercial", "industrial"]),
-    scene: z.enum(["towers", "villas", "commercial", "industrial"]),
+    scene: z.enum(["towers", "highrise", "villas", "commercial", "industrial"]),
     seed: z.number().default(1),
     year: z.number().int().min(1990).max(2100),
     floors: z.string(),
-    units: z.number().int().positive(),
-    builtUpSqft: z.number().positive(),
+    /** Scope of work, e.g. "Civil works", "RCC works", "Turnkey" */
+    scope: z.string().max(24).optional(),
+    units: z.number().int().positive().optional(),
+    builtUpSqft: z.number().positive().optional(),
     highlight: z.string().max(60),
     /** Optional link to a project page when the building is also listed under Projects */
     project: z.string().optional(),
@@ -116,3 +118,16 @@ export const ConstructionsSchema = z.array(
   }),
 );
 export type Construction = z.infer<typeof ConstructionsSchema>[number];
+
+export const CsrSchema = z.array(
+  z.object({
+    slug: z.string(),
+    name: z.string(),
+    deity: z.string(),
+    icon: z.enum(["jain", "sai", "ganpati"]),
+    locality: z.string(),
+    line: z.string().max(110),
+    image: z.object({ src: z.string().startsWith("/"), alt: z.string() }).optional(),
+  }),
+);
+export type CsrItem = z.infer<typeof CsrSchema>[number];

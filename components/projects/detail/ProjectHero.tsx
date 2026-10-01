@@ -18,11 +18,11 @@ export function ProjectHero({ project: p, stationName }: { project: Project; sta
     { icon: TrainFront, label: stationName, value: p.location.distanceFromStation ?? "Nearby" },
   ];
   return (
-    <section className="relative -mt-[84px] bg-surface pt-[84px]">
+    <section className="relative -mt-(--header-h) bg-surface pt-(--header-h)">
       <Container className="pt-6 pb-10 md:pt-8">
         <Breadcrumbs
           items={[
-            { name: "Projects", href: "/projects" },
+            { name: "Portfolio", href: "/projects" },
             { name: stationName, href: `/projects/station/${p.station}` },
             { name: p.name, href: `/projects/${p.slug}` },
           ]}
@@ -39,7 +39,7 @@ export function ProjectHero({ project: p, stationName }: { project: Project; sta
                 <span className="rounded-full bg-white/15 px-3 py-1 text-xs backdrop-blur">MahaRERA {p.rera[0].number}</span>
               ) : null}
             </div>
-            <h1 className="page-enter mt-3 font-display text-4xl leading-none font-medium md:text-6xl [animation-delay:100ms]">{p.name}</h1>
+            <h1 className="page-enter mt-3 font-display text-4xl leading-none md:text-6xl [animation-delay:100ms]">{p.name}</h1>
             <p className="page-enter mt-3 flex items-center gap-2 text-white/85 [animation-delay:180ms]">
               <MapPin className="size-4 text-[#e5c96a]" />
               {p.location.locality}, {p.location.city}

@@ -3,12 +3,20 @@
     "slug": "site-engineer-civil",
     "title": "Site Engineer (Civil)",
     "department": "Projects",
-    "location": "Virar",
+    "location": "Ghatkopar (E), Mumbai",
     "type": "FULL_TIME",
     "experience": "2–5 years",
     "description": "Run day-to-day execution on a high-rise residential site.",
-    "responsibilities": ["Supervise RCC and finishing work", "Track daily progress and quality checks", "Coordinate with contractors and consultants"],
-    "requirements": ["B.E./Diploma in Civil Engineering", "High-rise site experience", "Working knowledge of AutoCAD and MS Project"],
+    "responsibilities": [
+      "Supervise RCC and finishing work",
+      "Track daily progress and quality checks",
+      "Coordinate with contractors and consultants"
+    ],
+    "requirements": [
+      "B.E./Diploma in Civil Engineering",
+      "High-rise site experience",
+      "Working knowledge of AutoCAD and MS Project"
+    ],
     "postedAt": "2026-09-01",
     "validThrough": "2026-12-31",
     "open": true
@@ -17,12 +25,20 @@
     "slug": "sales-manager",
     "title": "Sales Manager",
     "department": "Sales",
-    "location": "Virar",
+    "location": "Ghatkopar (E), Mumbai",
     "type": "FULL_TIME",
     "experience": "3–7 years",
     "description": "Lead site-visit conversions for residential and commercial projects.",
-    "responsibilities": ["Host site visits and close bookings", "Manage the lead pipeline in CRM", "Coach a team of sales executives"],
-    "requirements": ["Real estate sales experience", "Fluent English, Hindi and Marathi", "Strong negotiation skills"],
+    "responsibilities": [
+      "Host site visits and close bookings",
+      "Manage the lead pipeline in CRM",
+      "Coach a team of sales executives"
+    ],
+    "requirements": [
+      "Real estate sales experience",
+      "Fluent English, Hindi and Marathi",
+      "Strong negotiation skills"
+    ],
     "postedAt": "2026-09-10",
     "validThrough": "2026-12-31",
     "open": true
@@ -31,12 +47,20 @@
     "slug": "architect",
     "title": "Architect",
     "department": "Design",
-    "location": "Virar",
+    "location": "Ghatkopar (E), Mumbai",
     "type": "FULL_TIME",
     "experience": "3+ years",
     "description": "Shape plans and elevations for our upcoming launches.",
-    "responsibilities": ["Prepare concept and working drawings", "Coordinate approvals with authorities", "Work with structural and MEP consultants"],
-    "requirements": ["B.Arch with Council of Architecture registration", "Residential high-rise experience", "AutoCAD, SketchUp, Revit"],
+    "responsibilities": [
+      "Prepare concept and working drawings",
+      "Coordinate approvals with authorities",
+      "Work with structural and MEP consultants"
+    ],
+    "requirements": [
+      "B.Arch with Council of Architecture registration",
+      "Residential high-rise experience",
+      "AutoCAD, SketchUp, Revit"
+    ],
     "postedAt": "2026-08-20",
     "validThrough": "2026-11-30",
     "open": true
@@ -45,12 +69,20 @@
     "slug": "crm-executive",
     "title": "CRM Executive",
     "department": "Customer care",
-    "location": "Virar",
+    "location": "Ghatkopar (E), Mumbai",
     "type": "FULL_TIME",
     "experience": "1–3 years",
     "description": "Be the voice of Prabhav for families after booking.",
-    "responsibilities": ["Handle payment schedules and demand letters", "Coordinate registration and possession", "Resolve customer queries quickly"],
-    "requirements": ["Graduate in any discipline", "Excellent communication", "Advanced Excel"],
+    "responsibilities": [
+      "Handle payment schedules and demand letters",
+      "Coordinate registration and possession",
+      "Resolve customer queries quickly"
+    ],
+    "requirements": [
+      "Graduate in any discipline",
+      "Excellent communication",
+      "Advanced Excel"
+    ],
     "postedAt": "2026-09-15",
     "validThrough": "2026-12-15",
     "open": true

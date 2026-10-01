@@ -5,7 +5,8 @@ import testimonialsJson from "@/data/testimonials.json";
 import jobsJson from "@/data/jobs.json";
 import insightsJson from "@/data/insights.json";
 import constructionsJson from "@/data/constructions.json";
-import { AmenitiesSchema, ConstructionsSchema, InsightsSchema, JobsSchema, SiteSchema, TestimonialsSchema } from "@/lib/schemas/content.schema";
+import csrJson from "@/data/csr.json";
+import { AmenitiesSchema, ConstructionsSchema, CsrSchema, InsightsSchema, JobsSchema, SiteSchema, TestimonialsSchema } from "@/lib/schemas/content.schema";
 
 export { default as navigation } from "@/data/navigation.json";
 export { default as home } from "@/data/pages/home.json";
@@ -32,3 +33,6 @@ export const getInsight = (slug: string) => insights.find((i) => i.slug === slug
 
 /** Delivered buildings, newest first */
 export const constructions = ConstructionsSchema.parse(constructionsJson).sort((a, b) => b.year - a.year);
+
+/** Community projects (temples) built and gifted by Prabhav */
+export const csr = CsrSchema.parse(csrJson);

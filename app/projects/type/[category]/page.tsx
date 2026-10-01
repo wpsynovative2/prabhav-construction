@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: PageProps<"/projects/type/[ca
   const count = getAllProjects().filter((p) => p.category === c).length;
   return buildMetadata({
     title: `${CATEGORY_LABEL[c]} Projects by Prabhav Construction`,
-    description: `${count} RERA-registered ${COPY[c].noun} near Western line stations. ${COPY[c].intro}`,
+    description: `${count} RERA-registered ${COPY[c].noun} across Mumbai, Igatpuri and Nashik. ${COPY[c].intro}`,
     path: `/projects/type/${c}`,
   });
 }
@@ -44,7 +44,7 @@ export default async function TypePage({ params }: PageProps<"/projects/type/[ca
       title={COPY[c].title}
       intro={COPY[c].intro}
       crumbs={[
-        { name: "Projects", href: "/projects" },
+        { name: "Portfolio", href: "/projects" },
         { name: CATEGORY_LABEL[c], href: `/projects/type/${c}` },
       ]}
       projects={projects}

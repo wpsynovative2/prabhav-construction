@@ -1,0 +1,119 @@
+{
+  "slug": "empire-igatpuri",
+  "name": "Empire",
+  "tagline": "Villas & spacious apartments in Igatpuri",
+  "description": "Holiday-home villas and spacious apartments in Igatpuri, a quick escape from Mumbai.",
+  "category": "residential",
+  "subType": "villas",
+  "status": "upcoming",
+  "featured": false,
+  "station": "igatpuri",
+  "location": {
+    "address": "Igatpuri",
+    "locality": "Igatpuri",
+    "city": "Nashik",
+    "state": "Maharashtra",
+    "pincode": "422403",
+    "lat": 19.699,
+    "lng": 73.559
+  },
+  "units": [
+    {
+      "label": "Villa"
+    },
+    {
+      "label": "Apartment"
+    }
+  ],
+  "rera": [
+    {
+      "number": "P51600005114"
+    }
+  ],
+  "highlights": [
+    "Holiday homes",
+    "Villas & apartments",
+    "Hill-station setting"
+  ],
+  "amenities": [
+    "landscaped-garden",
+    "security",
+    "parking"
+  ],
+  "connectivity": [
+    {
+      "place": "Igatpuri railway station",
+      "type": "transport"
+    },
+    {
+      "place": "Mumbai–Nashik Highway",
+      "type": "transport"
+    }
+  ],
+  "art": {
+    "scene": "villas",
+    "seed": 8
+  },
+  "seo": {
+    "title": "Empire: Villas & Apartments in Igatpuri by Prabhav",
+    "description": "Empire by Prabhav: holiday-home villas and spacious apartments in Igatpuri. MahaRERA P51600005114.",
+    "keywords": []
+  },
+  "publishedAt": "2015-03-01",
+  "price": {
+    "display": "Price on request",
+    "onRequest": true
+  },
+  "images": {
+    "gallery": [
+      {
+        "src": "/images/projects/empire-igatpuri/01-exterior.jpg",
+        "alt": "Empire: elevation with landscaped lawn",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/empire-igatpuri/02-exterior.jpg",
+        "alt": "Empire: front elevation",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/empire-igatpuri/03-exterior.jpg",
+        "alt": "Empire: night view",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/empire-igatpuri/04-exterior.jpg",
+        "alt": "Empire: side elevation",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/empire-igatpuri/05-exterior.jpg",
+        "alt": "Empire: bird's-eye night view",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/empire-igatpuri/06-exterior.jpg",
+        "alt": "Empire: bird's-eye view",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/empire-igatpuri/07-exterior.jpg",
+        "alt": "Empire: rear elevation",
+        "kind": "exterior"
+      }
+    ],
+    "floorPlans": [],
+    "cover": {
+      "src": "/images/projects/empire-igatpuri/01-exterior.jpg",
+      "alt": "Empire: elevation with landscaped lawn"
+    }
+  },
+  "constructionUpdates": [],
+  "faqs": [
+    {
+      "q": "Is Empire RERA registered?",
+      "a": "Yes. MahaRERA No. P51600005114."
+    }
+  ],
+  "updatedAt": "2026-10-01"
+}

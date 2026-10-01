@@ -50,7 +50,7 @@ export function Footer({ site, groups, stations, categories }: Props) {
           ))}
         </FooterCol>
 
-        <FooterCol title="Projects">
+        <FooterCol title="Portfolio">
           <FooterLink href="/projects">All projects</FooterLink>
           {categories.map((c) => (
             <FooterLink key={c.slug} href={`/projects/type/${c.slug}`}>

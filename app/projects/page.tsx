@@ -15,7 +15,7 @@ import { itemListLd } from "@/lib/seo/jsonld";
 export function generateMetadata(): Metadata {
   const active = getActiveStations().map((s) => s.name);
   return buildMetadata({
-    title: `Projects in ${active.join(", ")}`,
+    title: `Portfolio: projects in ${active.join(", ")}`,
     description: `${getAllProjects().length} ${seo.pages.projects.description}`,
     path: "/projects",
   });
@@ -29,9 +29,9 @@ export default function ProjectsPage() {
   return (
     <>
       <PageHero
-        title="Our projects"
+        title="Our portfolio"
         subtitle="Homes, high streets and industrial parks, each one built by Prabhav."
-        crumbs={[{ name: "Projects", href: "/projects" }]}
+        crumbs={[{ name: "Portfolio", href: "/projects" }]}
       />
       <section className="bg-bg py-12 md:py-16">
         <Container>

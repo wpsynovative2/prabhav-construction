@@ -32,16 +32,16 @@ export default async function StationPage({ params }: PageProps<"/projects/stati
   const stationNames = Object.fromEntries(stations.map((st) => [st.slug, st.name]));
   return (
     <LandingPage
-      title={`Projects near ${s.name}`}
-      intro={s.intro ?? `Developments by Prabhav near ${s.name} station.`}
+      title={`Projects in ${s.name}`}
+      intro={s.intro ?? `Developments by Prabhav in ${s.name}.`}
       crumbs={[
-        { name: "Projects", href: "/projects" },
+        { name: "Portfolio", href: "/projects" },
         { name: s.name, href: `/projects/station/${s.slug}` },
       ]}
       projects={projects}
       stationNames={stationNames}
       faqs={[
-        { q: `How far are Prabhav projects from ${s.name} station?`, a: projects.map((p) => `${p.name}: ${p.location.distanceFromStation ?? "nearby"}`).join(". ") + "." },
+        { q: `Where are Prabhav projects in ${s.name}?`, a: projects.map((p) => `${p.name}: ${p.location.locality}`).join(". ") + "." },
         { q: "Can I visit the site?", a: "Yes. Schedule a site tour and our project engineers will walk you through it." },
       ]}
       source={`station:${s.slug}`}

@@ -7,6 +7,14 @@ import { CATEGORY_LABEL } from "@/lib/utils";
 
 /** A delivered building in the portfolio. */
 export function DeliveredCard({ item }: { item: Construction }) {
+  const stats = [
+    { k: "Floors", v: item.floors },
+    item.scope && { k: "Scope", v: item.scope },
+    item.units && { k: item.category === "residential" ? "Homes" : "Units", v: String(item.units) },
+    item.builtUpSqft && { k: "Sq ft", v: `${Math.round(item.builtUpSqft / 1000)}K` },
+  ]
+    .filter((s): s is { k: string; v: string } => Boolean(s))
+    .slice(0, 3);
   const body = (
     <>
       <div className="relative aspect-[4/3] overflow-hidden">
@@ -32,15 +40,14 @@ export function DeliveredCard({ item }: { item: Construction }) {
           {item.locality}
         </p>
         <p className="mt-2 text-sm text-accent-text">{item.highlight}</p>
-        <dl className="mt-4 grid grid-cols-3 gap-2 border-t border-dashed border-line pt-4 text-center">
-          {[
-            { k: "Floors", v: item.floors },
-            { k: item.category === "residential" ? "Homes" : "Units", v: String(item.units) },
-            { k: "Sq ft", v: `${Math.round(item.builtUpSqft / 1000)}K` },
-          ].map((s) => (
+        <dl
+          className="mt-4 grid gap-2 border-t border-dashed border-line pt-4 text-center"
+          style={{ gridTemplateColumns: `repeat(${stats.length}, minmax(0, 1fr))` }}
+        >
+          {stats.map((s) => (
             <div key={s.k} className="flex flex-col-reverse">
               <dt className="text-[0.7rem] text-muted">{s.k}</dt>
-              <dd className="font-display text-lg text-fg">{s.v}</dd>
+              <dd className="truncate font-display text-lg text-fg">{s.v}</dd>
             </div>
           ))}
         </dl>

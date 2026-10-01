@@ -1,0 +1,137 @@
+{
+  "slug": "evana-nashik",
+  "name": "Evana",
+  "tagline": "2, 2.5 BHK & terrace garden flats in Nashik",
+  "description": "Six residential towers of ground + 14 floors at Pathardi, Nashik. An IGBC Gold pre-certified green project.",
+  "category": "residential",
+  "subType": "apartments",
+  "status": "ongoing",
+  "featured": false,
+  "station": "nashik",
+  "location": {
+    "address": "Pathardi",
+    "locality": "Pathardi, Nashik",
+    "city": "Nashik",
+    "state": "Maharashtra",
+    "pincode": "422010",
+    "lat": 19.942,
+    "lng": 73.78
+  },
+  "units": [
+    {
+      "label": "2 BHK"
+    },
+    {
+      "label": "2.5 BHK"
+    },
+    {
+      "label": "Terrace garden flat"
+    }
+  ],
+  "towers": 6,
+  "floors": "G+14",
+  "rera": [
+    {
+      "number": "P51600012427"
+    }
+  ],
+  "highlights": [
+    "IGBC Gold pre-certified",
+    "Clubhouse & pool",
+    "2 elevators per wing",
+    "Amphitheatre"
+  ],
+  "amenities": [
+    "clubhouse",
+    "swimming-pool",
+    "yoga-deck",
+    "basketball-court",
+    "kids-play-area",
+    "temple",
+    "parking",
+    "security",
+    "lift",
+    "amphitheatre"
+  ],
+  "connectivity": [
+    {
+      "place": "Nashik Road railway station",
+      "type": "transport"
+    },
+    {
+      "place": "Mumbai–Agra Highway",
+      "type": "transport"
+    }
+  ],
+  "art": {
+    "scene": "towers",
+    "seed": 21
+  },
+  "seo": {
+    "title": "Evana: Green Homes in Pathardi, Nashik by Prabhav",
+    "description": "Evana by Prabhav: 2, 2.5 BHK and terrace garden flats in 6 towers at Pathardi, Nashik. IGBC Gold pre-certified. MahaRERA P51600012427.",
+    "keywords": []
+  },
+  "publishedAt": "2016-01-01",
+  "price": {
+    "display": "Price on request",
+    "onRequest": true
+  },
+  "images": {
+    "gallery": [
+      {
+        "src": "/images/projects/evana-nashik/01-exterior.jpg",
+        "alt": "Evana: tower elevation",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/evana-nashik/02-amenity.jpg",
+        "alt": "Evana: landscaped podium",
+        "kind": "amenity"
+      },
+      {
+        "src": "/images/projects/evana-nashik/03-amenity.jpg",
+        "alt": "Evana: clubhouse",
+        "kind": "amenity"
+      },
+      {
+        "src": "/images/projects/evana-nashik/04-amenity.jpg",
+        "alt": "Evana: swimming pool",
+        "kind": "amenity"
+      },
+      {
+        "src": "/images/projects/evana-nashik/05-amenity.jpg",
+        "alt": "Evana: entrance plaza",
+        "kind": "amenity"
+      },
+      {
+        "src": "/images/projects/evana-nashik/06-interior.jpg",
+        "alt": "Evana: sample living room",
+        "kind": "interior"
+      },
+      {
+        "src": "/images/projects/evana-nashik/07-interior.jpg",
+        "alt": "Evana: sample bedroom",
+        "kind": "interior"
+      },
+      {
+        "src": "/images/projects/evana-nashik/08-interior.jpg",
+        "alt": "Evana: sample study bedroom",
+        "kind": "interior"
+      }
+    ],
+    "floorPlans": [],
+    "cover": {
+      "src": "/images/projects/evana-nashik/01-exterior.jpg",
+      "alt": "Evana: tower elevation"
+    }
+  },
+  "constructionUpdates": [],
+  "faqs": [
+    {
+      "q": "Is Evana RERA registered?",
+      "a": "Yes. MahaRERA No. P51600012427."
+    }
+  ],
+  "updatedAt": "2026-10-01"
+}

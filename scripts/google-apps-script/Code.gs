@@ -8,6 +8,11 @@ const HEADERS = {
           "landingPage","referrer","recaptchaScore","quality","duplicate"],
   Careers: ["timestamp","fullName","mobile","email","position","experience","currentLocation",
           "resumeUrl","message","source","recaptchaScore","quality","duplicate"],
+  Collaborations: ["timestamp","fullName","mobile","email","organisation","collaborationType","city",
+          "message","source","utm_source","utm_medium","utm_campaign","recaptchaScore","quality","duplicate"],
+  Redevelopment: ["timestamp","fullName","mobile","email","societyName","designation","location","flats",
+          "plotArea","buildingAge","message","source","utm_source","utm_medium","utm_campaign",
+          "recaptchaScore","quality","duplicate"],
 };
 // Keep "mobile" as the 3rd column in every tab; isDuplicate() relies on it.
 
@@ -30,7 +35,7 @@ function doPost(e) {
 
     const notify = props.getProperty("NOTIFY_EMAIL");
     if (notify) MailApp.sendEmail(notify, `New ${sheetName} enquiry: ${data.fullName}`,
-      `${data.fullName}\n${data.mobile}\n${data.project || data.position || ""}\n${data.source}`);
+      `${data.fullName}\n${data.mobile}\n${data.project || data.position || data.societyName || data.collaborationType || ""}\n${data.source}`);
     return json({ ok: true });
   } catch (err) {
     return json({ ok: false, error: String(err) });

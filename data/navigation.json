@@ -9,20 +9,20 @@
       "href": "/about-us"
     },
     {
-      "label": "Projects",
+      "label": "Portfolio",
       "href": "/projects",
       "dropdown": true
     },
     {
-      "label": "Our constructions",
-      "href": "/our-constructions"
+      "label": "Insights",
+      "href": "/insights"
     },
     {
-      "label": "Career",
-      "href": "/career"
+      "label": "Collaborate with us",
+      "href": "/collaborate"
     },
     {
-      "label": "Contact us",
+      "label": "Get in Touch",
       "href": "/contact-us"
     }
   ],
@@ -43,11 +43,15 @@
           "href": "/insights"
         },
         {
-          "label": "Career",
+          "label": "Collaborate with us",
+          "href": "/collaborate"
+        },
+        {
+          "label": "Careers",
           "href": "/career"
         },
         {
-          "label": "Contact us",
+          "label": "Get in Touch",
           "href": "/contact-us"
         }
       ]

@@ -32,7 +32,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <PageHero title={contactPage.hero.title} subtitle={contactPage.hero.subtitle} crumbs={[{ name: "Contact us", href: "/contact-us" }]} />
+      <PageHero title={contactPage.hero.title} subtitle={contactPage.hero.subtitle} crumbs={[{ name: "Get in Touch", href: "/contact-us" }]} />
 
       <section className="bg-bg py-14 md:py-20">
         <Container className="grid gap-10 lg:grid-cols-[1.15fr_1fr]">

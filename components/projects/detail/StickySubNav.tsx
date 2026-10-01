@@ -23,7 +23,7 @@ export function StickySubNav({ items }: { items: { id: string; label: string }[]
   }, [items]);
 
   return (
-    <nav aria-label="On this page" className="sticky top-[68px] z-30 border-y border-line bg-surface-raised/90 backdrop-blur-xl">
+    <nav aria-label="On this page" className="sticky top-(--header-h) z-30 border-y border-line bg-surface-raised/90 backdrop-blur-xl">
       <ul className="no-scrollbar mx-auto flex max-w-[1240px] gap-1 overflow-x-auto px-5 md:px-8">
         {items.map((i) => (
           <li key={i.id}>

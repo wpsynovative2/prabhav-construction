@@ -1,0 +1,119 @@
+{
+  "slug": "vivaant-igatpuri",
+  "name": "Vivaant",
+  "tagline": "Row-house villas & pool apartments in Igatpuri",
+  "description": "Good living amidst the forests of Igatpuri: Viceroy and Kimberly row-house villas and pool apartments, with a water body, lotus pond, pool and spa.",
+  "category": "residential",
+  "subType": "row-houses",
+  "status": "ongoing",
+  "featured": false,
+  "station": "igatpuri",
+  "location": {
+    "address": "Igatpuri",
+    "locality": "Igatpuri",
+    "city": "Nashik",
+    "state": "Maharashtra",
+    "pincode": "422403",
+    "lat": 19.6958,
+    "lng": 73.5626
+  },
+  "units": [
+    {
+      "label": "Viceroy Row House villa"
+    },
+    {
+      "label": "Kimberly Row House villa"
+    },
+    {
+      "label": "Pool apartment"
+    }
+  ],
+  "rera": [
+    {
+      "number": "P51600005114",
+      "phase": "Phase 2"
+    }
+  ],
+  "highlights": [
+    "Second homes near Mumbai",
+    "Water body & lotus pond",
+    "Swimming pool & spa",
+    "Earthquake-resistant structure"
+  ],
+  "amenities": [
+    "swimming-pool",
+    "spa",
+    "water-body",
+    "stp",
+    "power-backup",
+    "lift",
+    "video-door-phone",
+    "landscaped-garden"
+  ],
+  "connectivity": [
+    {
+      "place": "Igatpuri railway station",
+      "type": "transport"
+    },
+    {
+      "place": "Mumbai–Nashik Highway",
+      "type": "transport"
+    }
+  ],
+  "art": {
+    "scene": "villas",
+    "seed": 3
+  },
+  "seo": {
+    "title": "Vivaant: Row-House Villas in Igatpuri by Prabhav",
+    "description": "Vivaant by Prabhav: Viceroy & Kimberly row-house villas and pool apartments in Igatpuri. MahaRERA P51600005114.",
+    "keywords": []
+  },
+  "publishedAt": "2015-01-01",
+  "price": {
+    "display": "Price on request",
+    "onRequest": true
+  },
+  "images": {
+    "gallery": [
+      {
+        "src": "/images/projects/vivaant-igatpuri/01-amenity.jpg",
+        "alt": "Vivaant: swimming pool and villas",
+        "kind": "amenity"
+      },
+      {
+        "src": "/images/projects/vivaant-igatpuri/02-exterior.jpg",
+        "alt": "Vivaant: villa clusters",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/vivaant-igatpuri/03-exterior.jpg",
+        "alt": "Vivaant: row-house street",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/vivaant-igatpuri/04-exterior.jpg",
+        "alt": "Vivaant: entrance and street view",
+        "kind": "exterior"
+      },
+      {
+        "src": "/images/projects/vivaant-igatpuri/05-exterior.jpg",
+        "alt": "Vivaant: row-house elevation",
+        "kind": "exterior"
+      }
+    ],
+    "floorPlans": [],
+    "cover": {
+      "src": "/images/projects/vivaant-igatpuri/01-amenity.jpg",
+      "alt": "Vivaant: swimming pool and villas"
+    }
+  },
+  "constructionUpdates": [],
+  "faqs": [
+    {
+      "q": "Is Vivaant RERA registered?",
+      "a": "Yes. MahaRERA No. P51600005114."
+    }
+  ],
+  "updatedAt": "2026-10-01"
+}

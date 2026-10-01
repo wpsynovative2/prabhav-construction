@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useForm, useWatch } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { LeadFieldsSchema, type LeadFields, type LeadFieldsInput } from "@/lib/schemas/lead.schema";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
-import { Honeypot, PhoneInput, RecaptchaNote, SelectInput, TextArea, TextInput } from "./fields";
+import { Honeypot, PhoneInput, RecaptchaNote, TextArea, TextInput } from "./fields";
 import { loadRecaptcha } from "./useRecaptcha";
 import { submitForm } from "./submit";
 import type { LeadContext, ProjectOption } from "./LeadModalProvider";
@@ -26,13 +26,14 @@ const CTA_LABEL: Record<string, string> = {
 
 type Props = {
   context: LeadContext;
-  projects: ProjectOption[];
+  /** Kept for callers; the form no longer shows project/configuration pickers */
+  projects?: ProjectOption[];
   compact?: boolean;
   onDone?: () => void;
   className?: string;
 };
 
-export function LeadForm({ context, projects, compact, onDone, className }: Props) {
+export function LeadForm({ context, compact, onDone, className }: Props) {
   const router = useRouter();
   // Time trap: the API drops submissions made < 3 s after the form appeared
   const [renderedAt] = useState(() => Date.now());
@@ -42,7 +43,7 @@ export function LeadForm({ context, projects, compact, onDone, className }: Prop
   const {
     register,
     handleSubmit,
-    control,
+    trigger,
     formState: { errors, isSubmitting },
   } = useForm<LeadFieldsInput, unknown, LeadFields>({
     resolver: zodResolver(LeadFieldsSchema),
@@ -54,12 +55,10 @@ export function LeadForm({ context, projects, compact, onDone, className }: Prop
       project: context.project ?? "",
       unit: context.unit ?? "",
       message: context.message ?? "",
-      consent: false,
+      // Pre-ticked by client request; still mandatory (schema rejects false)
+      consent: true,
     },
   });
-
-  const selected = useWatch({ control, name: "project" });
-  const units = projects.find((p) => p.name === selected)?.units ?? [];
 
   const onSubmit = async (data: LeadFields) => {
     setServerError(null);
@@ -93,28 +92,21 @@ export function LeadForm({ context, projects, compact, onDone, className }: Prop
       <TextInput label="Full name" autoComplete="name" error={errors.fullName?.message} {...register("fullName")} />
       <PhoneInput label="Mobile number" error={errors.mobile?.message} {...register("mobile")} />
       <TextInput label="Email" type="email" autoComplete="email" optional error={errors.email?.message} {...register("email")} />
-      {!compact || !context.project ? (
-        <div className="grid gap-4 sm:grid-cols-2">
-          <SelectInput
-            label="Interested in"
-            optional
-            options={projects.map((p) => ({ value: p.name, label: p.name }))}
-            {...register("project")}
-          />
-          <SelectInput
-            label="Configuration"
-            optional
-            options={(units.length ? units : context.unit ? [context.unit] : []).map((u) => ({ value: u, label: u }))}
-            {...register("unit")}
-          />
-        </div>
-      ) : null}
-      {!compact ? <TextArea label="Message" optional error={errors.message?.message} {...register("message")} /> : null}
+      {!compact ? <TextArea label="Regards" optional error={errors.message?.message} {...register("message")} /> : null}
 
       <label className="flex cursor-pointer items-start gap-3 text-xs leading-relaxed text-muted">
-        <input type="checkbox" className="mt-0.5 size-4 shrink-0 accent-[var(--primary)]" {...register("consent")} />
+        <input
+          type="checkbox"
+          required
+          aria-required="true"
+          aria-invalid={errors.consent ? true : undefined}
+          className="mt-0.5 size-4 shrink-0 accent-[var(--primary)]"
+          {...register("consent", { onChange: () => trigger("consent") })}
+        />
         <span>
-          I agree to be contacted by Prabhav Construction by call, SMS or WhatsApp, even if my number is on DND.
+          By submitting this form, I consent to receive communications from Prabhav Construction through WhatsApp,
+          SMS, email, phone calls and other channels, even if my number is registered on DND/NDNC.
+          <span className="text-red-600 dark:text-red-400" aria-hidden> *</span>
         </span>
       </label>
       {errors.consent ? (

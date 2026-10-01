@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Bodoni_Moda, Figtree } from "next/font/google";
+import { Manrope, Marcellus } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Providers } from "@/components/layout/Providers";
-import { Header } from "@/components/layout/Header";
+import { SideNav } from "@/components/layout/SideNav";
 import { Footer } from "@/components/layout/Footer";
 import { MobileActionBar } from "@/components/layout/MobileActionBar";
 import { IntroSplash } from "@/components/brand/IntroSplash";
@@ -14,8 +14,9 @@ import { navigation, seo, site } from "@/lib/data/content";
 import { organizationLd, websiteLd } from "@/lib/seo/jsonld";
 import { CATEGORY_LABEL, siteUrl } from "@/lib/utils";
 
-const bodoni = Bodoni_Moda({ variable: "--font-bodoni", subsets: ["latin"], weight: ["400", "500", "600"], display: "swap" });
-const figtree = Figtree({ variable: "--font-figtree", subsets: ["latin"], display: "swap" });
+// Headings: Marcellus (flared classical letterforms that echo the PRABHAV wordmark). Body: Manrope.
+const headingFont = Marcellus({ variable: "--font-heading", subsets: ["latin"], weight: "400", display: "swap" });
+const bodyFont = Manrope({ variable: "--font-body", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
@@ -29,10 +30,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fffdfa" },
-    { media: "(prefers-color-scheme: dark)", color: "#160a04" },
-  ],
+  themeColor: "#fffdfa",
 };
 
 const GTM = process.env.NEXT_PUBLIC_GTM_ID;
@@ -44,10 +42,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   const categories = (Object.keys(counts) as (keyof typeof counts)[])
     .filter((c) => counts[c] > 0)
     .map((c) => ({ slug: c, label: CATEGORY_LABEL[c], count: counts[c] }));
+  const statusCounts = { upcoming: 0, ongoing: 0, completed: 0 };
+  for (const p of projects) statusCounts[p.status]++;
   const projectOptions = projects.map((p) => ({ name: p.name, units: p.units.map((u) => u.label) }));
 
   return (
-    <html lang="en-IN" suppressHydrationWarning className={`${bodoni.variable} ${figtree.variable}`}>
+    <html lang="en-IN" suppressHydrationWarning className={`${headingFont.variable} ${bodyFont.variable}`}>
       <body className="min-h-dvh bg-bg font-sans text-fg antialiased">
         {GTM ? (
           <Script id="gtm" strategy="afterInteractive">
@@ -56,15 +56,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         ) : null}
         <IntroSplash />
         <Providers projects={projectOptions}>
-          <Header
+          <SideNav
             nav={navigation.main}
-            stations={stations}
-            categories={categories}
+            statusCounts={statusCounts}
+            projects={projects.slice(0, 3).map((p) => ({ slug: p.slug, name: p.name, locality: p.location.locality, scene: p.art.scene, seed: p.art.seed, cover: p.images.cover?.src }))}
             phone={site.phone}
             phoneDisplay={site.phoneDisplay}
+            email={site.email}
+            social={site.social}
           />
-          <main id="main">{children}</main>
-          <Footer site={site} groups={navigation.footer} stations={stations} categories={categories} />
+          {/* Content sits to the right of the fixed left rail on desktop */}
+          <div className="lg:pl-[88px]">
+            <main id="main">{children}</main>
+            <Footer site={site} groups={navigation.footer} stations={stations} categories={categories} />
+          </div>
           <MobileActionBar phone={site.phone} whatsapp={site.whatsapp} />
         </Providers>
         <JsonLd data={organizationLd(site, seo.sameAs)} />

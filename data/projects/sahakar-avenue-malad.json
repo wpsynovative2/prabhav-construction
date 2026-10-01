@@ -1,0 +1,90 @@
+{
+  "slug": "sahakar-avenue-malad",
+  "name": "Sahakar Avenue",
+  "tagline": "Offices in Malad (East)",
+  "description": "A redevelopment by Prabhav in Malad (East), with offices of 685 and 1,500 sq ft carpet area.",
+  "category": "commercial",
+  "subType": "offices",
+  "status": "upcoming",
+  "featured": false,
+  "station": "malad",
+  "location": {
+    "address": "Malad (East)",
+    "locality": "Malad (East)",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400097",
+    "lat": 19.1871,
+    "lng": 72.859
+  },
+  "units": [
+    {
+      "label": "Office",
+      "carpetAreaSqft": [
+        685,
+        1500
+      ]
+    }
+  ],
+  "rera": [
+    {
+      "number": "P51800003995"
+    }
+  ],
+  "highlights": [
+    "Redevelopment project",
+    "Offices of 685 & 1,500 sq ft"
+  ],
+  "amenities": [
+    "lift",
+    "parking",
+    "power-backup",
+    "security"
+  ],
+  "connectivity": [
+    {
+      "place": "Malad station",
+      "type": "transport"
+    },
+    {
+      "place": "Western Express Highway",
+      "type": "transport"
+    }
+  ],
+  "art": {
+    "scene": "commercial",
+    "seed": 11
+  },
+  "seo": {
+    "title": "Sahakar Avenue: Offices in Malad (East) by Prabhav",
+    "description": "Sahakar Avenue by Prabhav: offices of 685 and 1,500 sq ft carpet in Malad (East). MahaRERA P51800003995.",
+    "keywords": []
+  },
+  "publishedAt": "2015-09-01",
+  "price": {
+    "display": "Price on request",
+    "onRequest": true
+  },
+  "images": {
+    "gallery": [
+      {
+        "src": "/images/projects/sahakar-avenue-malad/01-exterior.jpg",
+        "alt": "Sahakar Avenue: tower elevation",
+        "kind": "exterior"
+      }
+    ],
+    "floorPlans": [],
+    "cover": {
+      "src": "/images/projects/sahakar-avenue-malad/01-exterior.jpg",
+      "alt": "Sahakar Avenue: tower elevation"
+    }
+  },
+  "constructionUpdates": [],
+  "faqs": [
+    {
+      "q": "Is Sahakar Avenue RERA registered?",
+      "a": "Yes. MahaRERA No. P51800003995."
+    }
+  ],
+  "updatedAt": "2026-10-01"
+}

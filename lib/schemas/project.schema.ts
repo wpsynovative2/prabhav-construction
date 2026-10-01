@@ -68,14 +68,15 @@ export const ProjectSchema = z
       .array(
         z.object({
           place: z.string(),
-          distance: z.string(),
+          /** Omit when the real distance isn't known; the UI then shows the landmark only */
+          distance: z.string().optional(),
           type: z.enum(["transport", "education", "health", "shopping", "work"]),
         }),
       )
       .default([]),
     /** Illustration used until real renders are supplied */
     art: z.object({
-      scene: z.enum(["towers", "villas", "commercial", "industrial"]),
+      scene: z.enum(["towers", "highrise", "villas", "commercial", "industrial"]),
       seed: z.number().default(1),
     }),
     images: z.object({

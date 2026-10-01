@@ -1,0 +1,149 @@
+{
+  "slug": "codename-crown-mulund",
+  "name": "Codename Crown",
+  "tagline": "1, 2 & 3 BHK residences in Mulund (East)",
+  "description": "A G+39 gated tower on 90 Feet Road, Mulund (East), with just four homes per floor, private balconies and open views.",
+  "category": "residential",
+  "subType": "apartments",
+  "status": "upcoming",
+  "featured": false,
+  "station": "mulund",
+  "location": {
+    "address": "90 Feet Road, next to ICICI Bank",
+    "locality": "Mulund (East)",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400081",
+    "lat": 19.1702,
+    "lng": 72.9612
+  },
+  "units": [
+    {
+      "label": "1 BHK",
+      "carpetAreaSqft": [391, 475],
+      "priceFrom": 9500000
+    },
+    {
+      "label": "2 BHK",
+      "carpetAreaSqft": [601, 644],
+      "priceFrom": 14500000
+    },
+    {
+      "label": "3 BHK",
+      "carpetAreaSqft": [960, 960],
+      "priceFrom": 22500000
+    }
+  ],
+  "price": {
+    "min": 9500000,
+    "max": 25000000,
+    "display": "₹95 L++ onwards",
+    "onRequest": false
+  },
+  "towers": 1,
+  "floors": "G+39",
+  "rera": [
+    {
+      "number": "P51900008403"
+    }
+  ],
+  "highlights": [
+    "Tallest on this stretch",
+    "Only 4 homes per floor",
+    "Vastu-compliant, zero-wastage layouts",
+    "Private balconies with open views",
+    "Double-height entrance lobby",
+    "Spacious SUV parking"
+  ],
+  "amenities": [
+    "ev-charging",
+    "amphitheatre",
+    "indoor-games",
+    "kids-play-area",
+    "open-gym",
+    "multipurpose-hall",
+    "yoga-deck",
+    "gym",
+    "co-working",
+    "basketball-court",
+    "video-door-phone",
+    "security"
+  ],
+  "connectivity": [
+    {
+      "place": "Eastern Express Highway",
+      "distance": "3 mins",
+      "type": "transport"
+    },
+    {
+      "place": "Mulund station (East entry)",
+      "distance": "4 mins",
+      "type": "transport"
+    },
+    {
+      "place": "Nahur station",
+      "distance": "8 mins",
+      "type": "transport"
+    },
+    {
+      "place": "Bombay Presidency International School",
+      "distance": "2 mins",
+      "type": "education"
+    },
+    {
+      "place": "V. G. Vaze College",
+      "distance": "4 mins",
+      "type": "education"
+    },
+    {
+      "place": "Galaxy Super Speciality Hospital",
+      "distance": "2 mins",
+      "type": "health"
+    },
+    {
+      "place": "Fortis Hospital, Mulund",
+      "distance": "10 mins",
+      "type": "health"
+    },
+    {
+      "place": "R Galleria Mall",
+      "distance": "5 mins",
+      "type": "shopping"
+    },
+    {
+      "place": "D-Mart",
+      "distance": "6 mins",
+      "type": "shopping"
+    }
+  ],
+  "art": {
+    "scene": "highrise",
+    "seed": 39
+  },
+  "images": {
+    "gallery": [],
+    "floorPlans": []
+  },
+  "constructionUpdates": [],
+  "faqs": [
+    {
+      "q": "Is Codename Crown RERA registered?",
+      "a": "Yes. MahaRERA No. P51900008403."
+    },
+    {
+      "q": "What is the starting price at Codename Crown?",
+      "a": "1 BHK homes start at ₹95 lakh++. 2 BHK from ₹1.45 Cr++ and 3 BHK from ₹2.25 Cr++."
+    },
+    {
+      "q": "How many homes are there on each floor?",
+      "a": "Only four, so every home gets more privacy and open views."
+    }
+  ],
+  "seo": {
+    "title": "Codename Crown: 1, 2 & 3 BHK Flats in Mulund East | Prabhav",
+    "description": "Codename Crown by Prabhav: a G+39 tower on 90 Feet Road, Mulund (E). 1, 2 & 3 BHK from ₹95 L++. MahaRERA P51900008403.",
+    "keywords": ["flats in Mulund East", "1 BHK Mulund East", "2 BHK Mulund East", "3 BHK Mulund East", "Codename Crown"]
+  },
+  "publishedAt": "2026-10-01",
+  "updatedAt": "2026-10-01"
+}

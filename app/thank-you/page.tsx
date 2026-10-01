@@ -11,7 +11,14 @@ export const metadata: Metadata = buildMetadata({ ...seo.pages.thankYou, path: "
 export default async function ThankYouPage({ searchParams }: PageProps<"/thank-you">) {
   const sp = await searchParams;
   const career = sp.type === "career";
-  const steps = career
+  const partner = sp.type === "collaborate" || sp.type === "redevelopment";
+  const steps = partner
+    ? [
+        { icon: Search, text: "Our team reviews your details" },
+        { icon: PhoneCall, text: "We call within two working days" },
+        { icon: CalendarCheck, text: "Meet to discuss next steps" },
+      ]
+    : career
     ? [
         { icon: Search, text: "Our HR team reviews your profile" },
         { icon: PhoneCall, text: "Shortlisted? We call within a week" },
@@ -24,17 +31,23 @@ export default async function ThankYouPage({ searchParams }: PageProps<"/thank-y
       ];
 
   return (
-    <section className="relative -mt-[84px] grid min-h-[85dvh] place-items-center overflow-hidden bg-surface pt-[84px]">
+    <section className="relative -mt-(--header-h) grid min-h-[85dvh] place-items-center overflow-hidden bg-surface pt-(--header-h)">
       <div className="dot-grid pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(circle,black,transparent_70%)]" />
       <Container className="relative py-16 text-center">
         <div className="logo-loader mx-auto flex w-fit flex-col items-center">
           <LogoMark className="h-24 w-auto" rayClassName="ray" />
         </div>
         <h1 className="page-enter mt-8 font-display text-4xl text-fg md:text-6xl">
-          {career ? "Application received" : "Thank you"}
+          {career ? "Application received" : partner ? "Thank you for reaching out" : "Thank you"}
         </h1>
         <p className="page-enter mx-auto mt-4 max-w-md text-lg text-muted [animation-delay:120ms]">
-          {career ? "Thanks for wanting to build with us." : "Your details are with our team."}
+          {career
+            ? "Thanks for wanting to build with us."
+            : sp.type === "redevelopment"
+              ? "Your society's details are with our redevelopment team."
+              : partner
+                ? "Your collaboration request is with our team."
+                : "Your details are with our team."}
         </p>
         <ol className="mx-auto mt-10 grid max-w-3xl gap-4 sm:grid-cols-3">
           {steps.map(({ icon: I, text }, i) => (

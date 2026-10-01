@@ -1,11 +1,11 @@
 {
   "hero": {
-    "badge": "Developer & builder since 2000 · MahaRERA registered",
+    "badge": "Prabhav Construction Co. Pvt. Ltd. · MahaRERA registered",
     "headline": [
       "Built on trust.",
       "Crafted to last."
     ],
-    "subline": "We plan, engineer and build homes, commercial and industrial spaces. In-house, start to finish.",
+    "subline": "Creating splendid structures: homes, offices and second homes across Mumbai, Igatpuri and Nashik.",
     "primaryCta": {
       "label": "Explore projects",
       "href": "/projects"
@@ -37,28 +37,28 @@
       "icon": "award"
     },
     {
-      "value": 40,
+      "value": 50,
       "suffix": "+",
       "label": "Projects delivered",
       "icon": "building"
     },
     {
-      "value": 2500,
-      "suffix": "+",
-      "label": "Happy families",
+      "value": 2,
+      "suffix": "M+",
+      "label": "Sq ft developed",
       "icon": "home"
     },
     {
-      "value": 100,
-      "suffix": "%",
-      "label": "RERA compliant",
-      "icon": "shield"
+      "value": 35,
+      "suffix": "",
+      "label": "Floors, tallest tower",
+      "icon": "trending-up"
     }
   ],
   "sections": {
     "featured": {
-      "eyebrow": "Our developments",
-      "title": "Landmark projects",
+      "eyebrow": "Featured project",
+      "title": "Featured projects",
       "subtitle": "Conceived, engineered and built by Prabhav."
     },
     "categories": {
@@ -70,30 +70,30 @@
       "title": "More than buildings, we build belonging",
       "points": [
         {
-          "icon": "gem",
-          "title": "Premium materials",
-          "text": "Branded fittings, tested concrete."
+          "icon": "shield-check",
+          "title": "Deep integrity",
+          "text": "A strict code of conduct on every site."
         },
         {
           "icon": "clock",
-          "title": "On-time delivery",
-          "text": "Tracked, published, kept."
+          "title": "Precise timekeeping",
+          "text": "Time-bound completion, highest accuracy."
         },
         {
-          "icon": "file-check",
-          "title": "Clear paperwork",
-          "text": "Clear titles, full RERA disclosure."
+          "icon": "users",
+          "title": "Team spirit",
+          "text": "Strong leadership, an energetic team."
         },
         {
-          "icon": "handshake",
-          "title": "After-sales care",
-          "text": "A team that picks up the phone."
+          "icon": "leaf",
+          "title": "LEED standards",
+          "text": "Greener buildings wherever required."
         }
       ]
     },
     "stations": {
       "eyebrow": "Where we build",
-      "title": "Our footprint on the Western line"
+      "title": "Our footprint across Mumbai & beyond"
     },
     "process": {
       "eyebrow": "How we build",
@@ -129,16 +129,21 @@
       "title": "See our craftsmanship in person",
       "subtitle": "Walk the site with our project engineers.",
       "button": "Schedule a site tour"
+    },
+    "csr": {
+      "eyebrow": "CSR",
+      "title": "Giving back to the community",
+      "subtitle": "Places of faith, built with the same care as our homes, and gifted to the neighbourhoods we build in."
     }
   },
   "marquee": [
-    "In-house engineering",
+    "Creating splendid structures",
+    "50+ projects delivered",
+    "2 million+ sq ft developed",
+    "Towers up to 35 floors",
+    "IGBC Gold pre-certified Evana",
     "MahaRERA registered",
-    "Tested concrete",
-    "Earthquake-resistant RCC",
-    "On-time possession",
-    "Clear titles",
-    "Premium fittings",
-    "Vastu compliant"
+    "Earthquake-resistant structures",
+    "LEED standards"
   ]
 }

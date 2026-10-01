@@ -1,16 +1,36 @@
 {
   "home": [
     {
+      "q": "Is it safe to buy an under-construction flat?",
+      "a": "Yes, if the project is MahaRERA registered. RERA requires timelines, approvals and quarterly progress to be published, and buyer money to be held in a dedicated project account."
+    },
+    {
+      "q": "How do I check if a project is RERA registered?",
+      "a": "Search the project's MahaRERA number on maharera.maharashtra.gov.in, or scan the QR code on its advertisement. Every Prabhav project shows its number on the project page."
+    },
+    {
+      "q": "What is the difference between carpet area and built-up area?",
+      "a": "Carpet area is the usable floor inside your walls. Built-up area adds wall thickness and balconies. Under RERA, prices must be quoted on carpet area."
+    },
+    {
+      "q": "What documents do I need to buy a flat in Maharashtra?",
+      "a": "PAN card, Aadhaar, address proof, passport-size photos and income proof if you're taking a home loan. Our team shares a full checklist at booking."
+    },
+    {
+      "q": "What are stamp duty and registration charges in Maharashtra?",
+      "a": "Stamp duty is a percentage of the agreement value (commonly around 6% in MMR cities) plus registration of 1%, capped at ₹30,000. Rates change, so always confirm the current figures before booking."
+    },
+    {
+      "q": "Can I get a home loan for an under-construction property?",
+      "a": "Yes. Banks disburse in stages as construction progresses. Prabhav projects are approved by leading banks."
+    },
+    {
+      "q": "What is an Occupancy Certificate (OC) and why does it matter?",
+      "a": "The OC confirms the building was built as per approved plans and is safe to occupy. It's needed for utility connections, resale and home loans on ready flats."
+    },
+    {
       "q": "Who builds Prabhav projects?",
       "a": "Our own in-house design, engineering and site teams, from foundation to handover."
-    },
-    {
-      "q": "Are all Prabhav projects RERA registered?",
-      "a": "Yes. Every launched project carries a MahaRERA number, shown on its project page."
-    },
-    {
-      "q": "Can I visit a site under construction?",
-      "a": "Yes. Our project engineers walk you through the site, seven days a week."
     }
   ],
   "contact": [
@@ -19,8 +39,8 @@
       "a": "Within one working day, usually the same day."
     },
     {
-      "q": "Do you have an office I can visit?",
-      "a": "Yes. Our head office address and hours are listed on this page."
+      "q": "Where is your office?",
+      "a": "1501/1502 Excel Plaza, 90 Feet Road, Pant Nagar, Ghatkopar (East), Mumbai 400075."
     }
   ],
   "career": [

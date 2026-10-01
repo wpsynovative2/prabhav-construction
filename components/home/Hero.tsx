@@ -18,7 +18,7 @@ const d = (s: number) => ({ "--d": `${s}s` }) as React.CSSProperties;
 export function Hero({ hero }: { hero: HeroData }) {
   const [line1, line2] = hero.headline;
   return (
-    <section className="relative -mt-[84px] overflow-hidden pt-[84px]">
+    <section className="relative -mt-(--header-h) overflow-hidden pt-(--header-h)">
       {/* Backdrop: warm glow, dot grid, giant radiating rays */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_75%_35%,var(--glow),transparent_70%)]" />
       <div className="dot-grid pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(70%_60%_at_20%_30%,black,transparent)]" />
@@ -34,11 +34,11 @@ export function Hero({ hero }: { hero: HeroData }) {
             {hero.badge}
           </span>
 
-          <h1 className="mt-6 font-display text-[2.7rem] leading-[1.02] font-medium tracking-tight text-fg sm:text-6xl lg:text-[4.4rem]">
+          <h1 className="mt-6 font-display text-[2.4rem] leading-[1.08] text-fg sm:text-5xl lg:text-[3.6rem]">
             <span className="hero-rise intro-delay block" style={d(0.15)}>
               {line1}
             </span>
-            <span className="hero-rise intro-delay gold-shine block pb-2 italic" style={d(0.3)}>
+            <span className="hero-rise intro-delay gold-shine block pb-2" style={d(0.3)}>
               {line2}
             </span>
           </h1>

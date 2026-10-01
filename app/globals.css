@@ -5,6 +5,7 @@
 
 :root {
   color-scheme: light;
+  --header-h: 64px;
   --bg: #fffdfa;
   --surface: #faf6f2;
   --surface-raised: #ffffff;
@@ -106,8 +107,8 @@
   --color-brown: #612f15;
   --color-brown-900: #2a1409;
 
-  --font-display: var(--font-bodoni), Georgia, serif;
-  --font-sans: var(--font-figtree), system-ui, sans-serif;
+  --font-display: var(--font-heading), Georgia, serif;
+  --font-sans: var(--font-body), system-ui, sans-serif;
   --radius-card: 1.25rem;
   --radius-control: 0.75rem;
   --shadow-soft: var(--shadow);
@@ -116,6 +117,11 @@
 
 html {
   scroll-behavior: smooth;
+}
+@media (min-width: 1024px) {
+  :root {
+    --header-h: 0px;
+  }
 }
 body {
   background: var(--color-bg);
@@ -248,12 +254,41 @@ body {
   animation: train-v 9s linear infinite;
 }
 
+/* Temple flags flutter */
+@keyframes flag {
+  0%, 100% { transform: skewY(0deg) scaleX(1); }
+  50% { transform: skewY(-6deg) scaleX(0.92); }
+}
+.flag-wave {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: flag 2.4s ease-in-out infinite;
+}
+
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: none; }
 }
 @keyframes dash {
   to { stroke-dashoffset: 0; }
+}
+
+/* ---------- Photo-backed sections ----------
+   Dark (tone="surface") sections show the photo under the brand-brown overlay, alternating
+   with plain sections. On desktop the photo stays fixed while scrolling (parallax). */
+.photo-dark {
+  background-color: #160a04;
+  background-image:
+    radial-gradient(55% 70% at 85% 15%, rgba(212, 175, 55, 0.16), transparent 70%),
+    linear-gradient(100deg, rgba(22, 10, 4, 0.92) 0%, rgba(42, 20, 9, 0.84) 50%, rgba(97, 47, 21, 0.68) 100%),
+    url("/images/sunset-towers.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 1024px) and (hover: hover) {
+  .photo-dark {
+    background-attachment: fixed;
+  }
 }
 
 .page-enter {

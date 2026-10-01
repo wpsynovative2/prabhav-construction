@@ -101,6 +101,7 @@ export const SelectInput = forwardRef<HTMLSelectElement, SelectProps>(function S
         id={id}
         className={cn(inputClass, "appearance-none pr-10")}
         aria-invalid={error ? true : undefined}
+        aria-describedby={error ? `${id}-error` : undefined}
         {...props}
       >
         <option value="">Select</option>
@@ -114,9 +115,14 @@ export const SelectInput = forwardRef<HTMLSelectElement, SelectProps>(function S
         {label}
         {optional ? <span className="opacity-60"> (optional)</span> : null}
       </label>
-      <svg className="pointer-events-none absolute top-1/2 right-4 size-4 -translate-y-1/2 text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <svg className="pointer-events-none absolute top-[1.6rem] right-4 size-4 -translate-y-1/2 text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
         <path d="m6 9 6 6 6-6" />
       </svg>
+      {error ? (
+        <p id={`${id}-error`} className="mt-1.5 text-xs text-red-600 dark:text-red-400" aria-live="polite">
+          {error}
+        </p>
+      ) : null}
     </div>
   );
 });
@@ -170,3 +176,34 @@ export function RecaptchaNote() {
     </p>
   );
 }
+
+type ConsentProps = React.InputHTMLAttributes<HTMLInputElement> & { error?: string };
+
+/** Mandatory communications consent (pre-ticked by client request; the schema still rejects false) */
+export const ConsentCheckbox = forwardRef<HTMLInputElement, ConsentProps>(function ConsentCheckbox({ error, ...props }, ref) {
+  return (
+    <div>
+      <label className="flex cursor-pointer items-start gap-3 text-xs leading-relaxed text-muted">
+        <input
+          ref={ref}
+          type="checkbox"
+          required
+          aria-required="true"
+          aria-invalid={error ? true : undefined}
+          className="mt-0.5 size-4 shrink-0 accent-[var(--primary)]"
+          {...props}
+        />
+        <span>
+          By submitting this form, I consent to receive communications from Prabhav Construction through WhatsApp,
+          SMS, email, phone calls and other channels, even if my number is registered on DND/NDNC.
+          <span className="text-red-600 dark:text-red-400" aria-hidden> *</span>
+        </span>
+      </label>
+      {error ? (
+        <p className="mt-1.5 text-xs text-red-600 dark:text-red-400" aria-live="polite">
+          {error}
+        </p>
+      ) : null}
+    </div>
+  );
+});

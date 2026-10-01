@@ -8,7 +8,7 @@ const LEGAL = ["/privacy-policy", "/terms-and-conditions", "/disclaimer"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteUrl();
-  const staticPages = ["", "/about-us", "/projects", "/our-constructions", "/career", "/insights", "/contact-us", "/privacy-policy", "/terms-and-conditions", "/disclaimer"].map((p) => ({
+  const staticPages = ["", "/about-us", "/projects", "/our-constructions", "/collaborate", "/career", "/insights", "/contact-us", "/privacy-policy", "/terms-and-conditions", "/disclaimer"].map((p) => ({
     url: `${base}${p}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,

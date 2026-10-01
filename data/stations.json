@@ -1,8 +1,68 @@
 [
-  { "slug": "virar", "name": "Virar", "line": "Western", "order": 1, "intro": "The fastest-growing end of the Western line, with fast locals to Churchill and new ring-road links.", "seo": { "title": "Flats, Shops & Industrial Units near Virar Station", "description": "RERA-registered homes, shops and industrial galas by Prabhav Construction near Virar station." } },
-  { "slug": "nallasopara", "name": "Nallasopara", "line": "Western", "order": 2, "intro": "A busy commercial hub with strong rental demand and quick access to the Vasai-Virar belt.", "seo": { "title": "Flats & Shops near Nallasopara Station", "description": "Residential and commercial projects by Prabhav Construction near Nallasopara station." } },
-  { "slug": "vasai-road", "name": "Vasai Road", "line": "Western", "order": 3, "intro": "A junction station linking the Western line with the Diva–Panvel corridor, backed by an established industrial estate.", "seo": { "title": "Projects near Vasai Road Station", "description": "Homes and industrial galas by Prabhav Construction near Vasai Road station." } },
-  { "slug": "naigaon", "name": "Naigaon", "line": "Western", "order": 4 },
-  { "slug": "bhayandar", "name": "Bhayandar", "line": "Western", "order": 5 },
-  { "slug": "mira-road", "name": "Mira Road", "line": "Western", "order": 6 }
+  {
+    "slug": "andheri",
+    "name": "Andheri",
+    "line": "Western",
+    "order": 1,
+    "intro": "Prabhav's Amberley rises near Lokhandwala and Versova, minutes from the Versova Metro station.",
+    "seo": {
+      "title": "Prabhav Projects in Andheri (W)",
+      "description": "Amberley by Prabhav: 1, 2 & 3 BHK apartments in Andheri (W). MahaRERA P51800004072."
+    }
+  },
+  {
+    "slug": "malad",
+    "name": "Malad",
+    "line": "Western",
+    "order": 2,
+    "intro": "Sahakar Avenue in Malad (East), a redevelopment by Prabhav in an upcoming investment hub of the western suburbs.",
+    "seo": {
+      "title": "Prabhav Projects in Malad (E)",
+      "description": "Sahakar Avenue by Prabhav: offices in Malad (East). MahaRERA P51800003995."
+    }
+  },
+  {
+    "slug": "chembur",
+    "name": "Chembur",
+    "line": "Harbour",
+    "order": 3,
+    "intro": "Arisha brings 2 & 3 BHK homes to the Chembur East – Ghatkopar East belt.",
+    "seo": {
+      "title": "Prabhav Projects in Chembur East",
+      "description": "Arisha by Prabhav: 2 & 3 BHK homes in Chembur East / Ghatkopar East. MahaRERA P51900007376."
+    }
+  },
+  {
+    "slug": "mulund",
+    "name": "Mulund",
+    "line": "Central",
+    "order": 4,
+    "intro": "Codename Crown on 90 Feet Road, Mulund (East), and Manibhadra Tower in Mulund (West), both minutes from the Eastern Express Highway and Mulund station.",
+    "seo": {
+      "title": "Prabhav Projects in Mulund: Codename Crown & Manibhadra Tower",
+      "description": "Codename Crown (Mulund East, MahaRERA P51900008403) and Manibhadra Tower (Mulund West, MahaRERA P51800003009) by Prabhav."
+    }
+  },
+  {
+    "slug": "igatpuri",
+    "name": "Igatpuri",
+    "line": "Central",
+    "order": 5,
+    "intro": "Second homes amidst the forests and hills of Igatpuri: row-house villas and pool apartments by Prabhav.",
+    "seo": {
+      "title": "Second Homes in Igatpuri by Prabhav",
+      "description": "Vivaant and Empire by Prabhav: row-house villas, villas and apartments in Igatpuri. MahaRERA P51600005114."
+    }
+  },
+  {
+    "slug": "nashik",
+    "name": "Nashik",
+    "line": "Central",
+    "order": 6,
+    "intro": "Evana at Pathardi, Nashik: six towers of IGBC Gold pre-certified green homes.",
+    "seo": {
+      "title": "Prabhav Projects in Nashik",
+      "description": "Evana by Prabhav: 2, 2.5 BHK and terrace garden flats in Pathardi, Nashik. MahaRERA P51600012427."
+    }
+  }
 ]

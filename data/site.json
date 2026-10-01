@@ -1,40 +1,54 @@
 {
   "name": "Prabhav Construction",
   "shortName": "Prabhav",
-  "legalName": "Prabhav Construction",
-  "tagline": "Building trust since 2000",
+  "legalName": "Prabhav Construction Company Pvt. Ltd.",
+  "tagline": "Creating splendid structures",
   "foundingYear": "2000",
-  "logos": { "light": "/logo/logo-light.png", "dark": "/logo/logo-dark.png" },
-  "phone": "+919876543210",
-  "phoneDisplay": "+91 98765 43210",
-  "whatsapp": "919876543210",
-  "email": "info@prabhavconstruction.in",
-  "careersEmail": "careers@prabhavconstruction.in",
+  "logos": {
+    "light": "/logo/logo-light.png",
+    "dark": "/logo/logo-dark.png"
+  },
+  "phone": "+919967789777",
+  "phoneDisplay": "+91 99677 89777",
+  "whatsapp": "919967789777",
+  "email": "sales@prabhavgroup.in",
+  "careersEmail": "sales@prabhavgroup.in",
   "hours": "Mon–Sat · 10:00 am – 7:00 pm",
-  "hoursSpec": [{ "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "19:00" }],
+  "hoursSpec": [
+    {
+      "days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "19:00"
+    }
+  ],
   "offices": [
     {
-      "name": "Head office",
+      "name": "Corporate office",
       "address": {
-        "streetAddress": "Office No. 00, Example Complex, Station Road",
-        "addressLocality": "Virar West",
+        "streetAddress": "1501/1502 Excel Plaza, 90 Feet Road, Pant Nagar, Near Durga Mata Mandir",
+        "addressLocality": "Ghatkopar (East), Mumbai",
         "addressRegion": "Maharashtra",
-        "postalCode": "401303"
+        "postalCode": "400075"
       },
-      "city": "Palghar",
-      "lat": 19.4559,
-      "lng": 72.8114,
-      "phone": "+919876543210",
-      "mapsUrl": "https://maps.google.com/?q=19.4559,72.8114",
-      "mapEmbedUrl": "https://www.google.com/maps?q=19.4559,72.8114&z=15&output=embed"
+      "city": "Mumbai",
+      "lat": 19.08276,
+      "lng": 72.91077,
+      "phone": "+912221023548",
+      "mapsUrl": "https://maps.google.com/?q=Prabhav+Group+Excel+Plaza+Ghatkopar+East",
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.5670798018587!2d72.9107719149012!3d19.08276268708409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c63228390683%3A0xc51f5a8e89f5d3ca!2sPrabhav+Group!5e0!3m2!1sen!2sin!4v1548745317978"
     }
   ],
   "social": {
-    "instagram": "https://www.instagram.com/",
-    "facebook": "https://www.facebook.com/",
-    "linkedin": "https://www.linkedin.com/",
-    "youtube": "https://www.youtube.com/"
+    "facebook": "https://www.facebook.com/vivaant.vivaant.3",
+    "instagram": "https://www.instagram.com/vivaant123/"
   },
-  "region": "Mumbai Western Suburbs",
+  "region": "Mumbai, Igatpuri & Nashik",
   "defaultOgImage": "/opengraph-image"
 }

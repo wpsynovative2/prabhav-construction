@@ -1,6 +1,6 @@
 import "server-only";
 
-type SheetName = "Leads" | "Careers";
+type SheetName = "Leads" | "Careers" | "Collaborations" | "Redevelopment";
 
 export async function forwardToSheet(sheet: SheetName, data: Record<string, unknown>) {
   const url = process.env.GSCRIPT_WEBHOOK_URL;

@@ -40,23 +40,46 @@ export async function POST(req: NextRequest) {
     ...lead.tracking,
   };
 
-  const saved =
-    lead.formType === "career"
-      ? await forwardToSheet("Careers", {
-          ...common,
-          position: lead.position,
-          experience: lead.experience,
-          currentLocation: lead.currentLocation,
-          resumeBase64: lead.resumeBase64,
-          resumeName: lead.resumeName,
-          resumeMime: lead.resumeMime,
-        })
-      : await forwardToSheet("Leads", {
-          ...common,
-          project: lead.project ?? "",
-          unit: lead.unit ?? "",
-          intent: lead.intent ?? "",
-        });
+  let saved: boolean;
+  switch (lead.formType) {
+    case "career":
+      saved = await forwardToSheet("Careers", {
+        ...common,
+        position: lead.position,
+        experience: lead.experience,
+        currentLocation: lead.currentLocation,
+        resumeBase64: lead.resumeBase64,
+        resumeName: lead.resumeName,
+        resumeMime: lead.resumeMime,
+      });
+      break;
+    case "collaborate":
+      saved = await forwardToSheet("Collaborations", {
+        ...common,
+        organisation: lead.organisation ?? "",
+        collaborationType: lead.collaborationType,
+        city: lead.city,
+      });
+      break;
+    case "redevelopment":
+      saved = await forwardToSheet("Redevelopment", {
+        ...common,
+        societyName: lead.societyName,
+        designation: lead.designation,
+        location: lead.location,
+        flats: lead.flats ?? "",
+        plotArea: lead.plotArea ?? "",
+        buildingAge: lead.buildingAge ?? "",
+      });
+      break;
+    default:
+      saved = await forwardToSheet("Leads", {
+        ...common,
+        project: lead.project ?? "",
+        unit: lead.unit ?? "",
+        intent: lead.intent ?? "",
+      });
+  }
 
   if (!saved) {
     return NextResponse.json(

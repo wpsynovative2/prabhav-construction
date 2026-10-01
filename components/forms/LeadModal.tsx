@@ -2,7 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { BadgeCheck, Building2, HardHat, X } from "lucide-react";
+import Image from "next/image";
+import { X } from "lucide-react";
 import { LogoMark } from "@/components/brand/LogoMark";
 import { LeadForm } from "./LeadForm";
 import type { LeadContext, ProjectOption } from "./LeadModalProvider";
@@ -14,12 +15,6 @@ const TITLES: Record<string, string> = {
   "floor-plan": "Unlock floor plans",
   enquiry: "Enquire now",
 };
-
-const PERKS = [
-  { icon: Building2, text: "Direct from the developer" },
-  { icon: HardHat, text: "Site tours with our engineers" },
-  { icon: BadgeCheck, text: "MahaRERA registered" },
-];
 
 type Props = { context: LeadContext | null; projects: ProjectOption[]; onClose: () => void };
 
@@ -87,19 +82,8 @@ export function LeadModal({ context, projects, onClose }: Props) {
             {/* Brand panel */}
             <div className="relative hidden overflow-hidden bg-[linear-gradient(160deg,#7a3c1b,#3a1a0b)] p-8 text-white md:block">
               <LogoMark className="absolute -right-16 -bottom-10 h-72 w-auto opacity-20" />
-              <div className="relative">
-                <LogoMark className="h-10 w-auto" />
-                <p className="mt-6 font-display text-3xl leading-tight">Talk to the Prabhav team.</p>
-                <ul className="mt-8 grid gap-4">
-                  {PERKS.map(({ icon: I, text }) => (
-                    <li key={text} className="flex items-center gap-3 text-sm text-white/85">
-                      <span className="grid size-9 place-items-center rounded-full bg-white/10 ring-1 ring-[#d4af37]/40">
-                        <I className="size-4 text-[#e5c96a]" />
-                      </span>
-                      {text}
-                    </li>
-                  ))}
-                </ul>
+              <div className="relative grid h-full place-items-center">
+                <Image src="/logo/logo-dark.png" alt="Prabhav Construction" width={995} height={637} className="h-auto w-48" />
               </div>
             </div>
 

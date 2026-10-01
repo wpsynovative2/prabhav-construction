@@ -8,7 +8,10 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { Icon } from "@/components/ui/Icon";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { about, home, seo, site } from "@/lib/data/content";
+import { Milestones } from "@/components/about/Milestones";
+import { Leadership } from "@/components/about/Leadership";
+import { CsrSection } from "@/components/home/CsrSection";
+import { about, csr, home, seo, site } from "@/lib/data/content";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { siteUrl } from "@/lib/utils";
 
@@ -70,84 +73,37 @@ export default function AboutPage() {
         </RevealGroup>
       </Section>
 
-      {/* Milestones timeline */}
+      {/* Milestones: details appear on hover */}
       <Section>
         <SectionHeading eyebrow="Milestones" title="Twenty-five years, one brick at a time" align="center" />
-        <div className="relative">
-          <div className="absolute top-[34px] right-0 left-0 hidden h-px hairline md:block" />
-          <RevealGroup className="no-scrollbar -mx-5 flex snap-x gap-4 overflow-x-auto px-5 pb-2 md:mx-0 md:grid md:grid-cols-6 md:overflow-visible md:px-0" stagger={0.1}>
-            {about.milestones.map((m) => (
-              <RevealItem key={m.year} className="w-44 shrink-0 snap-start md:w-auto">
-                <div className="group flex flex-col items-center text-center">
-                  <span className="relative grid size-[68px] place-items-center rounded-full border border-line bg-surface-raised font-display text-lg text-accent-text shadow-soft transition-all duration-500 group-hover:scale-110 group-hover:border-accent group-hover:bg-primary group-hover:text-primary-fg">
-                    {m.year}
-                  </span>
-                  <p className="mt-4 text-sm text-fg">{m.title}</p>
-                </div>
-              </RevealItem>
-            ))}
-          </RevealGroup>
-        </div>
+        <Milestones items={about.milestones} />
       </Section>
 
-      {/* Leadership */}
+      {/* Leadership: two portraits that fade into each other */}
       <Section tone="surface">
         <SectionHeading eyebrow="Leadership" title="The people behind Prabhav" align="center" />
-        <RevealGroup className="grid gap-5 sm:grid-cols-3">
-          {about.leadership.map((l, i) => (
-            <RevealItem key={l.role}>
-              <div className="group overflow-hidden rounded-[var(--radius-card)] border border-line bg-surface-raised text-center transition-all duration-500 hover:-translate-y-1 hover:shadow-lift">
-                <div className="relative grid aspect-[4/3] place-items-center overflow-hidden bg-[linear-gradient(150deg,#7a3c1b,#2a1409)]">
-                  <LogoMark className="absolute h-[140%] w-auto opacity-10 transition-transform duration-1000 group-hover:rotate-6" />
-                  <span className="relative grid size-28 place-items-center rounded-full border-2 border-[#d4af37] bg-white/10 font-display text-4xl text-white backdrop-blur" style={{ transitionDelay: `${i * 60}ms` }}>
-                    {l.initials}
-                  </span>
-                </div>
-                <div className="p-6">
-                  <h3 className="font-display text-2xl text-fg">{l.name}</h3>
-                  <p className="text-sm text-accent-text">{l.role}</p>
-                </div>
+        <Leadership leaders={about.leadership} />
+      </Section>
+
+      {/* Quality */}
+      <Section>
+        <SectionHeading eyebrow="Quality & compliance" title="Built by the book" align="center" />
+        <RevealGroup className="grid grid-cols-2 gap-4 md:grid-cols-4">
+          {about.quality.map((q) => (
+            <RevealItem key={q.title}>
+              <div className="flex h-full flex-col items-start gap-4 rounded-2xl bg-white p-5 text-[#2a1409] ring-1 ring-line">
+                <Icon name={q.icon} className="size-8 text-[#8a6f1c]" />
+                <p className="font-display text-lg leading-tight">{q.title}</p>
               </div>
             </RevealItem>
           ))}
         </RevealGroup>
       </Section>
 
-      {/* Quality + CSR */}
-      <Section>
-        <div className="grid gap-12 lg:grid-cols-2">
-          <div>
-            <SectionHeading eyebrow="Quality & compliance" title="Built by the book" />
-            <RevealGroup className="grid grid-cols-2 gap-4">
-              {about.quality.map((q) => (
-                <RevealItem key={q.title}>
-                  <div className="flex h-full flex-col items-start gap-4 rounded-2xl bg-white p-5 text-[#2a1409] ring-1 ring-line">
-                    <Icon name={q.icon} className="size-8 text-[#8a6f1c]" />
-                    <p className="font-display text-lg leading-tight">{q.title}</p>
-                  </div>
-                </RevealItem>
-              ))}
-            </RevealGroup>
-          </div>
-          <div>
-            <SectionHeading eyebrow="Giving back" title="Beyond buildings" />
-            <RevealGroup className="grid gap-4">
-              {about.csr.map((c) => (
-                <RevealItem key={c.title}>
-                  <div className="group flex items-center gap-5 rounded-2xl border border-line bg-surface-raised p-5 transition-all duration-500 hover:border-accent/60 hover:shadow-soft">
-                    <span className="grid size-14 shrink-0 place-items-center rounded-full bg-surface text-accent-text ring-1 ring-line transition group-hover:bg-primary group-hover:text-primary-fg">
-                      <Icon name={c.icon} className="size-6" />
-                    </span>
-                    <div>
-                      <h3 className="font-display text-xl text-fg">{c.title}</h3>
-                      <p className="text-sm text-muted">{c.text}</p>
-                    </div>
-                  </div>
-                </RevealItem>
-              ))}
-            </RevealGroup>
-          </div>
-        </div>
+      {/* CSR */}
+      <Section tone="surface">
+        <SectionHeading eyebrow={home.sections.csr.eyebrow} title={home.sections.csr.title} subtitle={home.sections.csr.subtitle} align="center" />
+        <CsrSection items={csr} />
       </Section>
 
       <CtaBand source="about:cta-band" phone={site.phone} phoneDisplay={site.phoneDisplay} />

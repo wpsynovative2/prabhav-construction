@@ -2,16 +2,16 @@
   "titleTemplate": "%s | Prabhav Construction",
   "pages": {
     "home": {
-      "title": "Prabhav Construction: Residential, Commercial & Industrial Projects in Mumbai Western Suburbs",
-      "description": "MahaRERA-registered homes, shops and industrial galas near Virar, Nallasopara and Vasai Road stations. Building trust since 2000."
+      "title": "Prabhav Construction: Homes & Offices in Mumbai, Igatpuri & Nashik",
+      "description": "Prabhav Construction Company Pvt. Ltd.: 50+ projects and 2 million+ sq ft developed. MahaRERA-registered homes in Andheri, Mulund, Chembur, Igatpuri and Nashik."
     },
     "about": {
       "title": "About us",
-      "description": "Prabhav Construction has built homes, high streets and industrial parks in the Western suburbs since 2000."
+      "description": "Prabhav Construction, led by Chairman & MD Mr. Prashant Lathia, has delivered 50+ projects and 2 million+ sq ft across Mumbai."
     },
     "projects": {
-      "title": "Our projects",
-      "description": "Residential, commercial and industrial projects by Prabhav Construction near Western line stations."
+      "title": "Our portfolio",
+      "description": "Residential and commercial projects by Prabhav Construction in Mumbai, Igatpuri and Nashik."
     },
     "career": {
       "title": "Careers at Prabhav Construction",
@@ -22,8 +22,8 @@
       "description": "Market news, buyer guides and policy updates for property buyers in Mumbai's Western suburbs."
     },
     "contact": {
-      "title": "Contact Prabhav Construction",
-      "description": "Call, WhatsApp or visit Prabhav Construction's head office in Virar West. Open Monday to Saturday."
+      "title": "Get in Touch with Prabhav Construction",
+      "description": "Visit Prabhav Construction at Excel Plaza, Ghatkopar (East), Mumbai, or call +91 99677 89777."
     },
     "thankYou": {
       "title": "Thank you",
@@ -47,9 +47,7 @@
     }
   },
   "sameAs": [
-    "https://www.instagram.com/",
-    "https://www.facebook.com/",
-    "https://www.linkedin.com/",
-    "https://www.youtube.com/"
+    "https://www.facebook.com/vivaant.vivaant.3",
+    "https://www.instagram.com/vivaant123/"
   ]
 }

@@ -2,62 +2,66 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { LogoMark } from "@/components/brand/LogoMark";
 import { ButtonLink } from "@/components/ui/Button";
-import { Icon } from "@/components/ui/Icon";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { Eyebrow } from "@/components/ui/Section";
 
 type Point = { icon: string; title: string; text: string };
 
+/** About teaser: layered photo collage on one side, a statement and four numbered promises on the other. */
 export function AboutTeaser({ eyebrow, title, points }: { eyebrow: string; title: string; points: Point[] }) {
   return (
-    <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
-      <Reveal className="relative">
-        <div className="relative overflow-hidden rounded-[2rem] bg-[linear-gradient(150deg,#7a3c1b,#2a1409)] p-8 text-white md:p-12">
-          <LogoMark className="pointer-events-none absolute -top-10 -right-10 h-72 w-auto opacity-15" />
-          <div className="relative grid gap-8 md:grid-cols-[1fr_1.1fr] md:items-center">
-            <div>
-              <Eyebrow className="text-[#e5c96a]">{eyebrow}</Eyebrow>
-              <h2 className="mt-4 font-display text-3xl leading-tight md:text-4xl">{title}</h2>
-              <span className="mt-5 block h-px w-16 bg-[#d4af37]" />
-              <ButtonLink href="/about-us" variant="accent" className="mt-8">
-                Our story
-                <ArrowRight className="size-4 transition-transform group-hover/btn:translate-x-1" />
-              </ButtonLink>
-            </div>
-            <div className="relative">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] ring-1 ring-white/15">
-                <Image
-                  src="/images/BG-img1.jpg"
-                  alt="A calm, sunlit living room in a Prabhav home"
-                  fill
-                  sizes="(min-width: 1024px) 25vw, 80vw"
-                  className="object-cover transition-transform duration-[1.5s] hover:scale-105"
-                />
-              </div>
-              <div className="floaty absolute -bottom-5 -left-5 rounded-2xl bg-white p-4 text-[#2a1409] shadow-lift">
-                <p className="font-display text-3xl leading-none">25+</p>
-                <p className="text-xs text-[#6b5548]">years of craft</p>
-              </div>
-            </div>
+    <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      {/* Collage */}
+      <Reveal className="relative mx-auto w-full max-w-xl pb-16 lg:pb-10">
+        <div className="absolute -top-4 -left-4 h-[78%] w-[78%] rounded-[2rem] border border-accent/60" aria-hidden />
+        <div className="relative aspect-[4/5] w-[78%] overflow-hidden rounded-[2rem] shadow-lift">
+          <Image
+            src="/images/sunset-towers.jpg"
+            alt="Prabhav residential towers at sunset"
+            fill
+            sizes="(min-width: 1024px) 30vw, 70vw"
+            className="object-cover transition-transform duration-[1.5s] hover:scale-105"
+          />
+        </div>
+        <div className="absolute right-0 bottom-0 aspect-square w-[52%] overflow-hidden rounded-[1.5rem] border-4 border-bg shadow-lift">
+          <Image src="/images/BG-img1.jpg" alt="A finished Prabhav home interior" fill sizes="(min-width: 1024px) 20vw, 50vw" className="object-cover" />
+        </div>
+        <div className="floaty absolute top-[42%] right-[6%] grid size-28 place-items-center rounded-full bg-primary text-center text-primary-fg shadow-lift md:size-32">
+          <div>
+            <p className="font-display text-4xl leading-none">25+</p>
+            <p className="mt-1 text-[0.65rem] tracking-[0.15em] uppercase opacity-80">years</p>
           </div>
+          <LogoMark className="absolute -top-3 left-1/2 h-7 w-auto -translate-x-1/2" />
         </div>
       </Reveal>
 
-      <RevealGroup className="grid gap-4">
-        {points.map((p) => (
-          <RevealItem key={p.title}>
-            <div className="group flex items-center gap-5 rounded-2xl border border-transparent p-4 transition-all duration-500 hover:border-line hover:bg-surface-raised hover:shadow-soft">
-              <span className="grid size-14 shrink-0 place-items-center rounded-full bg-surface text-accent-text ring-1 ring-line transition-all duration-500 group-hover:bg-primary group-hover:text-primary-fg group-hover:ring-primary">
-                <Icon name={p.icon} className="size-6" />
-              </span>
-              <div>
-                <h3 className="font-display text-xl text-fg">{p.title}</h3>
-                <p className="text-sm text-muted">{p.text}</p>
+      {/* Statement + promises */}
+      <div>
+        <Reveal>
+          <Eyebrow>{eyebrow}</Eyebrow>
+          <h2 className="mt-3 font-display text-[2.2rem] leading-[1.08] text-fg md:text-5xl">{title}</h2>
+          <span className="mt-5 block h-px w-20 hairline" />
+        </Reveal>
+        <RevealGroup className="mt-8 grid gap-x-8 sm:grid-cols-2">
+          {points.map((p, i) => (
+            <RevealItem key={p.title}>
+              <div className="group border-t border-line py-5">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-display text-sm text-accent-text">0{i + 1}</span>
+                  <h3 className="font-display text-xl text-fg transition-colors group-hover:text-primary">{p.title}</h3>
+                </div>
+                <p className="mt-1 pl-7 text-sm text-muted">{p.text}</p>
               </div>
-            </div>
-          </RevealItem>
-        ))}
-      </RevealGroup>
+            </RevealItem>
+          ))}
+        </RevealGroup>
+        <Reveal className="mt-6">
+          <ButtonLink href="/about-us" variant="outline">
+            Our story
+            <ArrowRight className="size-4 transition-transform group-hover/btn:translate-x-1" />
+          </ButtonLink>
+        </Reveal>
+      </div>
     </div>
   );
 }

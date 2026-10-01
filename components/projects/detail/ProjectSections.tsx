@@ -12,6 +12,7 @@ import { Eyebrow } from "@/components/ui/Section";
 import { Accordion } from "@/components/ui/Accordion";
 import { formatMonth, formatPrice } from "@/lib/utils";
 import { MapEmbed } from "./MapEmbed";
+import { GalleryCarousel } from "./GalleryCarousel";
 
 export function Block({ id, eyebrow, title, children }: { id: string; eyebrow: string; title: string; children: React.ReactNode }) {
   return (
@@ -122,13 +123,7 @@ export function Gallery({ project: p }: { project: Project }) {
   if (!p.images.gallery.length) return null;
   return (
     <Block id="gallery" eyebrow="Gallery" title="A closer look">
-      <div className="no-scrollbar -mx-5 flex snap-x gap-4 overflow-x-auto px-5">
-        {p.images.gallery.map((g) => (
-          <a key={g.src} href={g.src} target="_blank" rel="noreferrer" className="relative aspect-[4/3] w-[80%] shrink-0 snap-start overflow-hidden rounded-2xl sm:w-[45%]">
-            <Image src={g.src} alt={g.alt} fill sizes="(min-width: 640px) 45vw, 80vw" className="object-cover transition-transform duration-700 hover:scale-105" />
-          </a>
-        ))}
-      </div>
+      <GalleryCarousel images={p.images.gallery.map(({ src, alt }) => ({ src, alt }))} />
     </Block>
   );
 }
@@ -136,7 +131,7 @@ export function Gallery({ project: p }: { project: Project }) {
 const CONN_ICON = { transport: TrainFront, education: GraduationCap, health: HeartPulse, shopping: ShoppingBag, work: Factory } as const;
 
 export function LocationConnectivity({ project: p }: { project: Project }) {
-  const maxKm = Math.max(...p.connectivity.map((c) => toKm(c.distance)), 1);
+  const maxKm = Math.max(...p.connectivity.map((c) => (c.distance ? toKm(c.distance) : 0)), 1);
   return (
     <Block id="location" eyebrow="Location" title="Well connected">
       <div className="grid gap-6 lg:grid-cols-2">
@@ -156,11 +151,13 @@ export function LocationConnectivity({ project: p }: { project: Project }) {
                   <div className="flex-1">
                     <div className="flex justify-between gap-3 text-sm">
                       <span className="text-fg">{c.place}</span>
-                      <span className="font-medium text-accent-text">{c.distance}</span>
+                      {c.distance ? <span className="font-medium text-accent-text">{c.distance}</span> : null}
                     </div>
-                    <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-line">
-                      <div className="gold-fill h-full rounded-full" style={{ width: `${Math.max(8, (toKm(c.distance) / maxKm) * 100)}%` }} />
-                    </div>
+                    {c.distance ? (
+                      <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-line">
+                        <div className="gold-fill h-full rounded-full" style={{ width: `${Math.max(8, (toKm(c.distance) / maxKm) * 100)}%` }} />
+                      </div>
+                    ) : null}
                   </div>
                 </li>
               );

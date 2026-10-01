@@ -19,7 +19,7 @@ export function StationPresence({ stations }: { stations: LineStation[] }) {
         <div className="relative mb-6 flex items-center gap-3 text-sm text-muted">
           <span className="inline-flex items-center gap-2 rounded-full bg-surface px-3 py-1.5 text-fg">
             <TrainFront className="size-4 text-accent-text" />
-            Western line
+            Our locations
           </span>
           <span className="hidden sm:inline">Tap a gold stop to see projects there</span>
         </div>
@@ -51,7 +51,7 @@ export function StationPresence({ stations }: { stations: LineStation[] }) {
                     href={`/projects/station/${s.slug}`}
                     className="group mt-1 flex flex-col items-center rounded-2xl px-3 py-1 text-center transition hover:-translate-y-1"
                   >
-                    <span className="rounded-full bg-primary px-2.5 py-0.5 text-xs font-semibold text-primary-fg">
+                    <span className="rounded-full bg-primary px-2.5 py-0.5 text-xs font-semibold whitespace-nowrap text-primary-fg">
                       {s.count} {s.count === 1 ? "project" : "projects"}
                     </span>
                   </Link>

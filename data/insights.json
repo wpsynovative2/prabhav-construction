@@ -1,18 +1,33 @@
 [
   {
-    "slug": "virar-alibaug-corridor-what-it-means-for-buyers",
-    "title": "What the Virar–Alibaug corridor could mean for Virar buyers",
-    "category": "Infrastructure",
-    "icon": "route",
+    "slug": "why-igatpuri-for-a-second-home",
+    "title": "Why Igatpuri is Mumbai's favourite second-home escape",
+    "category": "Market",
+    "icon": "trees",
     "date": "2026-09-22",
     "readMins": 4,
     "featured": true,
-    "summary": "A new ring road around MMR puts Virar on the map for commuters and businesses alike.",
+    "summary": "Forests, hills and rivers a short drive from Mumbai: a retreat that is also an investment.",
     "points": [
-      "Planned multimodal corridor linking Virar to Alibaug across MMR",
-      "Faster road access to Navi Mumbai, JNPT and the new airport",
-      "Micro-markets near interchanges usually see demand first",
-      "Buy on today's pricing; infrastructure gains follow completion"
+      "A respite from crowded cities, heat and work stress",
+      "Lush woodland, hill views and flowing rivers",
+      "Row houses, villas and apartments for every budget",
+      "Popular with NRIs as well as Mumbaikars"
+    ]
+  },
+  {
+    "slug": "how-nris-can-invest-in-indian-real-estate",
+    "title": "How NRIs can invest in Indian real estate",
+    "category": "Buyer guide",
+    "icon": "landmark",
+    "date": "2026-08-18",
+    "readMins": 4,
+    "summary": "RBI and FEMA rules let NRIs buy homes and offices in India, with repatriation benefits.",
+    "points": [
+      "NRIs can buy any residential or commercial property",
+      "Agricultural land, farm houses and plantations are excluded",
+      "Property can also be received as a gift or by inheritance",
+      "Repatriation of the invested capital is permitted"
     ]
   },
   {
@@ -28,7 +43,8 @@
       "Built-up adds wall thickness and balconies",
       "Super built-up adds a share of lobbies and amenities",
       "Under RERA, sale price must be quoted on carpet area"
-    ]
+    ],
+    "featured": false
   },
   {
     "slug": "checking-a-project-on-maharera",
@@ -43,7 +59,8 @@
       "Search it on maharera.maharashtra.gov.in",
       "Check promised possession date and approvals",
       "Look at quarterly progress updates and any complaints"
-    ]
+    ],
+    "featured": false
   },
   {
     "slug": "ready-to-move-vs-under-construction",
@@ -58,36 +75,7 @@
       "Under-construction: lower entry price, staggered payments",
       "Check the developer's delivery record before booking",
       "Factor rent and EMI overlap into your budget"
-    ]
-  },
-  {
-    "slug": "home-loan-checklist",
-    "title": "Your home loan checklist, before you book",
-    "category": "Buyer guide",
-    "icon": "landmark",
-    "date": "2026-07-25",
-    "readMins": 3,
-    "summary": "Get pre-approved, compare offers and keep these documents ready.",
-    "points": [
-      "Check your credit score and clear small dues first",
-      "Get in-principle approval to know your real budget",
-      "Compare interest type, processing fee and prepayment terms",
-      "Choose a project already approved by your bank"
-    ]
-  },
-  {
-    "slug": "why-industrial-galas-are-in-demand",
-    "title": "Why industrial galas near the highway are in demand",
-    "category": "Market",
-    "icon": "factory",
-    "date": "2026-07-08",
-    "readMins": 4,
-    "summary": "E-commerce and light manufacturing are moving to the Vasai–Bhiwandi belt.",
-    "points": [
-      "Warehousing demand follows highway and port access",
-      "Clear height and floor load decide rental value",
-      "Owning a gala often costs less than renting over time",
-      "Check power load, truck access and fire approvals"
-    ]
+    ],
+    "featured": false
   }
 ]

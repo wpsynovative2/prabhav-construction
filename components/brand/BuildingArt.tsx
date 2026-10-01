@@ -1,7 +1,7 @@
 import { useId } from "react";
 import { seeded, cn } from "@/lib/utils";
 
-export type Scene = "towers" | "villas" | "commercial" | "industrial";
+export type Scene = "towers" | "highrise" | "villas" | "commercial" | "industrial";
 
 type Props = { scene: Scene; seed?: number; className?: string; title?: string; anchor?: "center" | "ground" };
 
@@ -41,6 +41,7 @@ export function BuildingArt({ scene, seed = 1, className, title, anchor = "cente
       <circle cx={sunX} cy={70} r={22} fill="var(--sun)" />
       <path d="M0 250 Q100 225 200 240 T400 232 V300 H0 Z" fill="var(--tower-c)" opacity={0.45} />
       {scene === "towers" && <Towers rand={rand} uid={uid} />}
+      {scene === "highrise" && <Highrise rand={rand} uid={uid} />}
       {scene === "villas" && <Villas rand={rand} uid={uid} />}
       {scene === "commercial" && <Commercial rand={rand} uid={uid} />}
       {scene === "industrial" && <Industrial uid={uid} />}
@@ -104,6 +105,52 @@ function Towers({ rand, uid }: Part) {
       <Tree x={62} s={0.9} />
       <Tree x={348} s={1.2} />
       <Tree x={370} s={0.8} />
+    </g>
+  );
+}
+
+/** One slender high-rise with a lit crown, flanked by low-rise neighbours. */
+function Highrise({ rand, uid }: Part) {
+  // Kept within the lower half of the canvas so the crown survives wide, ground-anchored crops
+  const x = 174;
+  const w = 52;
+  const top = 150;
+  const floors = Array.from({ length: 14 }, (_, i) => top + 20 + i * 5);
+  return (
+    <g>
+      {[
+        { x: 92, w: 46, h: 46 },
+        { x: 250, w: 54, h: 60 },
+        { x: 132, w: 34, h: 32 },
+      ].map((b, i) => (
+        <g key={i} opacity={0.75}>
+          <rect x={b.x} y={262 - b.h} width={b.w} height={b.h} fill="var(--tower-b)" />
+          <WindowGrid x={b.x + 3} y={262 - b.h + 6} w={b.w - 6} h={b.h - 12} rand={rand} cell={9} size={4} />
+        </g>
+      ))}
+      {/* crown */}
+      <path d={`M${x + 5} ${top} L${x + 12} ${top - 11} L${x + 19} ${top - 3} L${x + w / 2} ${top - 16} L${x + w - 19} ${top - 3} L${x + w - 12} ${top - 11} L${x + w - 5} ${top} Z`} fill={`url(#gold${uid})`} />
+      <circle cx={x + w / 2} cy={top - 18} r={1.6} fill="var(--accent)" />
+      {/* shaft */}
+      <rect x={x} y={top} width={w} height={262 - top} fill="var(--tower-a)" />
+      <rect x={x + w * 0.68} y={top} width={w * 0.32} height={262 - top} fill={`url(#shade${uid})`} />
+      <rect x={x - 2} y={top} width={w + 4} height={4} fill="var(--tower-edge)" />
+      <rect x={x + 4} y={top + 7} width={w - 8} height={8} fill="var(--window-lit)" opacity={0.9} />
+      {floors.map((y, i) => (
+        <g key={i}>
+          <rect x={x + 4} y={y} width={w - 8} height={3} fill={rand() > 0.4 ? "var(--window-lit)" : "var(--window)"} />
+          <rect x={x - 2} y={y + 3.6} width={w * 0.42} height={1} fill="var(--tower-edge)" />
+          <rect x={x + w * 0.58 + 2} y={y + 3.6} width={w * 0.42} height={1} fill="var(--tower-edge)" />
+        </g>
+      ))}
+      <rect x={x + w / 2 - 0.6} y={top + 18} width={1.2} height={262 - top - 40} fill="var(--accent)" opacity={0.7} />
+      {/* double-height lobby */}
+      <rect x={x + 7} y={262 - 18} width={w - 14} height={18} fill="var(--window-lit)" />
+      <rect x={x + 3} y={262 - 20} width={w - 6} height={2.4} fill={`url(#gold${uid})`} />
+      <Tree x={160} s={0.8} />
+      <Tree x={242} s={0.9} />
+      <Tree x={40} s={1.2} />
+      <Tree x={362} s={1.2} />
     </g>
   );
 }

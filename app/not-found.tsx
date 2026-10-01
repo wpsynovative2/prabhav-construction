@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 
 export default function NotFound() {
   return (
-    <section className="relative -mt-[84px] bg-surface pt-[84px]">
+    <section className="relative -mt-(--header-h) bg-surface pt-(--header-h)">
       <Container className="grid items-center gap-10 py-16 md:grid-cols-2 md:py-24">
         <div>
           <p className="gold-text font-display text-8xl md:text-9xl">404</p>
