@@ -33,7 +33,7 @@ export default async function InsightPage({ params }: PageProps<"/insights/[slug
     <>
       <section className="relative -mt-(--header-h) bg-surface pt-(--header-h)">
         <Container className="max-w-4xl pt-6 pb-12 md:pt-8">
-          <Breadcrumbs items={[{ name: "Insights", href: "/insights" }, { name: i.category, href: `/insights/${i.slug}` }]} />
+          <Breadcrumbs items={[{ name: "News Corner", href: "/insights" }, { name: i.category, href: `/insights/${i.slug}` }]} />
           <div className="mt-8">
             <InsightMeta insight={i} />
             <h1 className="page-enter mt-4 font-display text-[2.2rem] leading-[1.08] text-fg md:text-[3.2rem]">{i.title}</h1>

@@ -10,12 +10,13 @@ import { CtaBand } from "@/components/home/CtaBand";
 import { InsightsSection } from "@/components/home/InsightsSection";
 import { FeaturedProject } from "@/components/home/FeaturedProject";
 import { CsrSection } from "@/components/home/CsrSection";
+import { ProjectStatusCards } from "@/components/home/ProjectStatusCards";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { ButtonLink } from "@/components/ui/Button";
 import { Marquee } from "@/components/ui/Marquee";
 import { Accordion } from "@/components/ui/Accordion";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { getFeaturedProjects } from "@/lib/data/projects";
+import { getAllProjects, getFeaturedProjects } from "@/lib/data/projects";
 import { getLineStations, stations } from "@/lib/data/stations";
 import { csr, faqs, home, insights, seo, site, testimonials } from "@/lib/data/content";
 import { buildMetadata } from "@/lib/seo/metadata";
@@ -32,6 +33,16 @@ export default function HomePage() {
   const s = home.sections;
   const featured = getFeaturedProjects()[0];
   const stationNames = Object.fromEntries(stations.map((st) => [st.slug, st.name]));
+  const projects = getAllProjects();
+  const statusCards = (["upcoming", "ongoing", "completed"] as const).map((status) => {
+    const atStage = projects.filter((p) => p.status === status);
+    return {
+      status,
+      ...s.projects.cards[status],
+      count: atStage.length,
+      covers: atStage.flatMap((p) => (p.images.cover ? [p.images.cover.src] : [])),
+    };
+  });
 
   return (
     <>
@@ -69,6 +80,11 @@ export default function HomePage() {
       </Section>
 
       <Section>
+        <SectionHeading eyebrow={s.projects.eyebrow} title={s.projects.title} subtitle={s.projects.subtitle} align="center" />
+        <ProjectStatusCards cards={statusCards} />
+      </Section>
+
+      <Section className="pt-0 md:pt-0">
         <SectionHeading eyebrow={s.stations.eyebrow} title={s.stations.title} align="center" />
         <StationPresence stations={getLineStations()} />
       </Section>

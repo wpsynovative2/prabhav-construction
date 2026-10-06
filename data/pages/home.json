@@ -61,9 +61,27 @@
       "title": "Featured projects",
       "subtitle": "Conceived, engineered and built by Prabhav."
     },
-    "categories": {
-      "eyebrow": "What we build",
-      "title": "Spaces for every ambition"
+    "projects": {
+      "eyebrow": "Our projects",
+      "title": "Find your next address",
+      "subtitle": "Browse Prabhav developments by stage.",
+      "cards": {
+        "upcoming": {
+          "title": "Upcoming projects",
+          "text": "New launches. Register early for first choice.",
+          "cta": "View upcoming"
+        },
+        "ongoing": {
+          "title": "Ongoing projects",
+          "text": "Under construction now. Visit the site and watch it rise.",
+          "cta": "View ongoing"
+        },
+        "completed": {
+          "title": "Completed projects",
+          "text": "Delivered and handed over to happy families.",
+          "cta": "View completed"
+        }
+      }
     },
     "about": {
       "eyebrow": "About Prabhav",

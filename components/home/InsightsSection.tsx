@@ -12,12 +12,12 @@ export function InsightsSection({ items }: { items: Insight[] }) {
   return (
     <>
       <SectionHeading
-        eyebrow="News & insights"
+        eyebrow="News Corner"
         title="From the Prabhav desk"
         subtitle="Updates, guides and perspectives from our team."
         action={
           <ButtonLink href="/insights" variant="outline">
-            All insights
+            All news
             <ArrowRight className="size-4 transition-transform group-hover/btn:translate-x-1" />
           </ButtonLink>
         }

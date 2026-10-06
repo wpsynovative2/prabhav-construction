@@ -5,7 +5,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { motion } from "motion/react";
 import type { Category, Project, Status } from "@/lib/schemas/project.schema";
 import { applyFilters, getFacetCounts, parseFilters, serializeFilters, type FilterState } from "@/lib/data/filters";
-import { Button } from "@/components/ui/Button";
+import { Button, ButtonLink } from "@/components/ui/Button";
 import { CATEGORY_LABEL, STATUS_LABEL, cn } from "@/lib/utils";
 import { ProjectCard } from "./ProjectCard";
 
@@ -28,6 +28,7 @@ export function ProjectFilters({ projects, stations }: Props) {
   const counts = useMemo(() => getFacetCounts(projects, f), [projects, f]);
   const stationNames = Object.fromEntries(stations.map((s) => [s.slug, s.name]));
   const active = !!(f.category?.length || f.status?.length || f.station?.length);
+  const onlyCompleted = f.status?.length === 1 && f.status[0] === "completed";
 
   const update = (patch: Partial<FilterState>) => {
     const qs = serializeFilters({ ...f, ...patch });
@@ -51,7 +52,7 @@ export function ProjectFilters({ projects, stations }: Props) {
         <FilterRow label="Status">
           {(["upcoming", "ongoing", "completed"] as Status[]).map((s) => (
             <Chip key={s} on={!!f.status?.includes(s)} count={counts.status?.[s] ?? 0} onClick={() => update({ status: toggle(f.status, s) })}>
-              {s === "completed" ? "Delivered" : STATUS_LABEL[s]}
+              {STATUS_LABEL[s]}
             </Chip>
           ))}
         </FilterRow>
@@ -104,10 +105,15 @@ export function ProjectFilters({ projects, stations }: Props) {
         </>
       ) : (
         <div className="card grid place-items-center gap-4 px-6 py-16 text-center">
-          <p className="font-display text-2xl text-fg">No projects in this combination yet.</p>
-          <Button variant="outline" onClick={() => router.replace(pathname, { scroll: false })}>
-            Show all projects
-          </Button>
+          <p className="font-display text-2xl text-fg">
+            {onlyCompleted ? "Our completed developments are coming soon." : "No projects in this combination yet."}
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {onlyCompleted ? <ButtonLink href="/our-constructions">See buildings we have delivered</ButtonLink> : null}
+            <Button variant="outline" onClick={() => router.replace(pathname, { scroll: false })}>
+              Show all projects
+            </Button>
+          </div>
         </div>
       )}
     </div>

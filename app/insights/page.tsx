@@ -16,9 +16,9 @@ export default function InsightsPage() {
   return (
     <>
       <PageHero
-        title="Real estate insights"
+        title="News Corner"
         subtitle="News, guides and trends for smarter property decisions."
-        crumbs={[{ name: "Insights", href: "/insights" }]}
+        crumbs={[{ name: "News Corner", href: "/insights" }]}
       />
       <Section>
         {lead ? (
