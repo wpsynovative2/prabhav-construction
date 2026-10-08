@@ -1,31 +1,24 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowUpRight, ChevronDown, Mail, Phone } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { ThemedLogo } from "@/components/theme/ThemedLogo";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 
 // Theme switching is paused (site is light-only); flip to bring the toggle back.
 const SHOW_THEME_TOGGLE = false;
 import { LogoMark } from "@/components/brand/LogoMark";
-import { BuildingArt, type Scene } from "@/components/brand/BuildingArt";
 import { SocialIcon } from "@/components/ui/Icon";
 import { useLeadModal } from "@/components/forms/LeadModalProvider";
 import { cn } from "@/lib/utils";
 
 export type NavItem = { label: string; href: string; dropdown?: boolean };
-export type NavProject = { slug: string; name: string; locality: string; scene: Scene; seed: number; cover?: string };
 type Props = {
   nav: NavItem[];
   statusCounts: { upcoming: number; ongoing: number; completed: number };
-  projects: NavProject[];
-  phone: string;
-  phoneDisplay: string;
-  email: string;
   social: Record<string, string>;
 };
 
@@ -33,7 +26,7 @@ type Props = {
  * Left-rail navigation: a slim fixed bar (menu, logo, socials) that opens a full-height
  * panel with the site map. On small screens a top bar opens the same panel.
  */
-export function SideNav({ nav, statusCounts, projects, phone, phoneDisplay, email, social }: Props) {
+export function SideNav({ nav, statusCounts, social }: Props) {
   const [open, setOpen] = useState(false);
   const [portfolioOpen, setPortfolioOpen] = useState(true);
   const pathname = usePathname();
@@ -173,10 +166,10 @@ export function SideNav({ nav, statusCounts, projects, phone, phoneDisplay, emai
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 32, stiffness: 280 }}
-              className="photo-dark no-scrollbar absolute inset-y-0 left-0 flex w-full max-w-[880px] overflow-x-hidden overflow-y-auto pt-(--header-h) text-fg lg:left-[88px] lg:pt-0"
+              className="photo-dark no-scrollbar absolute inset-y-0 left-0 flex w-full max-w-[560px] overflow-x-hidden overflow-y-auto pt-(--header-h) text-fg lg:left-[88px] lg:pt-0"
             >
               <LogoMark className="pointer-events-none absolute -right-24 -bottom-24 h-[460px] w-auto opacity-10" />
-              <div className="relative grid w-full gap-10 p-7 md:grid-cols-[1.2fr_1fr] md:p-12">
+              <div className="relative grid w-full content-start gap-10 p-7 md:p-12">
                 <nav aria-label="Main">
                   <ul className="grid gap-2">
                     {nav.map((item, i) => (
@@ -243,36 +236,7 @@ export function SideNav({ nav, statusCounts, projects, phone, phoneDisplay, emai
                   </ul>
                 </nav>
 
-                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="grid content-start gap-6">
-                  <p className="text-xs font-semibold tracking-[0.2em] text-accent-text uppercase">Our projects</p>
-                  <ul className="grid gap-3">
-                    {projects.map((p) => (
-                      <li key={p.slug}>
-                        <Link href={`/projects/${p.slug}`} className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-2.5 pr-4 transition hover:border-accent/50 hover:bg-white/10">
-                          <span className="relative size-16 shrink-0 overflow-hidden rounded-xl">
-                            {p.cover ? (
-                              <Image src={p.cover} alt="" fill sizes="64px" className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                            ) : (
-                              <BuildingArt scene={p.scene} seed={p.seed} anchor="ground" className="absolute inset-0 transition-transform duration-700 group-hover:scale-110" />
-                            )}
-                          </span>
-                          <span className="min-w-0 flex-1">
-                            <span className="block truncate font-display text-lg text-fg">{p.name}</span>
-                            <span className="block text-xs text-muted">{p.locality}</span>
-                          </span>
-                          <ArrowUpRight className="size-4 text-muted transition group-hover:rotate-45 group-hover:text-accent-text" />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="grid gap-2 border-t border-white/10 pt-6 text-sm text-muted">
-                    <a href={`tel:${phone}`} className="inline-flex items-center gap-2 hover:text-primary">
-                      <Phone className="size-4 text-accent-text" /> {phoneDisplay}
-                    </a>
-                    <a href={`mailto:${email}`} className="inline-flex items-center gap-2 hover:text-primary">
-                      <Mail className="size-4 text-accent-text" /> {email}
-                    </a>
-                  </div>
+                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="lg:hidden">
                   <div className="flex items-center gap-3 lg:hidden">
                     {SHOW_THEME_TOGGLE && <ThemeToggle />}
                     {Object.entries(social).map(([name, href]) => (

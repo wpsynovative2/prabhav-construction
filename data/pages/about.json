@@ -11,23 +11,37 @@
       "Today we develop our own homes in Mumbai, Igatpuri and Nashik."
     ]
   },
-  "pillars": [
-    {
-      "icon": "eye",
-      "title": "Vision",
-      "text": "To be the most trusted and efficient developer in the infrastructure sector."
-    },
-    {
-      "icon": "target",
-      "title": "Philosophy",
-      "text": "Luxury is an outcome of who we are, with care for our communities and environment."
-    },
-    {
-      "icon": "heart",
-      "title": "Values",
-      "text": "Integrity, time-bound accuracy, room to grow and LEED standards."
-    }
-  ],
+  "values": {
+    "eyebrow": "What drives us",
+    "title": "E.P.I.C.",
+    "subtitle": "Four values behind every Prabhav building.",
+    "items": [
+      {
+        "letter": "E",
+        "title": "Excellence",
+        "text": "Accuracy and quality in every slab we pour.",
+        "icon": "award"
+      },
+      {
+        "letter": "P",
+        "title": "Passion",
+        "text": "We love what we build, and it shows.",
+        "icon": "flame"
+      },
+      {
+        "letter": "I",
+        "title": "Integrity",
+        "text": "Honest work, transparent dealings, time-bound delivery.",
+        "icon": "shield-check"
+      },
+      {
+        "letter": "C",
+        "title": "Collaboration",
+        "text": "Clients, partners and teams building as one.",
+        "icon": "handshake"
+      }
+    ]
+  },
   "leadership": [
     {
       "name": "Mr. Prashant Lathia",

@@ -54,26 +54,29 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      {/* Vision / mission / values */}
+      {/* Values: E.P.I.C. */}
       <Section tone="surface">
-        <SectionHeading eyebrow="What drives us" title="Vision, mission, values" align="center" />
-        <RevealGroup className="grid gap-5 md:grid-cols-3">
-          {about.pillars.map((p) => (
-            <RevealItem key={p.title}>
-              <div className="group relative h-full overflow-hidden rounded-[var(--radius-card)] border border-line bg-surface-raised p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-lift">
+        <SectionHeading eyebrow={about.values.eyebrow} title={about.values.title} subtitle={about.values.subtitle} align="center" />
+        <RevealGroup className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4" stagger={0.1}>
+          {about.values.items.map((v) => (
+            <RevealItem key={v.title}>
+              <div className="group relative h-full overflow-hidden rounded-[var(--radius-card)] border border-line bg-surface-raised p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-lift">
                 <LogoMark className="absolute -right-8 -bottom-10 h-40 w-auto opacity-[0.07] transition-all duration-700 group-hover:scale-110 group-hover:opacity-20" />
-                <span className="grid size-14 place-items-center rounded-2xl bg-primary text-primary-fg">
-                  <Icon name={p.icon} className="size-7" />
-                </span>
-                <h3 className="mt-6 font-display text-3xl text-fg">{p.title}</h3>
-                <p className="mt-2 text-muted">{p.text}</p>
+                <div className="flex items-start justify-between">
+                  <span className="gold-shine font-display text-8xl leading-[0.8]">{v.letter}</span>
+                  <span className="grid size-11 place-items-center rounded-full bg-primary text-primary-fg transition-transform duration-500 group-hover:rotate-12">
+                    <Icon name={v.icon} className="size-5" />
+                  </span>
+                </div>
+                <h3 className="mt-8 font-display text-3xl text-fg">{v.title}</h3>
+                <p className="mt-2 text-muted">{v.text}</p>
               </div>
             </RevealItem>
           ))}
         </RevealGroup>
       </Section>
 
-      {/* Milestones: details appear on hover */}
+      {/* Milestones: vertical timeline, cards slide in as you scroll */}
       <Section>
         <SectionHeading eyebrow="Milestones" title="Twenty-five years, one brick at a time" align="center" />
         <Milestones items={about.milestones} />

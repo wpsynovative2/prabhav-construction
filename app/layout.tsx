@@ -59,10 +59,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <SideNav
             nav={navigation.main}
             statusCounts={statusCounts}
-            projects={projects.slice(0, 3).map((p) => ({ slug: p.slug, name: p.name, locality: p.location.locality, scene: p.art.scene, seed: p.art.seed, cover: p.images.cover?.src }))}
-            phone={site.phone}
-            phoneDisplay={site.phoneDisplay}
-            email={site.email}
             social={site.social}
           />
           {/* Content sits to the right of the fixed left rail on desktop */}
