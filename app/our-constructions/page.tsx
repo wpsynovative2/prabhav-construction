@@ -19,14 +19,13 @@ import { itemListLd } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = buildMetadata({ ...seo.pages.constructions, path: "/our-constructions" });
 
-// Capabilities as stated on prabhavgroup.com (Constructor / About pages)
+// Capabilities, from the client's content bank
 const CHECKS = [
-  { icon: Sparkles, title: "Latest techniques", text: "For complex, high-rise projects" },
-  { icon: Truck, title: "Own equipment fleet", text: "At strategic locations across India" },
-  { icon: Clock, title: "Precise timekeeping", text: "Time-bound completion" },
-  { icon: ClipboardCheck, title: "Highest accuracy", text: "Workmanship comes first" },
-  { icon: ShieldCheck, title: "Earthquake-resistant", text: "Structures built to last" },
-  { icon: Leaf, title: "LEED standards", text: "Implemented wherever required" },
+  { icon: Sparkles, title: "Technical Expertise", text: "Innovative construction techniques" },
+  { icon: Clock, title: "Execution Discipline", text: "Time-bound completion" },
+  { icon: Truck, title: "Construction Strength", text: "A substantial equipment fleet" },
+  { icon: ClipboardCheck, title: "Workmanship", text: "Highest level of accuracy" },
+  { icon: Leaf, title: "Environmental Standards", text: "LEED standards" },
 ];
 
 export default function OurConstructionsPage() {
@@ -45,7 +44,7 @@ export default function OurConstructionsPage() {
     <>
       <PageHero
         title="Our constructions"
-        subtitle="Towers up to 35 floors, built for Mumbai's leading developers and for our own projects."
+        subtitle="Residential towers up to 35 floors, delivered through experienced execution and advanced techniques"
         crumbs={[{ name: "Our constructions", href: "/our-constructions" }]}
       />
 
@@ -95,7 +94,7 @@ export default function OurConstructionsPage() {
       ) : null}
 
       <Section tone="surface" className="pt-36 md:pt-48">
-        <SectionHeading eyebrow="Delivered" title="Built and handed over" subtitle="Civil and RCC works for leading developers, newest first." />
+        <SectionHeading eyebrow="Track Record" title="Built. Completed. Delivered." subtitle="50+ projects delivered, backed by years of construction expertise" />
         <RevealGroup className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4" stagger={0.06}>
           {constructions.map((c) => (
             <RevealItem key={c.slug}>
@@ -112,17 +111,18 @@ export default function OurConstructionsPage() {
 
       <Section tone="surface">
         <SectionHeading eyebrow="Quality" title="Checked at every stage" align="center" />
-        <RevealGroup className="grid grid-cols-2 gap-4 md:grid-cols-3" stagger={0.06}>
-          {CHECKS.map(({ icon: I, title, text }) => (
-            <RevealItem key={title}>
-              <div className="group flex h-full items-center gap-4 rounded-2xl border border-line bg-surface-raised p-5 transition-all duration-500 hover:-translate-y-0.5 hover:border-accent/60 hover:shadow-soft">
-                <span className="grid size-12 shrink-0 place-items-center rounded-full bg-surface text-accent-text ring-1 ring-line transition group-hover:bg-primary group-hover:text-primary-fg">
-                  <I className="size-5" />
-                </span>
-                <div>
-                  <h3 className="font-display text-lg leading-tight text-fg">{title}</h3>
-                  <p className="text-xs text-muted">{text}</p>
+        <RevealGroup className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5" stagger={0.06}>
+          {CHECKS.map(({ icon: I, title, text }, i) => (
+            <RevealItem key={title} className={i === 4 ? "sm:col-span-2 lg:col-span-1" : undefined}>
+              <div className="group h-full rounded-2xl border border-line bg-surface-raised p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 hover:shadow-soft">
+                <div className="flex items-center justify-between">
+                  <span className="gold-shine font-display text-4xl leading-none">0{i + 1}</span>
+                  <span className="grid size-11 place-items-center rounded-full bg-surface text-accent-text ring-1 ring-line transition group-hover:bg-primary group-hover:text-primary-fg">
+                    <I className="size-5" />
+                  </span>
                 </div>
+                <h3 className="mt-6 font-display text-xl leading-tight text-fg">{title}</h3>
+                <p className="mt-1 text-sm text-muted">{text}</p>
               </div>
             </RevealItem>
           ))}

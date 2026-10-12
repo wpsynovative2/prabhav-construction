@@ -2,10 +2,10 @@
   "hero": {
     "badge": "Prabhav Construction Co. Pvt. Ltd. · MahaRERA registered",
     "headline": [
-      "Built on trust.",
-      "Crafted to last."
+      "From a vision on paper",
+      "To a structure that stands tall"
     ],
-    "subline": "Creating splendid structures: homes, offices and second homes across Mumbai, Igatpuri and Nashik.",
+    "subline": "From residential and commercial spaces to infrastructure and second homes, Prabhav Group brings proven construction expertise to every project.",
     "primaryCta": {
       "label": "Explore projects",
       "href": "/projects"
@@ -16,16 +16,16 @@
     },
     "trust": [
       {
-        "value": "Design",
-        "label": "In-house architects"
+        "value": "Plan",
+        "label": "Built around purpose"
       },
       {
-        "value": "Build",
-        "label": "Our own site teams"
+        "value": "Construct",
+        "label": "Driven by proven expertise"
       },
       {
-        "value": "Deliver",
-        "label": "On-time handover"
+        "value": "Complete",
+        "label": "Focused on timely execution"
       }
     ]
   },
@@ -57,14 +57,14 @@
   ],
   "sections": {
     "featured": {
-      "eyebrow": "Featured project",
-      "title": "Featured projects",
-      "subtitle": "Conceived, engineered and built by Prabhav."
+      "eyebrow": "Spaces We’ve Brought to Life",
+      "title": "Featured Projects",
+      "subtitle": "Explore the projects that represent Prabhav Group’s journey in construction and development."
     },
     "projects": {
-      "eyebrow": "Our projects",
-      "title": "Find your next address",
-      "subtitle": "Browse Prabhav developments by stage.",
+      "eyebrow": "Our Projects",
+      "title": "A Look at What We’re Building",
+      "subtitle": "Explore Prabhav’s projects across different stages of development",
       "cards": {
         "upcoming": {
           "title": "Upcoming projects",
@@ -84,34 +84,34 @@
       }
     },
     "about": {
-      "eyebrow": "About Prabhav",
-      "title": "More than buildings, we build belonging",
+      "eyebrow": "The Prabhav Story",
+      "title": "Delivering work people can trust",
       "points": [
         {
-          "icon": "shield-check",
-          "title": "Deep integrity",
-          "text": "A strict code of conduct on every site."
+          "icon": "award",
+          "title": "Proven",
+          "text": "50+ projects delivered"
+        },
+        {
+          "icon": "building",
+          "title": "Capable",
+          "text": "From towers to complex infrastructure"
         },
         {
           "icon": "clock",
-          "title": "Precise timekeeping",
-          "text": "Time-bound completion, highest accuracy."
-        },
-        {
-          "icon": "users",
-          "title": "Team spirit",
-          "text": "Strong leadership, an energetic team."
+          "title": "Committed",
+          "text": "Quality work. Timely execution"
         },
         {
           "icon": "leaf",
-          "title": "LEED standards",
-          "text": "Greener buildings wherever required."
+          "title": "Responsible",
+          "text": "Thoughtful construction. Conscious development"
         }
       ]
     },
     "stations": {
-      "eyebrow": "Where we build",
-      "title": "Our footprint across Mumbai & beyond"
+      "eyebrow": "Our Presence",
+      "title": "Places That Carry the Prabhav Mark"
     },
     "process": {
       "eyebrow": "How we build",
@@ -141,17 +141,28 @@
     },
     "testimonials": {
       "eyebrow": "Testimonials",
-      "title": "Words from our families"
+      "title": "The Experience, In Their Words"
     },
     "cta": {
-      "title": "See our craftsmanship in person",
-      "subtitle": "Walk the site with our project engineers.",
+      "title": "See What We’re Building",
+      "subtitle": "Experience the project beyond the plans, in person",
       "button": "Schedule a site tour"
     },
     "csr": {
       "eyebrow": "CSR",
-      "title": "Giving back to the community",
-      "subtitle": "Places of faith, built with the same care as our homes, and gifted to the neighbourhoods we build in."
+      "title": "Building A Little More For The Communities We Serve",
+      "subtitle": "From places of faith to spaces that bring communities together, we believe our work should leave something meaningful behind.",
+      "quote": "The walls may be ours. The memories will always belong to the community."
+    },
+    "news": {
+      "eyebrow": "News Corner",
+      "title": "What’s Making Headlines",
+      "subtitle": "Key developments, industry news, and insights worth keeping up with"
+    },
+    "faq": {
+      "eyebrow": "Common Queries",
+      "title": "Let’s Clear Things Up",
+      "subtitle": "Everything you need to know, in one place"
     }
   },
   "marquee": [

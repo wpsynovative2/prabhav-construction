@@ -17,8 +17,8 @@ type Props = {
 
 /** Closing call to action used at the bottom of every page. */
 export function CtaBand({
-  title = "See our craftsmanship in person",
-  subtitle = "Walk the site with our project engineers.",
+  title = "See What We’re Building",
+  subtitle = "Experience the project beyond the plans, in person",
   button = "Schedule a site tour",
   source,
   project,

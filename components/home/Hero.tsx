@@ -24,8 +24,8 @@ export function Hero({ hero }: { hero: HeroData }) {
       <div className="dot-grid pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(70%_60%_at_20%_30%,black,transparent)]" />
       <LogoMark className="pointer-events-none absolute top-24 -left-40 h-[520px] w-auto -rotate-12 opacity-[0.06]" tone="current" />
 
-      <Container className="relative grid items-center gap-10 pt-8 pb-12 md:pt-12 lg:grid-cols-[1.05fr_1fr] lg:gap-6 lg:pb-16">
-        <div className="relative z-10 max-w-xl">
+      <Container className="relative grid items-center gap-10 pt-8 pb-12 md:pt-12 lg:grid-cols-[1.2fr_1fr] lg:gap-6 lg:pb-16">
+        <div className="relative z-10 max-w-2xl">
           <span className="hero-rise intro-delay inline-flex items-center gap-2 rounded-full border border-accent/40 bg-surface-raised/80 px-4 py-1.5 text-sm text-accent-text shadow-soft backdrop-blur" style={d(0.05)}>
             <span className="relative flex size-2">
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-75" />
@@ -34,7 +34,7 @@ export function Hero({ hero }: { hero: HeroData }) {
             {hero.badge}
           </span>
 
-          <h1 className="mt-6 font-display text-[2.4rem] leading-[1.08] text-fg sm:text-5xl lg:text-[3.6rem]">
+          <h1 className="mt-6 font-display text-[2rem] leading-[1.12] text-fg sm:text-[2.5rem] lg:text-[2.6rem]">
             <span className="hero-rise intro-delay block" style={d(0.15)}>
               {line1}
             </span>
@@ -58,11 +58,11 @@ export function Hero({ hero }: { hero: HeroData }) {
             </ButtonLink>
           </div>
 
-          <dl className="hero-rise intro-delay mt-10 grid max-w-md grid-cols-3 divide-x divide-line border-y border-line py-4" style={d(0.75)}>
+          <dl className="hero-rise intro-delay mt-10 grid max-w-lg grid-cols-3 divide-x divide-line border-y border-line py-4" style={d(0.75)}>
             {hero.trust.map((t) => (
-              <div key={t.label} className="px-4 first:pl-0">
+              <div key={t.label} className="px-3 first:pl-0 sm:px-5">
                 <dt className="sr-only">{t.label}</dt>
-                <dd className="font-display text-2xl text-fg md:text-3xl">{t.value}</dd>
+                <dd className="font-display text-xl text-fg sm:text-2xl md:text-[1.7rem]">{t.value}</dd>
                 <dd className="text-xs text-muted">{t.label}</dd>
               </div>
             ))}

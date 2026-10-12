@@ -66,11 +66,11 @@ export default function HomePage() {
 
       <Section tone="surface">
         <SectionHeading eyebrow={s.csr.eyebrow} title={s.csr.title} subtitle={s.csr.subtitle} align="center" />
-        <CsrSection items={csr} />
+        <CsrSection items={csr} quote={s.csr.quote} />
       </Section>
 
       <Section>
-        <InsightsSection items={insights} />
+        <InsightsSection items={insights} heading={s.news} />
       </Section>
 
       <Marquee items={home.marquee} />
@@ -101,7 +101,7 @@ export default function HomePage() {
 
       <Section tone="surface">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
-          <SectionHeading eyebrow="Questions" title="Good to know" className="md:flex-col md:items-start" />
+          <SectionHeading eyebrow={s.faq.eyebrow} title={s.faq.title} subtitle={s.faq.subtitle} className="md:flex-col md:items-start" />
           <Accordion items={faqs.home} />
         </div>
       </Section>

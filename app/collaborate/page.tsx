@@ -16,17 +16,17 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const PARTNERS = [
-  { icon: LandPlot, title: "Land owners", text: "Joint development and outright purchase" },
-  { icon: HardHat, title: "Contractors", text: "Civil, MEP and finishing work" },
-  { icon: Truck, title: "Vendors & suppliers", text: "Materials, fittings and services" },
-  { icon: PencilRuler, title: "Architects & consultants", text: "Design, structure and approvals" },
+  { icon: LandPlot, title: "Landowners", text: "Joint development & property acquisition" },
+  { icon: HardHat, title: "Contractors", text: "Civil, MEP & finishing execution" },
+  { icon: Truck, title: "Vendors & Suppliers", text: "Quality materials & project essentials" },
+  { icon: PencilRuler, title: "Architects & Consultants", text: "Design, planning & approvals" },
 ];
 
 const SOCIETY = [
-  { icon: Home, title: "Larger, modern homes", text: "Better layouts and amenities" },
-  { icon: FileCheck, title: "Transparent process", text: "Documented at every step" },
-  { icon: ShieldCheck, title: "MahaRERA registered", text: "Compliance from day one" },
-  { icon: Building2, title: "Built in-house", text: "25 years of delivery" },
+  { icon: Home, title: "Larger, Modern Homes", text: "Thoughtful spaces for better living" },
+  { icon: FileCheck, title: "Transparent Process", text: "Clarity at every stage" },
+  { icon: ShieldCheck, title: "MahaRERA Registered", text: "Regulatory compliance assured" },
+  { icon: Building2, title: "Built In-House", text: "25 years of proven delivery" },
 ];
 
 const FAQS = [
@@ -47,7 +47,7 @@ export default function CollaboratePage() {
       <Section>
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <SectionHeading eyebrow="Collaborate with us" title="Who we partner with" className="md:mb-8" />
+            <SectionHeading eyebrow="Collaborate With Us" title="Who We Partner With" className="md:mb-8" />
             <RevealGroup className="grid grid-cols-2 gap-4">
               {PARTNERS.map(({ icon: I, title, text }) => (
                 <RevealItem key={title}>
@@ -61,7 +61,7 @@ export default function CollaboratePage() {
             </RevealGroup>
           </div>
           <div>
-            <SectionHeading eyebrow="Opportunities with us" title="Why societies choose us" className="md:mb-8" />
+            <SectionHeading eyebrow="Opportunities With Us" title="Why Societies Choose Us" className="md:mb-8" />
             <RevealGroup className="grid grid-cols-2 gap-4">
               {SOCIETY.map(({ icon: I, title, text }) => (
                 <RevealItem key={title}>

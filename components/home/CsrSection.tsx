@@ -5,7 +5,7 @@ import { TempleArt } from "@/components/brand/TempleArt";
 import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
 
 /** CSR: temples Prabhav has built and gifted to the community. */
-export function CsrSection({ items }: { items: CsrItem[] }) {
+export function CsrSection({ items, quote }: { items: CsrItem[]; quote?: string }) {
   return (
     <>
       <RevealGroup className="grid gap-6 md:grid-cols-3">
@@ -24,21 +24,21 @@ export function CsrSection({ items }: { items: CsrItem[] }) {
                 </span>
               </div>
               <div className="p-6">
-                <p className="text-xs font-medium tracking-[0.15em] text-accent-text uppercase">{t.deity}</p>
-                <h3 className="mt-1 font-display text-2xl text-fg">{t.name}</h3>
-                <p className="mt-1 inline-flex items-center gap-1 text-sm text-muted">
-                  <MapPin className="size-3.5 text-accent-text" />
-                  {t.locality}
-                </p>
+                {t.deity ? <p className="mb-1 text-xs font-medium tracking-[0.15em] text-accent-text uppercase">{t.deity}</p> : null}
+                <h3 className="font-display text-2xl text-fg">{t.name}</h3>
+                {t.locality ? (
+                  <p className="mt-1 inline-flex items-center gap-1 text-sm text-muted">
+                    <MapPin className="size-3.5 text-accent-text" />
+                    {t.locality}
+                  </p>
+                ) : null}
                 <p className="mt-3 text-sm text-muted">{t.line}</p>
               </div>
             </article>
           </RevealItem>
         ))}
       </RevealGroup>
-      <p className="mx-auto mt-10 max-w-xl text-center font-display text-xl text-fg md:text-2xl">
-        &ldquo;We don&apos;t just build homes. We build the places a community gathers.&rdquo;
-      </p>
+      {quote ? <p className="mx-auto mt-10 max-w-2xl text-center font-display text-xl text-fg md:text-2xl">&ldquo;{quote}&rdquo;</p> : null}
     </>
   );
 }

@@ -84,13 +84,13 @@ export default function AboutPage() {
 
       {/* Leadership: set "hidden": true on a leader in about.json to keep them off the page */}
       <Section tone="surface">
-        <SectionHeading eyebrow="Leadership" title="The people behind Prabhav" align="center" />
+        <SectionHeading eyebrow={about.leadershipHeading.eyebrow} title={about.leadershipHeading.title} align="center" />
         <Leadership leaders={about.leadership.filter((l) => !("hidden" in l && l.hidden))} />
       </Section>
 
       {/* Quality */}
       <Section>
-        <SectionHeading eyebrow="Quality & compliance" title="Built by the book" align="center" />
+        <SectionHeading eyebrow={about.qualityHeading.eyebrow} title={about.qualityHeading.title} subtitle={about.qualityHeading.note} align="center" />
         <RevealGroup className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {about.quality.map((q) => (
             <RevealItem key={q.title}>
@@ -106,7 +106,7 @@ export default function AboutPage() {
       {/* CSR */}
       <Section tone="surface">
         <SectionHeading eyebrow={home.sections.csr.eyebrow} title={home.sections.csr.title} subtitle={home.sections.csr.subtitle} align="center" />
-        <CsrSection items={csr} />
+        <CsrSection items={csr} quote={home.sections.csr.quote} />
       </Section>
 
       <CtaBand source="about:cta-band" phone={site.phone} phoneDisplay={site.phoneDisplay} />

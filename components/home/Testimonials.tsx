@@ -42,7 +42,7 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
                 </span>
                 <span>
                   <span className="block font-medium text-fg">{t.name}</span>
-                  <span className="block text-xs text-accent-text">{t.project}</span>
+                  {t.project ? <span className="block text-xs text-accent-text">{t.project}</span> : null}
                 </span>
               </figcaption>
             </figure>

@@ -1,26 +1,20 @@
 [
   {
     "slug": "jain-mandir",
-    "name": "Jain Mandir",
-    "deity": "Shri Jain Derasar",
+    "name": "Shri Jain Derasar",
     "icon": "jain",
-    "locality": "Mumbai",
-    "line": "A serene marble shikhara for daily darshan and community gatherings."
+    "line": "For quiet darshans and moments that stay with us"
   },
   {
     "slug": "sai-baba-mandir",
-    "name": "Sai Baba Mandir",
-    "deity": "Shri Sai Baba",
+    "name": "Shri Sai Baba Mandir",
     "icon": "sai",
-    "locality": "Mumbai",
-    "line": "A peaceful space for aarti, bhandara and festivals through the year."
+    "line": "A place that feels familiar from the very first visit"
   },
   {
     "slug": "ganpati-mandir",
-    "name": "Ganpati Mandir",
-    "deity": "Shri Ganesh",
+    "name": "Shri Ganpati Mandir",
     "icon": "ganpati",
-    "locality": "Mumbai",
-    "line": "Home to the neighbourhood's Ganeshotsav celebrations every year."
+    "line": "Where Bappa becomes everyone’s reason to come together"
   }
 ]

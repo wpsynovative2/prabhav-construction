@@ -1,7 +1,7 @@
 {
   "hero": {
-    "title": "Creating splendid structures since 2000",
-    "subtitle": "Led by Chairman & MD Mr. Prashant Lathia: 50+ projects and 2 million+ sq ft across Mumbai's western belt."
+    "title": "It Started With a Site. It Became a Legacy.",
+    "subtitle": "Since 2000, Prabhav has delivered 50+ projects and developed 2M+ sq. ft. across Mumbai’s western belt under Mr. Prashant K. Lathia."
   },
   "story": {
     "title": "Our story",
@@ -12,48 +12,48 @@
     ]
   },
   "values": {
-    "eyebrow": "What drives us",
+    "eyebrow": "What Drives Us",
     "title": "E.P.I.C.",
-    "subtitle": "Four values behind every Prabhav building.",
+    "subtitle": "Four principles that shape how Prabhav works.",
     "items": [
       {
         "letter": "E",
         "title": "Excellence",
-        "text": "Accuracy and quality in every slab we pour.",
+        "text": "High standards of accuracy, workmanship, and execution",
         "icon": "award"
       },
       {
         "letter": "P",
         "title": "Passion",
-        "text": "We love what we build, and it shows.",
+        "text": "The commitment to keep raising the bar",
         "icon": "flame"
       },
       {
         "letter": "I",
         "title": "Integrity",
-        "text": "Honest work, transparent dealings, time-bound delivery.",
+        "text": "A deep commitment to honest work and responsible conduct",
         "icon": "shield-check"
       },
       {
         "letter": "C",
         "title": "Collaboration",
-        "text": "Clients, partners and teams building as one.",
+        "text": "Bringing teams and expertise together to deliver better work",
         "icon": "handshake"
       }
     ]
   },
   "leadership": [
     {
-      "name": "Mr. Prashant Lathia",
+      "name": "Mr. Prashant K. Lathia",
       "role": "Aspirational Founder",
-      "line": "Chairman & Managing Director. Over 50 projects delivered under his leadership.",
+      "line": "Leading with conviction, experience, and a clear sense of what lies ahead",
       "initials": "PL",
       "image": "/images/team/founder.jpg"
     },
     {
       "name": "Director name",
       "role": "Executional Wizard",
-      "line": "Turns blueprints into buildings, on time, every time.",
+      "line": "Making the difficult buildable, and the ambitious achievable",
       "initials": "DN",
       "hidden": true
     }
@@ -61,19 +61,19 @@
   "quality": [
     {
       "icon": "shield-check",
-      "title": "MahaRERA registered"
+      "title": "Deep Integrity"
+    },
+    {
+      "icon": "target",
+      "title": "Highest Accuracy"
+    },
+    {
+      "icon": "clock",
+      "title": "Time-Bound Completion"
     },
     {
       "icon": "leaf",
-      "title": "IGBC Gold pre-certified project"
-    },
-    {
-      "icon": "badge-check",
-      "title": "LEED standards"
-    },
-    {
-      "icon": "hard-hat",
-      "title": "Earthquake-resistant structures"
+      "title": "LEED Standards"
     }
   ],
   "milestones": [
@@ -107,5 +107,14 @@
       "title": "Evana, Nashik",
       "text": "Six IGBC Gold pre-certified towers at Pathardi, Nashik."
     }
-  ]
+  ],
+  "leadershipHeading": {
+    "eyebrow": "Leadership",
+    "title": "The Minds Behind the Name"
+  },
+  "qualityHeading": {
+    "eyebrow": "Quality & Compliance",
+    "title": "Standards That Shape Our Work",
+    "note": "From residential developments to complex infrastructure, each project adds to the Prabhav story"
+  }
 }

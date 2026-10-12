@@ -6,15 +6,15 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/Section";
 
 /** Editorial block: one lead story beside a stack of the latest insights. */
-export function InsightsSection({ items }: { items: Insight[] }) {
+export function InsightsSection({ items, heading }: { items: Insight[]; heading: { eyebrow: string; title: string; subtitle: string } }) {
   const [lead, ...rest] = items;
   if (!lead) return null;
   return (
     <>
       <SectionHeading
-        eyebrow="News Corner"
-        title="From the Prabhav desk"
-        subtitle="Updates, guides and perspectives from our team."
+        eyebrow={heading.eyebrow}
+        title={heading.title}
+        subtitle={heading.subtitle}
         action={
           <ButtonLink href="/insights" variant="outline">
             All news

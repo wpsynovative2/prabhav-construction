@@ -73,7 +73,7 @@ export type Amenity = z.infer<typeof AmenitiesSchema>[number];
 export const TestimonialsSchema = z.array(
   z.object({
     name: z.string(),
-    project: z.string(),
+    project: z.string().optional(),
     quote: z.string().max(160),
     rating: z.number().min(1).max(5).optional(),
     image: z.string().optional(),
@@ -123,9 +123,9 @@ export const CsrSchema = z.array(
   z.object({
     slug: z.string(),
     name: z.string(),
-    deity: z.string(),
+    deity: z.string().optional(),
     icon: z.enum(["jain", "sai", "ganpati"]),
-    locality: z.string(),
+    locality: z.string().optional(),
     line: z.string().max(110),
     image: z.object({ src: z.string().startsWith("/"), alt: z.string() }).optional(),
   }),
