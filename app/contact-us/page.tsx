@@ -77,7 +77,7 @@ export default function ContactPage() {
 
         <Container className="mt-10">
           <Reveal>
-            <MapEmbed src={office.mapEmbedUrl} title={`Map of ${site.name} ${office.name}`} />
+            <MapEmbed live src={office.mapEmbedUrl} title={`Map of ${site.name} ${office.name}`} className="aspect-[4/3] shadow-soft md:aspect-[21/9]" />
           </Reveal>
         </Container>
       </section>

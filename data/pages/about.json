@@ -47,13 +47,15 @@
       "name": "Mr. Prashant Lathia",
       "role": "Aspirational Founder",
       "line": "Chairman & Managing Director. Over 50 projects delivered under his leadership.",
-      "initials": "PL"
+      "initials": "PL",
+      "image": "/images/team/founder.jpg"
     },
     {
       "name": "Director name",
       "role": "Executional Wizard",
       "line": "Turns blueprints into buildings, on time, every time.",
-      "initials": "DN"
+      "initials": "DN",
+      "hidden": true
     }
   ],
   "quality": [

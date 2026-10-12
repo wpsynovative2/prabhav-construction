@@ -46,7 +46,7 @@ export function Leadership({ leaders }: { leaders: Leader[] }) {
               className="absolute inset-0"
             >
               {l.image ? (
-                <Image src={l.image} alt={`${l.name}, ${l.role}`} fill sizes="(min-width: 768px) 30vw, 90vw" className="object-cover" />
+                <Image src={l.image} alt={`${l.name}, ${l.role}`} fill sizes="(min-width: 768px) 30vw, 90vw" className="object-cover object-top" />
               ) : (
                 <Silhouette initials={l.initials} />
               )}
@@ -72,7 +72,8 @@ export function Leadership({ leaders }: { leaders: Leader[] }) {
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-10 flex gap-3" role="tablist" aria-label="Leaders">
+        {/* Switcher only shows when more than one leader is visible */}
+        <div className={cn("mt-10 flex gap-3", leaders.length < 2 && "hidden")} role="tablist" aria-label="Leaders">
           {leaders.map((x, n) => (
             <button
               key={x.role}

@@ -2,18 +2,23 @@
 
 import { useState } from "react";
 import { MapPin } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-/** Click-to-load map: a themed placeholder until the visitor asks for the live map. */
-export function MapEmbed({ src, title }: { src: string; title: string }) {
-  const [live, setLive] = useState(false);
+/**
+ * Google Map embed. By default a themed placeholder shows until the visitor asks for
+ * the live map; pass `live` to embed the map straight away (still lazy-loaded).
+ */
+export function MapEmbed({ src, title, live: startLive = false, className }: { src: string; title: string; live?: boolean; className?: string }) {
+  const [live, setLive] = useState(startLive);
   if (live) {
     return (
       <iframe
         src={src}
         title={title}
         loading="lazy"
+        allowFullScreen
         referrerPolicy="no-referrer-when-downgrade"
-        className="aspect-[4/3] w-full rounded-2xl border border-line"
+        className={cn("aspect-[4/3] w-full rounded-2xl border border-line", className)}
       />
     );
   }
@@ -21,18 +26,18 @@ export function MapEmbed({ src, title }: { src: string; title: string }) {
     <button
       type="button"
       onClick={() => setLive(true)}
-      className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-line bg-surface"
+      className={cn("group relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-line bg-surface", className)}
     >
       {/* Stylised street grid */}
       <svg viewBox="0 0 400 300" className="absolute inset-0 h-full w-full" aria-hidden>
         <rect width="400" height="300" fill="var(--surface)" />
-        <g stroke="var(--line)" strokeWidth="10" strokeLinecap="round">
+        <g fill="none" stroke="var(--line)" strokeWidth="10" strokeLinecap="round">
           <path d="M-10 90 H410" />
           <path d="M-10 210 Q200 180 410 230" />
           <path d="M120 -10 V310" />
           <path d="M290 -10 Q270 150 310 310" />
         </g>
-        <g stroke="var(--line)" strokeWidth="3">
+        <g fill="none" stroke="var(--line)" strokeWidth="3">
           <path d="M-10 150 H410" />
           <path d="M60 -10 V310" />
           <path d="M210 -10 V310" />

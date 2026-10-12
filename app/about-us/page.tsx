@@ -82,10 +82,10 @@ export default function AboutPage() {
         <Milestones items={about.milestones} />
       </Section>
 
-      {/* Leadership: two portraits that fade into each other */}
+      {/* Leadership: set "hidden": true on a leader in about.json to keep them off the page */}
       <Section tone="surface">
         <SectionHeading eyebrow="Leadership" title="The people behind Prabhav" align="center" />
-        <Leadership leaders={about.leadership} />
+        <Leadership leaders={about.leadership.filter((l) => !("hidden" in l && l.hidden))} />
       </Section>
 
       {/* Quality */}
