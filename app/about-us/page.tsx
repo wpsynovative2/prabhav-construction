@@ -28,7 +28,7 @@ export default function AboutPage() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal className="relative">
             <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem]">
-              <Image src="/images/BG-img1.jpg" alt="Interior of a finished Prabhav home" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+              <Image src="/images/background1.jpg" alt="Interior of a finished Prabhav home" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
             </div>
             <div className="absolute -right-3 -bottom-6 flex items-center gap-3 rounded-2xl border border-line bg-surface-raised p-4 shadow-lift md:-right-8">
               <LogoMark className="h-10 w-auto" />
@@ -55,7 +55,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Values: E.P.I.C. */}
-      <Section tone="surface">
+      <Section photo="/images/projects/vivaant-igatpuri/03-exterior.jpg" tone="surface">
         <SectionHeading eyebrow={about.values.eyebrow} title={about.values.title} subtitle={about.values.subtitle} align="center" />
         <RevealGroup className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4" stagger={0.1}>
           {about.values.items.map((v) => (
@@ -77,13 +77,13 @@ export default function AboutPage() {
       </Section>
 
       {/* Milestones: vertical timeline, cards slide in as you scroll */}
-      <Section>
+      <Section photo="/images/backgound1.jpg">
         <SectionHeading eyebrow="Milestones" title="Twenty-five years, one brick at a time" align="center" />
         <Milestones items={about.milestones} />
       </Section>
 
       {/* Leadership: set "hidden": true on a leader in about.json to keep them off the page */}
-      <Section tone="surface">
+      <Section photo="/images/projects/manibhadra-tower-mulund/04-exterior.jpg" tone="surface">
         <SectionHeading eyebrow={about.leadershipHeading.eyebrow} title={about.leadershipHeading.title} align="center" />
         <Leadership leaders={about.leadership.filter((l) => !("hidden" in l && l.hidden))} />
       </Section>
@@ -104,7 +104,7 @@ export default function AboutPage() {
       </Section>
 
       {/* CSR */}
-      <Section tone="surface">
+      <Section photo="/images/projects/evana-nashik/03-amenity.jpg" tone="surface">
         <SectionHeading eyebrow={home.sections.csr.eyebrow} title={home.sections.csr.title} subtitle={home.sections.csr.subtitle} align="center" />
         <CsrSection items={csr} quote={home.sections.csr.quote} />
       </Section>

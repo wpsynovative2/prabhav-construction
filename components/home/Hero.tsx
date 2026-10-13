@@ -1,5 +1,5 @@
 import { ArrowRight, BadgeCheck, HardHat } from "lucide-react";
-import { HeroScene } from "@/components/brand/HeroScene";
+import Image from "next/image";
 import { LogoMark } from "@/components/brand/LogoMark";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -69,9 +69,19 @@ export function Hero({ hero }: { hero: HeroData }) {
           </dl>
         </div>
 
-        {/* Illustration with floating proof cards */}
+        {/* Arched photo with floating proof cards */}
         <div className="relative mx-auto w-full max-w-[600px]">
-          <HeroScene className="relative w-full drop-shadow-[0_30px_40px_rgba(97,47,21,0.15)]" />
+          <div className="absolute -top-3 -right-3 h-full w-full rounded-t-[12rem] rounded-b-[2rem] border border-accent/60" aria-hidden />
+          <div className="relative aspect-[6/5] w-full overflow-hidden rounded-t-[12rem] rounded-b-[2rem] shadow-lift">
+            <Image
+              src="/images/Mumbai Sea Link at Sunset.png"
+              alt="Bandra-Worli Sea Link, Mumbai"
+              fill
+              preload
+              sizes="(min-width: 1024px) 600px, 100vw"
+              className="object-cover"
+            />
+          </div>
 
           <div className="floaty absolute top-[18%] -left-2 flex items-center gap-3 rounded-2xl border border-line bg-surface-raised/90 p-3 pr-4 shadow-lift backdrop-blur md:-left-8">
             <span className="grid size-10 place-items-center rounded-xl bg-primary text-primary-fg">

@@ -53,7 +53,7 @@ export function LandingPage({ title, intro, crumbs, projects, stationNames, faqs
         <ProjectGrid projects={projects} stationNames={stationNames} />
       </Section>
       {faqs.length ? (
-        <Section tone="surface">
+        <Section photo="/images/projects/vivaant-igatpuri/01-amenity.jpg" tone="surface">
           <SectionHeading eyebrow="Questions" title="Good to know" align="center" />
           <div className="mx-auto max-w-3xl">
             <Accordion items={faqs} />

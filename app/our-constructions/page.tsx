@@ -93,7 +93,7 @@ export default function OurConstructionsPage() {
         </Section>
       ) : null}
 
-      <Section tone="surface" className="pt-36 md:pt-48">
+      <Section photo="/images/projects/empire-igatpuri/01-exterior.jpg" tone="surface" className="pt-36 md:pt-48">
         <SectionHeading eyebrow="Track Record" title="Built. Completed. Delivered." subtitle="50+ projects delivered, backed by years of construction expertise" />
         <RevealGroup className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4" stagger={0.06}>
           {constructions.map((c) => (
@@ -109,7 +109,7 @@ export default function OurConstructionsPage() {
         <Process steps={home.sections.process.steps} />
       </Section>
 
-      <Section tone="surface">
+      <Section photo="/images/projects/empire-igatpuri/07-exterior.jpg" tone="surface">
         <SectionHeading eyebrow="Quality" title="Checked at every stage" align="center" />
         <RevealGroup className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5" stagger={0.06}>
           {CHECKS.map(({ icon: I, title, text }, i) => (

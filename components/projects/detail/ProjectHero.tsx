@@ -1,22 +1,24 @@
-import { CalendarCheck, Download, IndianRupee, MapPin, TrainFront } from "lucide-react";
+import { MapPin } from "lucide-react";
+// Quick-facts panel (price, possession, station, CTAs) is switched off for now. Restore these with the panel below:
+// import { CalendarCheck, Download, IndianRupee, TrainFront } from "lucide-react";
+// import { CtaButton } from "@/components/ui/CtaButton";
+// import { formatMonth } from "@/lib/utils";
 import type { Project } from "@/lib/schemas/project.schema";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { StatusBadge } from "@/components/ui/Badge";
-import { CtaButton } from "@/components/ui/CtaButton";
 import { Container } from "@/components/ui/Container";
 import { ProjectVisual } from "@/components/projects/ProjectVisual";
-import { formatMonth } from "@/lib/utils";
 
 export function ProjectHero({ project: p, stationName }: { project: Project; stationName: string }) {
-  const facts = [
-    { icon: IndianRupee, label: "Price", value: p.price.display },
-    {
-      icon: CalendarCheck,
-      label: "Possession",
-      value: p.status === "completed" ? "Ready to move" : p.possession ? formatMonth(p.possession) : "To be announced",
-    },
-    { icon: TrainFront, label: stationName, value: p.location.distanceFromStation ?? "Nearby" },
-  ];
+  // const facts = [
+  //   { icon: IndianRupee, label: "Price", value: p.price.display },
+  //   {
+  //     icon: CalendarCheck,
+  //     label: "Possession",
+  //     value: p.status === "completed" ? "Ready to move" : p.possession ? formatMonth(p.possession) : "To be announced",
+  //   },
+  //   { icon: TrainFront, label: stationName, value: p.location.distanceFromStation ?? "Nearby" },
+  // ];
   return (
     <section className="relative -mt-(--header-h) bg-surface pt-(--header-h)">
       <Container className="pt-6 pb-10 md:pt-8">
@@ -47,6 +49,7 @@ export function ProjectHero({ project: p, stationName }: { project: Project; sta
           </div>
         </div>
 
+        {/* Quick-facts panel (price, possession, station, CTAs) is switched off for now. To bring it back, uncomment this block, the facts array and the imports above.
         <div className="relative z-10 mx-3 -mt-2 grid gap-4 rounded-3xl border border-line bg-surface-raised p-5 shadow-lift md:mx-8 md:-mt-8 md:grid-cols-[1fr_auto] md:items-center md:p-6">
           <dl className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {facts.map(({ icon: I, label, value }) => (
@@ -72,6 +75,7 @@ export function ProjectHero({ project: p, stationName }: { project: Project; sta
             </CtaButton>
           </div>
         </div>
+        */}
       </Container>
     </section>
   );

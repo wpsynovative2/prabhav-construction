@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProjectHero } from "@/components/projects/detail/ProjectHero";
-import { StickySubNav } from "@/components/projects/detail/StickySubNav";
+// On-page tab bar is switched off for now; restore with the nav array and <StickySubNav /> below.
+// import { StickySubNav } from "@/components/projects/detail/StickySubNav";
 import {
   AmenitiesGrid,
   Block,
@@ -56,22 +57,22 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
   const related = getRelatedProjects(p);
   const stationNames = Object.fromEntries(stations.map((s) => [s.slug, s.name]));
 
-  const nav = [
-    { id: "overview", label: "Overview" },
-    { id: "configurations", label: "Configurations" },
-    amenities.length && { id: "amenities", label: "Amenities" },
-    p.images.gallery.length && { id: "gallery", label: "Gallery" },
-    { id: "floor-plans", label: "Floor plans" },
-    { id: "location", label: "Location" },
-    p.status === "ongoing" && p.constructionUpdates.length && { id: "progress", label: "Progress" },
-    { id: "rera", label: "RERA" },
-    p.faqs.length && { id: "faq", label: "FAQ" },
-  ].filter(Boolean) as { id: string; label: string }[];
+  // const nav = [
+  //   { id: "overview", label: "Overview" },
+  //   { id: "configurations", label: "Configurations" },
+  //   amenities.length && { id: "amenities", label: "Amenities" },
+  //   p.images.gallery.length && { id: "gallery", label: "Gallery" },
+  //   { id: "floor-plans", label: "Floor plans" },
+  //   { id: "location", label: "Location" },
+  //   p.status === "ongoing" && p.constructionUpdates.length && { id: "progress", label: "Progress" },
+  //   { id: "rera", label: "RERA" },
+  //   p.faqs.length && { id: "faq", label: "FAQ" },
+  // ].filter(Boolean) as { id: string; label: string }[];
 
   return (
     <>
       <ProjectHero project={p} stationName={stationName} />
-      <StickySubNav items={nav} />
+      {/* <StickySubNav items={nav} /> */}
 
       <Container className="grid gap-10 lg:grid-cols-[1fr_360px]">
         <div className="min-w-0">
@@ -93,7 +94,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
       </Container>
 
       {related.length ? (
-        <Section tone="surface">
+        <Section photo="/images/projects/empire-igatpuri/03-exterior.jpg" tone="surface">
           <SectionHeading eyebrow="You may also like" title="Related projects" />
           <ProjectGrid projects={related} stationNames={stationNames} />
         </Section>

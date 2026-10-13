@@ -45,7 +45,7 @@ export default function CareerPage() {
         </RevealGroup>
       </Section>
 
-      <Section tone="surface">
+      <Section photo="/images/projects/evana-nashik/04-amenity.jpg" tone="surface">
         <SectionHeading eyebrow="Perks" title="Looked after, on and off site" align="center" />
         <RevealGroup className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6" stagger={0.05}>
           {careerPage.perks.map((p) => (
@@ -68,7 +68,7 @@ export default function CareerPage() {
         </div>
       </Section>
 
-      <Section tone="surface">
+      <Section photo="/images/projects/evana-nashik/06-interior.jpg" tone="surface">
         <SectionHeading eyebrow="Questions" title="Applying, explained" align="center" />
         <div className="mx-auto max-w-3xl">
           <Accordion items={faqs.career} />

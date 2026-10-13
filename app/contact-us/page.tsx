@@ -82,7 +82,7 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <Section tone="surface">
+      <Section photo="/images/projects/evana-nashik/07-interior.jpg" tone="surface">
         <SectionHeading eyebrow="Questions" title="Before you visit" align="center" />
         <div className="mx-auto max-w-3xl">
           <Accordion items={faqs.contact} />
