@@ -77,7 +77,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Milestones: vertical timeline, cards slide in as you scroll */}
-      <Section photo="/images/backgound1.jpg">
+      <Section photo="/images/sunset-towers.jpg" wash={68}>
         <SectionHeading eyebrow="Milestones" title="Twenty-five years, one brick at a time" align="center" />
         <Milestones items={about.milestones} />
       </Section>

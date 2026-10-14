@@ -1,81 +1,150 @@
 [
   {
-    "slug": "why-igatpuri-for-a-second-home",
-    "title": "Why Igatpuri is Mumbai's favourite second-home escape",
-    "category": "Market",
-    "icon": "trees",
-    "date": "2026-09-22",
-    "readMins": 4,
+    "slug": "mmrda-surbana-jurong-mumbai-3-0-master-plan",
+    "title": "MMRDA signs Surbana Jurong to master-plan Mumbai 3.0",
+    "category": "Infrastructure",
+    "icon": "route",
+    "date": "2026-08-07",
+    "readMins": 3,
     "featured": true,
-    "summary": "Forests, hills and rivers a short drive from Mumbai: a retreat that is also an investment.",
+    "summary": "A Singapore planner will draw the vision and master plan for a new city across 124 villages in Raigad.",
     "points": [
-      "A respite from crowded cities, heat and work stress",
-      "Lush woodland, hill views and flowing rivers",
-      "Row houses, villas and apartments for every budget",
-      "Popular with NRIs as well as Mumbaikars"
-    ]
-  },
-  {
-    "slug": "how-nris-can-invest-in-indian-real-estate",
-    "title": "How NRIs can invest in Indian real estate",
-    "category": "Buyer guide",
-    "icon": "landmark",
-    "date": "2026-08-18",
-    "readMins": 4,
-    "summary": "RBI and FEMA rules let NRIs buy homes and offices in India, with repatriation benefits.",
-    "points": [
-      "NRIs can buy any residential or commercial property",
-      "Agricultural land, farm houses and plantations are excluded",
-      "Property can also be received as a gift or by inheritance",
-      "Repatriation of the invested capital is permitted"
-    ]
-  },
-  {
-    "slug": "carpet-vs-built-up-vs-super-built-up",
-    "title": "Carpet, built-up, super built-up: which area are you paying for?",
-    "category": "Buyer guide",
-    "icon": "ruler",
-    "date": "2026-09-12",
-    "readMins": 3,
-    "summary": "RERA requires prices on carpet area. Here's how to read any brochure.",
-    "points": [
-      "Carpet area: usable floor inside your walls",
-      "Built-up adds wall thickness and balconies",
-      "Super built-up adds a share of lobbies and amenities",
-      "Under RERA, sale price must be quoted on carpet area"
+      "Spread across about 323.44 sq km and 124 villages",
+      "Covers Panvel, Uran and Pen talukas of Raigad district",
+      "Integrates land use, mobility and infrastructure plans",
+      "Built around transit-oriented, mixed-use development"
     ],
-    "featured": false
-  },
-  {
-    "slug": "checking-a-project-on-maharera",
-    "title": "How to check any project on MahaRERA in five minutes",
-    "category": "Policy",
-    "icon": "shield-check",
-    "date": "2026-08-28",
-    "readMins": 3,
-    "summary": "Registration number, approvals, timelines and complaints, all on one public portal.",
-    "points": [
-      "Find the MahaRERA number on the ad or scan its QR code",
-      "Search it on maharera.maharashtra.gov.in",
-      "Check promised possession date and approvals",
-      "Look at quarterly progress updates and any complaints"
+    "body": [
+      "The Mumbai Metropolitan Region Development Authority (MMRDA) has signed an agreement with Singapore-headquartered Surbana Jurong Infrastructure Pte. Ltd. to prepare the Vision Document, Master Plan and related planning framework for Mumbai 3.0. It is a major step towards turning Maharashtra's vision for a new global urban and economic growth centre into a structured plan.",
+      "The agreement was signed by Dr. Sanjay Mukherjee, IAS, Metropolitan Commissioner, MMRDA, and Mr. Avinash Mishra, Chief Executive, South Asia, Surbana Jurong, in the presence of Chief Minister of Maharashtra Shri Devendra Fadnavis. Surbana Jurong's roots are closely linked with Singapore's own transformation into a model of planned urbanisation, housing and industrial development.",
+      "Mumbai 3.0 is spread across approximately 323.44 sq km, covering 124 villages across Panvel, Uran and Pen talukas of Raigad district.",
+      "Surbana Jurong will prepare an Inception Plan, Existing Situation Analysis, Vision Plan, Draft Concept Land Use Plan, stakeholder consultations and a Final Concept Plan. The work will study existing land use, roads and mobility, demographics, socio-economic conditions, utilities, environmental features and public amenities before setting the long-term spatial and economic framework for the new city.",
+      "The Vision Document will define Mumbai 3.0's economic positioning, growth strategy, investment themes, catalytic projects and place-making principles. It will also draw on global best practice in integrated urban development, smart infrastructure, mixed-use districts, public spaces, renewable energy, digital infrastructure, Transit-Oriented Development and innovation-led economies.",
+      "The Draft Concept Plan brings together three parts: a Concept Structure Plan (land-use patterns, development nodes and growth corridors), a Concept Mobility Plan (regional and intra-city connectivity, mass transit, multimodal and pedestrian movement, and Transit-Oriented Development) and a Concept Infrastructure Plan (water supply, sewerage, storm-water drainage, solid waste, power, gas, social infrastructure and blue-green networks)."
     ],
-    "featured": false
+    "source": {
+      "name": "MMRDA press release",
+      "url": "https://mmrda.maharashtra.gov.in/sites/default/files/2026-08/mmrda-surbana_jurong_sign_agreement_for_mumbai_3.0_vision_document_final_concept_plan_in_30_weeks.pdf"
+    }
   },
   {
-    "slug": "ready-to-move-vs-under-construction",
-    "title": "Ready-to-move or under-construction: how to choose",
+    "slug": "mumbai-property-registrations-14-year-august-high",
+    "title": "Mumbai property registrations hit a 14-year August high",
     "category": "Market",
-    "icon": "scale",
-    "date": "2026-08-10",
-    "readMins": 4,
-    "summary": "One saves on rent and GST, the other on price and payment flexibility.",
+    "icon": "file-check",
+    "date": "2026-08-31",
+    "readMins": 1,
+    "summary": "12,401 registrations, up 11% year-on-year, with both primary and secondary housing on the rise.",
     "points": [
-      "Ready-to-move: no GST, move in now, see what you buy",
-      "Under-construction: lower entry price, staggered payments",
-      "Check the developer's delivery record before booking",
-      "Factor rent and EMI overlap into your budget"
+      "12,401 property registrations recorded in August",
+      "Up 11 percent year-on-year",
+      "The highest August figure in 14 years",
+      "Growth seen in both primary and secondary housing"
     ],
-    "featured": false
+    "body": [
+      "Property registrations in Mumbai rose 11 percent year-on-year, with the city recording 12,401 registrations by 5:20 pm on a Monday. It is the highest August figure in 14 years and points to a rise in both primary and secondary housing."
+    ],
+    "source": {
+      "name": "The Times of India",
+      "url": "https://timesofindia.indiatimes.com/real-estate/news/mumbai-property-registrations-hit-14-year-august-high-at-12401-units/articleshow/133655502.cms"
+    }
+  },
+  {
+    "slug": "india-reits-gaining-scale-unlocking-value",
+    "title": "India REITs: gaining scale and unlocking value",
+    "category": "Market",
+    "icon": "building",
+    "date": "2026-06-19",
+    "readMins": 2,
+    "summary": "Listed REITs and InvITs now hold over 195 million sq ft, with about 37 million sq ft more in the pipeline.",
+    "points": [
+      "Existing REIT/InvIT portfolio has passed 195 million sq ft",
+      "About 37 million sq ft upcoming, as of March 2026",
+      "Office holds around 84% of the operational portfolio",
+      "Retail, industrial and warehousing are gaining momentum"
+    ],
+    "body": [
+      "Real Estate Investment Trusts (REITs) and Infrastructure Investment Trusts (InvITs) are speeding up the institutionalisation and democratisation of India's real estate sector. Rising investor participation, strong performance of the underlying assets, asset acquisitions and supportive policies are all driving the shift.",
+      "The REIT/InvIT ecosystem has grown steadily over the past five to six years in asset class and size, geography and investor base. The market now has five office-focused REITs, a retail REIT and an industrial and warehousing InvIT, showing how well these structures scale in India.",
+      "According to Colliers' report \"India REITs: Gaining scale & unlocking value\", the portfolio across listed REITs and InvITs has passed 195 million sq ft, with an upcoming pipeline of about 37 million sq ft as of March 2026. Office still dominates with around 84% of the operational portfolio, while retail and industrial and warehousing are gaining momentum."
+    ],
+    "source": {
+      "name": "Colliers India",
+      "url": "https://www.colliers.com/en-in/research/india-reits-gaining-scale-and-unlocking-value"
+    }
+  },
+  {
+    "slug": "india-real-estate-20x-by-2047",
+    "title": "India's real estate set for a 20X leap by 2047",
+    "category": "Market",
+    "icon": "trending-up",
+    "date": "2025-11-06",
+    "readMins": 1,
+    "summary": "From under USD 1 trillion today to a USD 5–10 trillion market, opening new urban growth corridors.",
+    "points": [
+      "Under USD 1 trillion today, USD 5–10 trillion by 2047",
+      "Could contribute 14–20% of India's GDP",
+      "New urban growth corridors are opening up",
+      "Aligned with the Viksit Bharat vision for Amrit Kaal"
+    ],
+    "body": [
+      "India's real estate sector is set for a 20X leap by 2047, unlocking new urban growth corridors and potentially becoming a USD 5–10 trillion market.",
+      "The market is on course to grow from under USD 1 trillion today to USD 5–10 trillion by 2047, potentially contributing 14–20% of the country's GDP. The transformation tracks India's broader economic rise and shapes the vision of Viksit Bharat under the Amrit Kaal roadmap."
+    ],
+    "source": {
+      "name": "Colliers India",
+      "url": "https://www.colliers.com/en-in/research/real-estate-2047-building-india-future-growth-corridors"
+    }
+  },
+  {
+    "slug": "mumbai-redevelopment-910-societies",
+    "title": "Mumbai redevelopment: 910 societies, 326.8 acres unlocked",
+    "category": "Market",
+    "icon": "home",
+    "date": "2025-09-10",
+    "readMins": 2,
+    "summary": "Society redevelopment has grown from a handful of deals in 2020 into a structured, scalable market.",
+    "points": [
+      "910 society redevelopment agreements from 2020 to H1 2025",
+      "Over 326.8 acres (1.3 mn sq m) of land unlocked for renewal",
+      "One of the largest land recycling waves post-DCPR 2034",
+      "Every agreement is registered with the IGR"
+    ],
+    "body": [
+      "Mumbai's redevelopment momentum has changed a great deal in recent years. From a nascent phase with limited deal activity in 2020, the market has become a far more structured and scalable ecosystem.",
+      "Between 2020 and H1 2025, 910 society-level redevelopment agreements were recorded, together unlocking over 326.8 acres (1.3 mn sq m) of potential land for renewal. It is one of the largest land recycling waves the city has seen in the post-DCPR 2034 era.",
+      "Development Agreements (DAs) are the legal contracts between a housing society and a developer. They set out obligations for rehabilitation, free-sale area, timelines and financial commitments. DAs must be registered with the Inspector General of Registration (IGR), the state authority, which creates an official record of redevelopment activity."
+    ],
+    "source": {
+      "name": "Knight Frank, Upgrading Mumbai: The Redevelopment Story 2025",
+      "url": "https://content.knightfrank.com/research/3042/documents/en/upgrading-mumbai-the-redevelopment-story-2025-12406.pdf"
+    }
+  },
+  {
+    "slug": "how-dcpr-2034-enables-redevelopment",
+    "title": "How DCPR 2034 is powering Mumbai's redevelopment",
+    "category": "Policy",
+    "icon": "scale",
+    "date": "2025-09-10",
+    "readMins": 3,
+    "summary": "FSI incentives and zone-specific rules have turned regulation into a redevelopment engine.",
+    "points": [
+      "Incentive FSI for tenant rehousing or public benefit",
+      "Cluster schemes get amalgamation bonuses and relaxed norms",
+      "33(9) cluster redevelopment allows up to 4.0 FSI or more",
+      "33(7B) opens redevelopment to standalone societies"
+    ],
+    "body": [
+      "Mumbai's redevelopment surge is not a spontaneous market outcome. It comes from a purpose-built policy ecosystem shaped to tackle the city's twin problems of land scarcity and ageing housing stock. Over the last decade, regulation has moved from fragmented controls to an integrated framework built around FSI incentives, financial instruments and zone-specific levers.",
+      "The Development Control and Promotion Regulations (DCPR) 2034 replaced DCR 1991 and fundamentally redefined how land, density and incentives work in Mumbai. Its key enablers include incentive FSI for projects with tenant rehousing obligations or public benefit, and higher buildability for cluster and composite redevelopment through amalgamation bonuses and relaxed design norms.",
+      "Cessed buildings under 33(7): covers cessed (pre-1969) buildings in the Island City, with FSI linked to Table 30(A) and a 50% incentive over the rehab requirement.",
+      "Cluster redevelopment under 33(9): designed for larger land tracts, typically over 4,000–6,000 sq m, allowing up to 4.0 FSI or higher in special incentive zones.",
+      "Independent societies under 33(7B): enables redevelopment of standalone societies, especially relevant in the suburbs, with FSI adjusted for road width and plot conditions.",
+      "MHADA buildings under 33(5): applies to MHADA layouts, often with low-income or rental housing, allowing up to 4.0 FSI plus further incentives depending on tenant count and amenities."
+    ],
+    "source": {
+      "name": "Knight Frank, Upgrading Mumbai: The Redevelopment Story 2025",
+      "url": "https://content.knightfrank.com/research/3042/documents/en/upgrading-mumbai-the-redevelopment-story-2025-12406.pdf"
+    }
   }
 ]

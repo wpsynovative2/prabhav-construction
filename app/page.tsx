@@ -99,7 +99,7 @@ export default function HomePage() {
         <Testimonials items={testimonials} />
       </Section>
 
-      <Section photo="/images/background2.jpg" tone="surface">
+      <Section photo="/images/backgound.jpg" tone="surface">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
           <SectionHeading eyebrow={s.faq.eyebrow} title={s.faq.title} subtitle={s.faq.subtitle} className="md:flex-col md:items-start" />
           <Accordion items={faqs.home} />

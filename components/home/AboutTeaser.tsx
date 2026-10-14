@@ -16,9 +16,10 @@ export function AboutTeaser({ eyebrow, title, points }: { eyebrow: string; title
         <div className="absolute -top-4 -left-4 h-[78%] w-[78%] rounded-[2rem] border border-accent/60" aria-hidden />
         <div className="relative aspect-[4/5] w-[78%] overflow-hidden rounded-[2rem] shadow-lift">
           <Image
-            src="/images/sunset-towers.jpg"
-            alt="Prabhav residential towers at sunset"
+            src="/images/story-tower.jpg"
+            alt="A residential tower with lit balconies and hanging greenery at dusk"
             fill
+            quality={90}
             sizes="(min-width: 1024px) 30vw, 70vw"
             className="object-cover transition-transform duration-[1.5s] hover:scale-105"
           />

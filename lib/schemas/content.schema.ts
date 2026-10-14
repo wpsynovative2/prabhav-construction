@@ -93,6 +93,10 @@ export const InsightsSchema = z.array(
     featured: z.boolean().default(false),
     summary: z.string().max(140, "Keep summaries to one line"),
     points: z.array(z.string().max(90)).min(2),
+    /** Full story, one paragraph per entry */
+    body: z.array(z.string()).optional(),
+    /** Where the story comes from; linked at the end of the article */
+    source: z.object({ name: z.string(), url: z.string().url() }).optional(),
   }),
 );
 export type Insight = z.infer<typeof InsightsSchema>[number];

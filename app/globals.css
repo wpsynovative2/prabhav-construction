@@ -287,7 +287,7 @@ body {
 }
 /* Plain (tone="bg") sections given a photo: it sits faintly under a wash of the page colour */
 .photo-soft {
-  --wash: color-mix(in srgb, var(--bg) 86%, transparent);
+  --wash: color-mix(in srgb, var(--bg) var(--wash-mix, 86%), transparent);
   background-color: var(--bg);
   background-image: linear-gradient(var(--wash), var(--wash)), var(--photo);
   background-size: cover;
