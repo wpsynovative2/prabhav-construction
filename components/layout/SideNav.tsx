@@ -92,7 +92,7 @@ export function SideNav({ nav, statusCounts, social }: Props) {
       </a>
 
       {/* Desktop rail */}
-      <aside className="fixed inset-y-0 left-0 z-[70] hidden w-[88px] flex-col items-center justify-between border-r border-line bg-surface-raised/90 py-6 backdrop-blur-xl lg:flex">
+      <aside className="fixed inset-y-0 left-0 z-[70] hidden w-[88px] flex-col items-center justify-between border-r border-white/40 bg-surface-raised/35 py-6 shadow-[4px_0_24px_-12px_rgba(42,20,9,0.35)] backdrop-blur-2xl backdrop-saturate-150 lg:flex">
         <button
           type="button"
           onClick={() => setOpen((o) => !o)}

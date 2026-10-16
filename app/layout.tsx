@@ -61,8 +61,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             statusCounts={statusCounts}
             social={site.social}
           />
-          {/* Content sits to the right of the fixed left rail on desktop */}
-          <div className="lg:pl-[88px]">
+          {/* Content runs full-bleed beneath the glass left rail on desktop; Container keeps text clear of it */}
+          <div>
             <main id="main">{children}</main>
             <Footer site={site} groups={navigation.footer} stations={stations} categories={categories} />
           </div>

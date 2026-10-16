@@ -24,7 +24,7 @@ export function StickySubNav({ items }: { items: { id: string; label: string }[]
 
   return (
     <nav aria-label="On this page" className="sticky top-(--header-h) z-30 border-y border-line bg-surface-raised/90 backdrop-blur-xl">
-      <ul className="no-scrollbar mx-auto flex max-w-[1240px] gap-1 overflow-x-auto px-5 md:px-8">
+      <ul className="no-scrollbar mx-auto flex max-w-[1240px] gap-1 overflow-x-auto px-5 md:px-8 lg:px-[max(2rem,calc(88px+1.5rem-max(0px,(100vw-1240px)/2)))]">
         {items.map((i) => (
           <li key={i.id}>
             <a
