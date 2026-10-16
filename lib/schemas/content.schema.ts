@@ -97,6 +97,15 @@ export const InsightsSchema = z.array(
     body: z.array(z.string()).optional(),
     /** Where the story comes from; linked at the end of the article */
     source: z.object({ name: z.string(), url: z.string().url() }).optional(),
+    /** Cover photo; falls back to the illustrated cover when absent */
+    image: z
+      .object({
+        src: z.string().startsWith("/"),
+        alt: z.string(),
+        /** Photographer and licence, shown under the photo on the article page */
+        credit: z.object({ text: z.string(), url: z.string().url() }).optional(),
+      })
+      .optional(),
   }),
 );
 export type Insight = z.infer<typeof InsightsSchema>[number];

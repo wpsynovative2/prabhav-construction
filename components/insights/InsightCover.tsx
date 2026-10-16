@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Insight } from "@/lib/schemas/content.schema";
 import { LogoMark } from "@/components/brand/LogoMark";
 import { Icon } from "@/components/ui/Icon";
@@ -11,8 +12,39 @@ const TONES: Record<Insight["category"], string> = {
   Policy: "bg-[linear-gradient(135deg,#4a2310_0%,#160a04_100%)]",
 };
 
-/** Illustrated cover: blueprint grid, radiating logo rays and the topic's icon. */
-export function InsightCover({ insight, className, large, iconHigh }: { insight: Insight; className?: string; large?: boolean; iconHigh?: boolean }) {
+/** Cover for a story: its photo when it has one, otherwise the illustrated blueprint cover. */
+export function InsightCover({
+  insight,
+  className,
+  large,
+  iconHigh,
+  sizes = "(min-width: 1024px) 33vw, 100vw",
+  priority,
+}: {
+  insight: Insight;
+  className?: string;
+  large?: boolean;
+  iconHigh?: boolean;
+  sizes?: string;
+  priority?: boolean;
+}) {
+  if (insight.image) {
+    return (
+      <div className={cn("relative overflow-hidden bg-[#2a1409]", className)}>
+        <Image
+          src={insight.image.src}
+          alt={insight.image.alt}
+          fill
+          sizes={sizes}
+          priority={priority}
+          className="object-cover transition-transform duration-1000 group-hover:scale-105"
+        />
+        {/* Warm brand wash so photos sit with the palette */}
+        <span className="absolute inset-0 bg-gradient-to-t from-[#1c0c04]/55 via-[#1c0c04]/10 to-transparent" />
+      </div>
+    );
+  }
+
   return (
     <div className={cn("relative overflow-hidden", TONES[insight.category], className)} aria-hidden>
       {/* Blueprint grid */}

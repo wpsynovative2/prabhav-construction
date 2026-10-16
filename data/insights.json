@@ -25,6 +25,14 @@
     "source": {
       "name": "MMRDA press release",
       "url": "https://mmrda.maharashtra.gov.in/sites/default/files/2026-08/mmrda-surbana_jurong_sign_agreement_for_mumbai_3.0_vision_document_final_concept_plan_in_30_weeks.pdf"
+    },
+    "image": {
+      "src": "/images/insights/mumbai-3-0-atal-setu.jpg",
+      "alt": "Atal Setu sea bridge stretching from Mumbai towards Uran and Raigad",
+      "credit": {
+        "text": "Photo: Amitbalani, CC0, via Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Atal_Setu_-_Trans_Harbour_Link_Mumbai.jpg"
+      }
     }
   },
   {
@@ -47,6 +55,14 @@
     "source": {
       "name": "The Times of India",
       "url": "https://timesofindia.indiatimes.com/real-estate/news/mumbai-property-registrations-hit-14-year-august-high-at-12401-units/articleshow/133655502.cms"
+    },
+    "image": {
+      "src": "/images/insights/mumbai-residential-skyline.jpg",
+      "alt": "Residential high-rises along the Mumbai waterfront",
+      "credit": {
+        "text": "Photo: iMahesh, CC BY-SA 4.0, via Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Mumbai_Skyline_and_Sail_boats.jpg"
+      }
     }
   },
   {
@@ -71,6 +87,14 @@
     "source": {
       "name": "Colliers India",
       "url": "https://www.colliers.com/en-in/research/india-reits-gaining-scale-and-unlocking-value"
+    },
+    "image": {
+      "src": "/images/insights/bandra-kurla-complex.jpg",
+      "alt": "Office towers in Bandra Kurla Complex, Mumbai",
+      "credit": {
+        "text": "Photo: N. Vivekananthamoorthy, CC BY 4.0, via Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Bandra-Kurla-Complex-Mumbai-Maharashtra-India.jpg"
+      }
     }
   },
   {
@@ -94,6 +118,14 @@
     "source": {
       "name": "Colliers India",
       "url": "https://www.colliers.com/en-in/research/real-estate-2047-building-india-future-growth-corridors"
+    },
+    "image": {
+      "src": "/images/insights/mumbai-towers-under-construction.jpg",
+      "alt": "Mumbai skyline with towers rising under construction cranes",
+      "credit": {
+        "text": "Photo: ASaber91, CC BY 2.0, via Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Mumbai_Aug_2018_(43397787434).jpg"
+      }
     }
   },
   {
@@ -118,6 +150,14 @@
     "source": {
       "name": "Knight Frank, Upgrading Mumbai: The Redevelopment Story 2025",
       "url": "https://content.knightfrank.com/research/3042/documents/en/upgrading-mumbai-the-redevelopment-story-2025-12406.pdf"
+    },
+    "image": {
+      "src": "/images/insights/mumbai-old-and-new-buildings.jpg",
+      "alt": "Older Mumbai housing blocks in front of new residential towers",
+      "credit": {
+        "text": "Photo: Nicolas Vigier, CC0, via Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:A_skyscraper_in_Mumbai_from_railway_station.jpg"
+      }
     }
   },
   {
@@ -145,6 +185,14 @@
     "source": {
       "name": "Knight Frank, Upgrading Mumbai: The Redevelopment Story 2025",
       "url": "https://content.knightfrank.com/research/3042/documents/en/upgrading-mumbai-the-redevelopment-story-2025-12406.pdf"
+    },
+    "image": {
+      "src": "/images/insights/south-mumbai-marine-drive.jpg",
+      "alt": "South Mumbai buildings along Marine Drive",
+      "credit": {
+        "text": "Photo: A.Savin, FAL, via Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Mumbai_03-2016_27_skyline_at_Marine_Drive.jpg"
+      }
     }
   }
 ]

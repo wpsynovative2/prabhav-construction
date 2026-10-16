@@ -40,9 +40,16 @@ export default async function InsightPage({ params }: PageProps<"/insights/[slug
             <h1 className="page-enter mt-4 font-display text-[2.2rem] leading-[1.08] text-fg md:text-[3.2rem]">{i.title}</h1>
             <p className="page-enter mt-4 text-lg text-muted [animation-delay:120ms]">{i.summary}</p>
           </div>
-          <div className="group mt-8">
-            <InsightCover insight={i} large className="aspect-[21/9] rounded-[1.75rem]" />
-          </div>
+          <figure className="group mt-8">
+            <InsightCover insight={i} large priority sizes="(min-width: 896px) 896px, 100vw" className="aspect-[21/9] rounded-[1.75rem]" />
+            {i.image?.credit ? (
+              <figcaption className="mt-2 text-right text-xs text-muted">
+                <a href={i.image.credit.url} target="_blank" rel="noopener noreferrer" className="hover:text-fg">
+                  {i.image.credit.text}
+                </a>
+              </figcaption>
+            ) : null}
+          </figure>
         </Container>
       </section>
 

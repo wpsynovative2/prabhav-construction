@@ -27,7 +27,7 @@ export function InsightFeature({ insight }: { insight: Insight }) {
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-line bg-[#1c0c04] transition-shadow duration-500 hover:shadow-lift">
       <div className="relative min-h-52 flex-1">
-        <InsightCover insight={insight} large className="absolute! inset-0" />
+        <InsightCover insight={insight} large sizes="(min-width: 1280px) 1280px, 100vw" className="absolute! inset-0" />
       </div>
       <div className="relative p-6 text-white md:p-8">
         <InsightMeta insight={insight} light />
@@ -50,7 +50,7 @@ export function InsightFeature({ insight }: { insight: Insight }) {
 export function InsightRow({ insight }: { insight: Insight }) {
   return (
     <article className="group relative flex items-center gap-4 rounded-2xl border border-line bg-surface-raised p-3 pr-4 transition-all duration-500 hover:-translate-y-0.5 hover:border-accent/60 hover:shadow-soft">
-      <InsightCover insight={insight} className="size-24 shrink-0 rounded-xl sm:size-28" />
+      <InsightCover insight={insight} sizes="112px" className="size-24 shrink-0 rounded-xl sm:size-28" />
       <div className="min-w-0 flex-1">
         <InsightMeta insight={insight} />
         <h3 className="mt-2 font-display text-lg leading-snug text-fg transition-colors group-hover:text-primary">
