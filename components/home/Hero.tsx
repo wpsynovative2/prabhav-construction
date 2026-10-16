@@ -13,8 +13,7 @@ type HeroData = {
 const d = (s: number) => ({ "--d": `${s}s` }) as React.CSSProperties;
 
 /**
- * Full-bleed photo hero. Copy sits centred at the bottom over the sea so the sky,
- * the "MUMBAI" lettering and the bridge in the photo stay clear.
+ * Full-bleed photo hero with the badge on top; the headline is screen-reader only.
  */
 export function Hero({ hero }: { hero: HeroData }) {
   const [line1, line2] = hero.headline;
@@ -49,20 +48,10 @@ export function Hero({ hero }: { hero: HeroData }) {
         </span>
       </Container>
 
-      <Container className="relative pt-40 pb-16 text-center md:pb-24 lg:[@media(max-height:800px)]:pb-14">
-        <h1 className="mx-auto max-w-4xl font-display text-[2rem] leading-[1.12] text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.45)] sm:text-[2.6rem] lg:text-[3.1rem] lg:[@media(max-height:800px)]:text-[2.4rem]">
-          <span className="hero-rise intro-delay block" style={d(0.15)}>
-            {line1}
-          </span>
-          <span className="hero-rise intro-delay block pb-1 text-[#f6d9a0]" style={d(0.3)}>
-            {line2}
-          </span>
-        </h1>
-
-        <p className="hero-rise intro-delay mx-auto mt-3 max-w-2xl text-base text-white/85 md:text-lg lg:[@media(max-height:800px)]:mt-2 lg:[@media(max-height:800px)]:text-base" style={d(0.45)}>
-          {hero.subline}
-        </p>
-      </Container>
+      {/* Headline is visually hidden (the photo carries the hero) but kept as the page's h1 */}
+      <h1 className="sr-only">
+        {line1} {line2}
+      </h1>
     </section>
   );
 }
