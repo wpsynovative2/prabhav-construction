@@ -336,6 +336,23 @@ html[data-splash="done"] .splash {
 html:not([data-splash]) .intro-delay {
   animation-delay: calc(var(--d, 0s) + 2.1s);
 }
+/* Hero photo settles from a slight zoom */
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.hero-zoom {
+  animation: hero-zoom 6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-zoom {
+    animation: none;
+  }
+}
 
 /* ---------- Scene animation helpers ---------- */
 .tower-rise {
