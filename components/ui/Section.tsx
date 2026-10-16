@@ -7,19 +7,28 @@ type SectionProps = {
   id?: string;
   /** "bg": plain background. "surface": photo under the dark brand overlay, content light-on-dark. */
   tone?: "bg" | "surface";
+  /** Background photo (path under /public). Dark sections fall back to the default photo; plain ones stay flat without it. */
+  photo?: string;
+  /** Plain sections only: how much page colour washes over the photo, in percent (default 86). Lower shows more photo. */
+  wash?: number;
   className?: string;
   containerClassName?: string;
   children: React.ReactNode;
 };
 
-export function Section({ id, tone = "bg", className, containerClassName, children }: SectionProps) {
+export function Section({ id, tone = "bg", photo, wash, className, containerClassName, children }: SectionProps) {
   const dark = tone === "surface";
   return (
     <section
       id={id}
       // data-theme="dark" re-scopes the colour tokens so headings and cards read on the dark photo
       data-theme={dark ? "dark" : undefined}
-      className={cn("relative py-16 text-fg md:py-28", dark ? "photo-dark" : "bg-bg", className)}
+      style={
+        photo
+          ? ({ "--photo": `url("${photo}")`, ...(wash != null && { "--wash-mix": `${wash}%` }) } as React.CSSProperties)
+          : undefined
+      }
+      className={cn("relative py-16 text-fg md:py-28", dark ? "photo-dark" : photo ? "photo-soft" : "bg-bg", className)}
     >
       <Container className={containerClassName}>{children}</Container>
     </section>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ArrowUpRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { InsightCover } from "@/components/insights/InsightCover";
 import { InsightMeta, InsightRow } from "@/components/insights/InsightCard";
@@ -47,6 +48,13 @@ export default async function InsightPage({ params }: PageProps<"/insights/[slug
 
       <section className="bg-bg py-14 md:py-20">
         <Container className="max-w-4xl">
+          {i.body?.length ? (
+            <Reveal className="mb-14 grid max-w-3xl gap-5 text-lg leading-relaxed text-fg">
+              {i.body.map((para) => (
+                <p key={para}>{para}</p>
+              ))}
+            </Reveal>
+          ) : null}
           <Eyebrow>Key takeaways</Eyebrow>
           <RevealGroup className="mt-6 grid gap-4 sm:grid-cols-2">
             {i.points.map((pt, n) => (
@@ -58,6 +66,17 @@ export default async function InsightPage({ params }: PageProps<"/insights/[slug
               </RevealItem>
             ))}
           </RevealGroup>
+          {i.source ? (
+            <a
+              href={i.source.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-8 inline-flex items-center gap-2 rounded-full border border-accent/50 px-5 py-2.5 text-sm font-medium text-fg transition-colors hover:border-accent hover:bg-accent/10"
+            >
+              Source: {i.source.name}
+              <ArrowUpRight className="size-4 text-accent-text transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+          ) : null}
           <p className="mt-6 text-xs text-muted">For general information only. Verify details with official sources before making decisions.</p>
 
           {more.length ? (

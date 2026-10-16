@@ -77,7 +77,7 @@ export default function CollaboratePage() {
         </div>
       </Section>
 
-      <Section tone="surface">
+      <Section photo="/images/projects/vivaant-igatpuri/02-exterior.jpg" tone="surface">
         <div className="mx-auto max-w-4xl">
           <CollaborateForms />
         </div>

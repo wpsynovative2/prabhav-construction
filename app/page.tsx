@@ -64,7 +64,7 @@ export default function HomePage() {
         {featured ? <FeaturedProject project={featured} stationName={stationNames[featured.station] ?? featured.station} /> : null}
       </Section>
 
-      <Section tone="surface">
+      <Section photo="/images/projects/evana-nashik/02-amenity.jpg" tone="surface">
         <SectionHeading eyebrow={s.csr.eyebrow} title={s.csr.title} subtitle={s.csr.subtitle} align="center" />
         <CsrSection items={csr} quote={s.csr.quote} />
       </Section>
@@ -75,7 +75,7 @@ export default function HomePage() {
 
       <Marquee items={home.marquee} />
 
-      <Section tone="surface">
+      <Section photo="/images/backgound3.jpg" tone="surface">
         <AboutTeaser eyebrow={s.about.eyebrow} title={s.about.title} points={s.about.points} />
       </Section>
 
@@ -89,7 +89,7 @@ export default function HomePage() {
         <StationPresence stations={getLineStations()} />
       </Section>
 
-      <Section tone="surface">
+      <Section photo="/images/projects/arisha-chembur/04-site.jpg" tone="surface">
         <SectionHeading eyebrow={s.process.eyebrow} title={s.process.title} align="center" />
         <Process steps={s.process.steps} />
       </Section>
@@ -99,7 +99,7 @@ export default function HomePage() {
         <Testimonials items={testimonials} />
       </Section>
 
-      <Section tone="surface">
+      <Section photo="/images/backgound.jpg" tone="surface">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
           <SectionHeading eyebrow={s.faq.eyebrow} title={s.faq.title} subtitle={s.faq.subtitle} className="md:flex-col md:items-start" />
           <Accordion items={faqs.home} />
